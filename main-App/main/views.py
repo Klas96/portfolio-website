@@ -27,7 +27,6 @@ class IndexView(generic.TemplateView):
 		
 		context["testimonials"] = testimonials
 		context["certificates"] = certificates
-		context["blogs"] = blogs
 		context["portfolio"] = portfolio
 		return context
 
@@ -40,6 +39,7 @@ class ContactView(generic.FormView):
 	def form_valid(self, form):
 		form.save()
 		messages.success(self.request, 'Thank you. We will be in touch soon.')
+		#TODO Send Email
 		return super().form_valid(form)
 
 
@@ -55,16 +55,3 @@ class PortfolioView(generic.ListView):
 class PortfolioDetailView(generic.DetailView):
 	model = Portfolio
 	template_name = "main/portfolio-detail.html"
-
-class BlogView(generic.ListView):
-	model = Blog
-	template_name = "main/blog.html"
-	paginate_by = 10
-	
-	def get_queryset(self):
-		return super().get_queryset().filter(is_active=True)
-
-
-class BlogDetailView(generic.DetailView):
-	model = Blog
-	template_name = "main/blog-detail.html"
