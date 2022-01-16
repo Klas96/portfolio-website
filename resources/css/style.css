@@ -299,10 +299,12 @@ a, .btn {
 	padding-top: 10px;
 }
 .keySkillCard + .keySkillCard {
-  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .keySkillCol {
   width: 300px;
+  text-align: center;
+
 }
 .pLbl {
   display: block;
@@ -580,12 +582,10 @@ body.navToggleActive {
   }
   .smTitle {
   	font-size: 18px;
+    padding-bottom: 0px;
   }
   .keySkillCard + .keySkillCard {
   	padding-top: 20px;
-  }
-  .keySkillCol {
-  	width: 250px;
   }
 
   .cs1Title {
@@ -776,4 +776,6 @@ input[type=text], input[type=email], select, textarea {
 .keySkillCard {
   display: inline-block;
   width: 49%;
+  text-align: center;
+  padding-top: 0px;
 }

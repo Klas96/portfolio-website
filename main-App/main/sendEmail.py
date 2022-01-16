@@ -19,6 +19,6 @@ def sendEmail(msgString):
     s = smtplib.SMTP(host='smtp.gmail.com', port=587)
     s.ehlo()
     s.starttls()
-    s.login('klas0holmgren@gmail.com', '')
+    s.login('klas0holmgren@gmail.com', 'passWord')
     s.send_message(msg)
     s.quit()
