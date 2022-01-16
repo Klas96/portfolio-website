@@ -5,7 +5,6 @@ from . models import (
     Testimonial,
     Media,
     Portfolio,
-    Blog,
     Certificate,
     Skill
     )
