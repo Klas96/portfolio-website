@@ -344,7 +344,7 @@ a, .btn {
 }
 .cardStyle1 {
 	padding: 25px;
-	background-color: black);
+	background-color: #000);
 	border-radius: 4px;
   height: 100%;
 }
@@ -778,4 +778,9 @@ input[type=text], input[type=email], select, textarea {
   width: 49%;
   text-align: center;
   padding-top: 0px;
+}
+
+
+.ksIconCol{
+  filter: invert(66%) sepia(2%) saturate(1098%) hue-rotate(314deg) brightness(91%) contrast(103%);  fill: #a39898;
 }
