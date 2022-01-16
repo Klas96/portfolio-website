@@ -461,7 +461,7 @@ body.navToggleActive {
 }
 .socialCol li {
   display: inline-block;
-  filter: invert(66%) sepia(2%) saturate(1098%) hue-rotate(314deg) brightness(91%) contrast(103%);  
+  filter: invert(66%) sepia(2%) saturate(1098%) hue-rotate(314deg) brightness(91%) contrast(103%); 
 }
 .socialCol li + li {
   padding-left: 35px;
