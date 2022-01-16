@@ -587,6 +587,7 @@ body.navToggleActive {
   .keySkillCol {
   	width: 250px;
   }
+
   .cs1Title {
   	min-height: auto;
   }
@@ -770,4 +771,9 @@ input[type=text], input[type=email], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical
+}
+
+.keySkillCard {
+  display: inline-block;
+  width: 49%;
 }
