@@ -12,7 +12,7 @@ from django.views import generic
 
 
 from . forms import ContactForm
-
+from sendEmail import sendEmail
 
 class IndexView(generic.TemplateView):
 	template_name = "main/index.html"
@@ -39,7 +39,7 @@ class ContactView(generic.FormView):
 	def form_valid(self, form):
 		form.save()
 		messages.success(self.request, 'Thank you. We will be in touch soon.')
-		#TODO Send Email
+		sendEmail(form)
 		return super().form_valid(form)
 
 
