@@ -56,7 +56,9 @@ a, .btn {
   color: var(--primaryDarkColor);
 }
 .lightBg {
+  padding-top: 20px;
   background-color: var(--lightBg);
+  padding-bottom: 20px;
 }
 
 .btn {
@@ -483,7 +485,7 @@ body.navToggleActive {
 
 /* portfolio page */
 .innerPageBannerCol {
-	padding: 180px 0 150px;
+	padding: 90px 0 75px;
 }
 .portfolioContentMain {
   position: relative;
