@@ -1,14 +1,13 @@
-#Introduction
+# Introduction
 
-Portfolio Webiste 
+Portfolio Webiste for Klas Holmgren
 
-#TODO
+# TODO
 
-Connect EMail Server
-Connect to from
+Connect Email Server to form object in contact.
 
-Convert icons to vcetor SVG
+Find better Icons
 
-Add more personal projects
+Work on presentation for personal projects.
 
-Make qute marks in testamonials bigger
+Make quote marks in testamonials bigger
