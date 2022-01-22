@@ -11,3 +11,5 @@ Find better Icons
 Work on presentation for personal projects.
 
 Make quote marks in testamonials bigger
+
+Make Django Backend adimn Site and Email-Client
