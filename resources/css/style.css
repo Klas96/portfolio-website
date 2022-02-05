@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap');
 /* font-family: 'Courier Prime', monospace;
 font-family: 'Heebo', sans-serif; */
+
 :root {
   --primaryColor: #fffb00;
   --primaryDarkColor: #372958;
@@ -151,6 +152,8 @@ a, .btn {
   box-shadow: 0 0 24px rgba(0,0,0,0.1);
 }
 
+
+col-md-6 pColMain
 
 /* navigation */
 .navCol {
@@ -499,9 +502,6 @@ body.navToggleActive {
   width: 100%;
 }
 
-.portfolioRow .pColMain:nth-child(2n-1) .pCol {
-  margin-top: -110px;
-}
 @media (min-width:576px) {
   .swiper-pagination {
     display: none;
@@ -789,4 +789,13 @@ input[type=text], input[type=email], select, textarea {
 
 .ksIconCol{
   filter: invert(66%) sepia(2%) saturate(1098%) hue-rotate(314deg) brightness(91%) contrast(103%);  fill: #a39898;
+}
+
+
+col-md-6
+
+pColMain
+
+.row {
+  margin-top: 0;
 }
