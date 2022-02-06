@@ -8,6 +8,7 @@ font-family: 'Heebo', sans-serif; */
   --primaryHoverColor: #ffe600;
   --secondaryColor: #F9B000;
   --baseColor: #ddd8c7;
+  --cardColor: #ac9f77;
   --baseFont: 'Heebo', sans-serif;
   --titleFont: 'Courier Prime', monospace;
   --regular: 400;
@@ -497,7 +498,44 @@ body.navToggleActive {
 }
 .pCol {
   height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: LightYellow;
 }
+
+.pCol Time {
+  margin-left: auto;
+}
+
+h5 {
+  display: flex;
+}
+
+.pCol {
+  color: #000;
+  border: 5px solid Khaki;
+  font-family: monospace;
+}
+
+.pCol h5, .pCol p {
+  margin: 1em;
+}
+
+.pCol a {
+  position: relative;
+  padding-top: 56%;
+  display: block;
+}
+
+.pCol a img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  object-fit: cover;
+  border: 3px solid #372958;
+}
+
 .pImg {
   width: 100%;
 }
