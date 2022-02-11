@@ -350,7 +350,7 @@ col-md-6 pColMain
 }
 .cardStyle1 {
 	padding: 25px;
-	background-color: #0000);
+	background-color: #0000;
 	border-radius: 4px;
   height: 100%;
 }
@@ -500,7 +500,7 @@ body.navToggleActive {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  background-color: LightYellow;
+  background-color: rgb(53, 53, 51);
 }
 
 .pCol Time {
@@ -513,7 +513,7 @@ h5 {
 
 .pCol {
   color: #000;
-  border: 5px solid Khaki;
+  border: 5px solid rgb(34, 10, 47);
   font-family: monospace;
 }
 
@@ -836,4 +836,9 @@ pColMain
 
 .row {
   margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
