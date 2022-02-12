@@ -519,6 +519,7 @@ h5 {
 
 .pCol h5, .pCol p {
   margin: 1em;
+  color:rgb(185, 174, 174)
 }
 
 .pCol a {
@@ -535,6 +536,7 @@ h5 {
   object-fit: cover;
   border: 3px solid #372958;
 }
+
 
 .pImg {
   width: 100%;
