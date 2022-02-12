@@ -78,7 +78,7 @@
           <form
           id="contactForm"
           action="https://formspree.io/f/mpzbpvok"
-          method="POST"
+          method="post"
           >
           <label>
             Your email:
@@ -150,5 +150,23 @@
     <!-- ================================
     End Scripts
     ================================= -->
+    <script>
+    document.getElementsByTagName("form")[0].onsubmit = function(event) {
+	event.preventDefault()
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                alert(xhr.response);
+		document.getElementsByTagName("form")[0].innerHTML = "<h1>Thank You! We will be in touch soon. 😀 </h1>";
+            }
+        };
+        xhr.open("post", "https://formspree.io/f/mpzbpvok", true);
+	formData = new FormData();
+	formData.append('eamil', document.getElementsByName("email")[0].value)
+	formData.append('message', document.getElementsByName("message")[0].value)
+        xhr.send(formData);
+	alert("Thank You!\nYour Email have been sent!");
+    }
+    </script>	
   </body>
 </html>
