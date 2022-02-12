@@ -411,7 +411,9 @@ col-md-6 pColMain
   border-bottom: 1px solid #3f3434;
 }
 
-
+.ksIconCol i {
+  color:#8b8484
+}
 
 .testimonialCol {
   padding-top: 35px;
