@@ -51,6 +51,8 @@ a, .btn {
   box-shadow: none;
 }
 
+
+
 .primaryColor {
   color: var(--primaryColor);
 }
@@ -218,7 +220,7 @@ col-md-6 pColMain
 	-webkit-transition: background-color 500ms ease-in-out 250ms;
   -o-transition: background-color 500ms ease-in-out 250ms;
   transition: background-color 500ms ease-in-out 250ms;
-	background-color: rgb(22, 20, 20);
+	background-color: rgb(248, 247, 247);
 	border: 1px solid rgba(110, 106, 106, 0.2);
   margin-left: auto;
 }
@@ -231,7 +233,7 @@ col-md-6 pColMain
   display: block;
   width: 18px;
   height: 2px;
-  background-color: #000;
+  background-color: rgb(248, 247, 247);
   -webkit-transition: transform 500ms ease-in-out;
   -o-transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
@@ -777,7 +779,6 @@ h5 {
   }
   .testimonialSlider .swiper-slide {
   	padding: 0 0px 50px;
-    background-color: black;
   }
   .swiperBtnStyle.swiper-button-next {
   	right: auto;
@@ -856,6 +857,15 @@ form {
   flex-direction: column;
 }
 
+@media (max-width: 720px) {
 
-#<link rel="stylesheet" media="only screen and (prefers-color-scheme: dark)" href="/style/darkness.css">
-#<link rel="stylesheet" media="only screen and (prefers-color-scheme: dark)" href="/style/dark.css">
+  body {
+    text-align: center;
+  }
+
+  .col-md-auto, .row, .col-sm-auto {
+    display: flex;
+    justify-content: center;  
+  }
+
+}
