@@ -863,7 +863,7 @@ form {
     text-align: center;
   }
 
-  .col-md-auto, .row, .col-sm-auto {
+  .col-md-auto, .row, .col-sm-auto, .pImg{
     display: flex;
     justify-content: center;  
   }
