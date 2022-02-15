@@ -719,10 +719,6 @@ h5 {
   	max-height: 20px;
   }
 
-  .socialCol {
-      background: red;
-  }
-
   .socialCol i {
       color: gray;
   }
@@ -859,3 +855,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+
+#<link rel="stylesheet" media="only screen and (prefers-color-scheme: dark)" href="/style/darkness.css">
+#<link rel="stylesheet" media="only screen and (prefers-color-scheme: dark)" href="/style/dark.css">
