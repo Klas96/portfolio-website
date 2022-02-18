@@ -1,14 +1,24 @@
 from operator import index
 from jinja2 import Template
 
-testamonial = {
+testamonialEricsson = {
     'author': 'Ericsson Manager',
-    'quote': 'Klas Holmgren has preformed his work and tasks with considerable care and great intrest, to our satisfaction. He also works easily with other people.'
+    'quote': 'Klas Holmgren has preformed his work and tasks with considerable care and great intrest, to our satisfaction. He also works easily with other people.',
+    'image': 'EricssonLogo.png'
 }
 
+testamonialHenrik = {
+    'author': 'Henrik Albrechtsson',
+    'quote': 'Klas has performed his duty with flexing his kite board while having a high speed efficiency and a lot of collaboration with his co-riders.',
+    'image': 'HenrikLogo.jpg'
+}
+
+
+testamonials = [testamonialEricsson, testamonialHenrik]
+
 data_dict = {
-    'testimonial': testamonial
-    
+    'testimonials': testamonials
+
 }
 
 def render_index():
