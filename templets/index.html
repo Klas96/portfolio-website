@@ -215,7 +215,6 @@
       </div>
     </section>
 
-    <!--TODO Länka alla Skolor Program osv-->
     <section>
       <div class="sectionSpaceSm lightBg">
         <div class="container">
@@ -290,64 +289,31 @@
                 <a href="portfolio.html" class="simpleLink">View all</a>
               </div>
             </div>
-            <div class="portfolioCard">
-              <div class="row g-4 align-items-center">
-                <div class="col-md-auto">
-                  <div class="portfolioImgCol">
-                    <a href="javascript:void(0)"><img src="resources/images/portfolio/CellTracker.png" alt="..."></a>
+            {% for project in projects[:3] %}
+                <div class="portfolioCard">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-auto">
+                      <div class="portfolioImgCol">
+                        <a href="{{project.href}}"><img src="resources/images/portfolio/{{project.image}}" alt="{{project.titel}}"></a>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="portfolioContentCol">
+                        <h4 class="lgTitle"><a href="{{project.href}}">{{project.titel}}</a></h4>
+                        <ul class="portfolioOption">
+                          <li><span class="dateLbl">{{project.year}}</span></li>
+                          <li>
+                          {% for skill in project.skills %}
+                            {{skill}},
+                          {% endfor %}
+                          </li>
+                        </ul>
+                        <p>{{project.description}}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md">
-                  <div class="portfolioContentCol">
-                    <h4 class="lgTitle"><a href="https://github.com/Klas96/YeastTrack">Cell Tracker</a></h4>
-                    <ul class="portfolioOption">
-                      <li><span class="dateLbl">2020</span></li>
-                      <li>Python, Sklearn, Keras, TensorFlow, Tkinter</li>
-                    </ul>
-                    <p>Master thesis project at Chalmers analysing microscopy time-laps data of growing yeast cells.</p>
-                    <p>In this project I learned a lot about image analysis and available tools like OpenCV and Scikit-Learn. But also how to mange larger projects and report regularly ta an employer.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolioCard">
-              <div class="row g-4 align-items-center">
-                <div class="col-md-auto">
-                  <div class="portfolioImgCol">
-                    <a href="http://klas96.github.io/Processing-Games/"><img src="resources/images/portfolio/MustashioImage.png" alt="..."></a>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="portfolioContentCol">
-                    <h4 class="lgTitle"><a href="http://klas96.github.io/Processing-Games/">Processing Games</a></h4>
-                    <ul class="portfolioOption">
-                      <li><span class="dateLbl">2015</span></li>
-                      <li>HTML, JavaScript, Processing</li>
-                    </ul>
-                    <p>I have made both one and two player games using the processing libraries.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolioCard">
-              <div class="row g-4 align-items-center">
-                <div class="col-md-auto">
-                  <div class="portfolioImgCol">
-                    <a href="https://github.com/Klas96/Flim-to-text"><img src="resources/images/portfolio/VideoToText.png" alt="..."></a>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="portfolioContentCol">
-                    <h4 class="lgTitle"><a href="https://github.com/Klas96/Flim-to-text">Auto Subtitler</a></h4>
-                    <ul class="portfolioOption">
-                      <li><time class="dateLbl">2020</time></li>
-                      <li>Python</li>
-                    </ul>
-                    <p>This Program takes a movie and takes the audio and usese a speach to text module to generate subtitels for the movie.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
 
           <!-- ================================
