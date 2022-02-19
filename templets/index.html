@@ -1,65 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Klas Holmgren - Home</title>
-    <meta name="Klas Holmgren" content="">
-    <link rel="home" href=""/>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-    <link rel="shortcut icon" type="image/x-icon" href="resources/images/icon.jpg">
-    <link rel="apple-touch-icon" type="image/jpg" href="resources/images/icon.jpg">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- ================================
-    Start CSS
-    ================================= -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
-    <link href="resources/css/style.css" rel="stylesheet">
-    <!-- ================================
-    End CSS
-    ================================= -->
-
-  </head>
-  <body>
-
-    <!-- ================================
-    Start Navigation Bar
-    ================================= -->
-    <header>
-      <div class="headerCol">
-        <div class="container-fluid">
-          <div class="row align-items-center">
-            <div class="col">
-              <div class="d-md-none">
-                <button class="navToggle">
-                  <span class="navToggle__text">Toggle Menu</span>
-                </button>
-              </div>
-              <div class="navCollapseCol">
-                <div class="navCol">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- ================================
-    End Navigation Bar
-    ================================= -->
-
-    <!-- ================================
-    Start Content
-    ================================= -->
+{% extends "head_foot.html" %}
+{% block content %}
     <section>
       <div class="bannerSection">
         <div class="container">
@@ -123,15 +63,12 @@
                 </div>
                 <div class="keySkillCard">
                   <div class="ksIconCol">
-                    <!--<img src="resources/images/icons/kind-icon.svg" width = 50 height = 50 alt="...">-->
                     <i class="fa fa-4x fa-heart" aria-hidden="true"></i>
-
                   </div>
                   <span class="ksText">Kind</span>
                 </div>
                 <div class="keySkillCard">
                   <div class="ksIconCol">
-                    <!--<img src="resources/images/icons/possetivity-icon.svg" width = 50 height = 50 alt="...">-->
                     <i class="fa fa-4x fa-thumbs-up" aria-hidden="true"></i>
                   </div>
                   <span class="ksText">Supportive</span>
@@ -280,37 +217,4 @@
     <!-- ================================
     End Content
     ================================= -->
-    
-    
-    <!-- ================================
-    Start Footer
-    ================================= -->
-    {{fotter}}
-    <footer>
-      <div class="footerCol">
-        <div class="container">
-          <ul class="socialCol">
-            <li><a href="https://www.facebook.com/klas.holmgren.7/"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.instagram.com/Klas_holmgren/"><i class="fa fa-3x fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/klas-holmgren-155233121/"><i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/Klas96"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <!-- ================================
-    End Footer
-    ================================= -->
-
-    <!-- ================================
-    Start Scripts
-    ================================= -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="resources/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
-    <script src="resources/js/script.js"></script>
-    <!-- ================================
-    End Scripts
-    ================================= -->
-  </body>
-</html>
+{% endblock %}

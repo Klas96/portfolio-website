@@ -1,5 +1,3 @@
-from operator import index
-from ssl import CertificateError
 from jinja2 import Template
 
 python_skill = {
@@ -151,12 +149,28 @@ data_dict = {
 
 def render_index():
 
-    with open('templets/index.html', 'r') as file:
-        template = Template(file.read())
+    from jinja2 import Environment, FileSystemLoader
 
+    #rtemplate = Environment(loader=BaseLoader).from_string(myString)
+
+    file_loader = FileSystemLoader('templets')
+    env = Environment(loader=file_loader)
+    template = env.get_template('index.html')
     rendered = template.render(**data_dict)
 
     with open('index.html', 'w') as file:
+        file.write(rendered)
+
+    template = env.get_template('portfolio.html')
+    rendered = template.render(**data_dict)
+
+    with open('portfolio.html', 'w') as file:
+        file.write(rendered)
+    
+    template = env.get_template('contact.html')
+    rendered = template.render(**data_dict)
+
+    with open('contact.html', 'w') as file:
         file.write(rendered)
 
 
