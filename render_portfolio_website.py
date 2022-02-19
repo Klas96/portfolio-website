@@ -1,6 +1,61 @@
 from operator import index
+from ssl import CertificateError
 from jinja2 import Template
 
+python_skill = {
+    'title': 'Python',
+    'procentige': 95
+}
+
+git_skill = {
+    'title': 'Git',
+    'procentige': 85
+}
+
+
+cplus_skill = {
+    'title': 'C++',
+    'procentige': 75
+}
+
+linux_skill = {
+    'title': 'Linux',
+    'procentige': 70
+}
+
+
+web_skill = {
+    'title': 'Linux',
+    'procentige': 65
+}
+
+skills = [python_skill, git_skill, cplus_skill, linux_skill, web_skill]
+
+engering_mathematics = {
+    'titel': 'Engineering mathematics and computational science, MSc',
+    'year': '2018 - 2020',
+    'school': 'Chalmers University',
+    'href': 'https://www.chalmers.se/en/education/programmes/masters-info/pages/engineering-mathematics-and-computational-science.aspx',
+    'description':  'The Masters program oﬀers knowledge in optimization, statistics, data science and machine learning. As well as how these can be applied to diﬀerent domains.'
+}
+
+physics_mathematics = {
+    'titel': 'Batchlors Engineering Physics',
+    'year': '2015 - 2018',
+    'school': 'Chalmers University',
+    'href': 'https://www.chalmers.se/sv/utbildning/program-pa-grundniva/Sidor/Teknisk-fysik.aspx',
+    'description':  'A advanced bachelors giving solid understanding in mathematics and ways it can be applied to understand the world.'
+}
+
+natural_science = {
+    'titel': 'Natural Science',
+    'year': '2012 - 2015',
+    'school': 'Sigrid Rudebecks Gymnasium',
+    'href': 'https://sigridrudebecks.se/',
+    'description':  'Studied Natural Science at Sigrid Rudebecks Gymnasium. Taking extra courses such as English 7, Math 5 and Mathematics Specialisation.'
+}
+
+certificates =  [engering_mathematics, physics_mathematics, natural_science]
 
 cell_tracker = {
     'titel': 'Cell Tracker',
@@ -89,8 +144,9 @@ testamonials = [testamonialEricsson, testamonialHenrik]
 
 data_dict = {
     'testimonials': testamonials,
-    'projects': projects
-
+    'projects': projects,
+    'certificates': certificates,
+    'skills': skills
 }
 
 def render_index():
