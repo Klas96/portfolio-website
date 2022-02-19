@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <title>Klas Holmgren - Contact</title>
+
+    <title>Klas Holmgren - Home</title>
     <meta name="Klas Holmgren" content="">
     <link rel="home" href=""/>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/icon.jpg">
+    <link rel="apple-touch-icon" type="image/jpg" href="resources/images/icon.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ================================
     Start CSS
     ================================= -->
-    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="resources/css/style.css" rel="stylesheet">
     <!-- ================================
     End CSS
     ================================= -->
@@ -55,6 +57,7 @@
     End Navigation Bar
     ================================= -->
 
+    
     <!-- ================================
     Start Content
     ================================= -->
@@ -95,31 +98,26 @@
       </div>
     </section>
 
+    <script>
+    document.getElementsByTagName("form")[0].onsubmit = function(event) {
+	event.preventDefault()
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                alert(xhr.response);
+		document.getElementsByTagName("form")[0].innerHTML = "<h1>Thank You! We will be in touch soon. 😀 </h1>";
+            }
+        };
+        xhr.open("post", "https://formspree.io/f/mpzbpvok", true);
+	formData = new FormData();
+	formData.append('eamil', document.getElementsByName("email")[0].value)
+	formData.append('message', document.getElementsByName("message")[0].value)
+        xhr.send(formData);
+	alert("Thank You!\nYour Email have been sent!");
+    }
+    </script>	
 
-    <!--
-    <section>
-      <div class="lightBg">
-        <div class="container">
-            <form id="contactForm">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email">
-
-                <label for="subject">Message</label>
-                <textarea id="message" name="message" placeholder="Write something.." rows="6"></textarea>
-
-                <input class='btn btnPrimary' type="submit" value="Submit">
-                <a href='main/email'>Email Me</a>
-            </form>
-        </div>
-      </div>
-    </section>
-    -->
-    <!-- ================================
-    End Content
-    ================================= -->
+    
     
     <!-- ================================
     Start Footer
@@ -128,7 +126,7 @@
       <div class="footerCol">
         <div class="container">
           <ul class="socialCol">
-	    <li><a href="https://www.facebook.com/klas.holmgren.7/"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/klas.holmgren.7/"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></a></li>
             <li><a href="https://www.instagram.com/Klas_holmgren/"><i class="fa fa-3x fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="https://www.linkedin.com/in/klas-holmgren-155233121/"><i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a></li>
             <li><a href="https://github.com/Klas96"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a></li>
@@ -150,23 +148,5 @@
     <!-- ================================
     End Scripts
     ================================= -->
-    <script>
-    document.getElementsByTagName("form")[0].onsubmit = function(event) {
-	event.preventDefault()
-        xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                alert(xhr.response);
-		document.getElementsByTagName("form")[0].innerHTML = "<h1>Thank You! We will be in touch soon. 😀 </h1>";
-            }
-        };
-        xhr.open("post", "https://formspree.io/f/mpzbpvok", true);
-	formData = new FormData();
-	formData.append('eamil', document.getElementsByName("email")[0].value)
-	formData.append('message', document.getElementsByName("message")[0].value)
-        xhr.send(formData);
-	alert("Thank You!\nYour Email have been sent!");
-    }
-    </script>	
   </body>
 </html>
