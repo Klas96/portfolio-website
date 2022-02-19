@@ -147,11 +147,9 @@ data_dict = {
     'skills': skills
 }
 
-def render_index():
+def render_portfolio():
 
     from jinja2 import Environment, FileSystemLoader
-
-    #rtemplate = Environment(loader=BaseLoader).from_string(myString)
 
     file_loader = FileSystemLoader('templets')
     env = Environment(loader=file_loader)
