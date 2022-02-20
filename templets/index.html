@@ -163,9 +163,10 @@
                         <ul class="portfolioOption">
                           <li><span class="dateLbl">{{project.year}}</span></li>
                           <li>
-                          {% for skill in project.skills %}
+                          {% for skill in project.skills[:-1] %}
                             {{skill}},
                           {% endfor %}
+                          {{project.skills[-1]}}
                           </li>
                         </ul>
                         <p>{{project.description}}</p>

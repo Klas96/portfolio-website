@@ -174,5 +174,5 @@ def render_portfolio():
 
 if __name__ == '__main__':
     print("Building Website...")
-    render_index()
+    render_portfolio()
 
