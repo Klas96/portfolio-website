@@ -4,6 +4,10 @@ Portfolio Webiste for Klas Holmgren
 
 
 
-# TODO
+# Braches
 
-Make Django Backend adimn Site and Email-Client in Django.
+Main - Contains html for website.
+
+Jinja - Jinja implementaion of website
+
+Jango - Jango implementaion of website.
