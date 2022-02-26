@@ -21,7 +21,11 @@
               {% for project in projects %}
               <div class="col-md-6 pColMain">
                 <div class="pCol">
-                  <h5><span>{{project.titel}}</span><time class="dateLbl">{{project.year}}</time></h5>
+                  <h5><span>{{project.titel}}</span>
+                    <span>
+                      <time class="dateLbl">{{project.year}}</time>
+                    </span>
+                  </h5>
                   <a href="{{project.href}}">
                     <img src="resources/images/portfolio/{{project.image}}" alt="{{project.titel}}" class="pImg">
                   </a>

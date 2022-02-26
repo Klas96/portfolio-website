@@ -516,11 +516,14 @@ body.navToggleActive {
   border-radius: 10px;
   overflow: hidden;
   background-color: rgb(53, 53, 51);
+  line-height: 1.5;
 }
 
-.pCol Time {
+.pCol span + span,
+.pCol time {
   margin-left: auto;
 }
+
 
 h5 {
   display: flex;

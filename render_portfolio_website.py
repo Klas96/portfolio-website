@@ -35,6 +35,6 @@ def render_portfolio():
 
 
 if __name__ == '__main__':
-    print("Building Website...")
+    print("Happy Voilance...🦄🐉")
     render_portfolio()
 
