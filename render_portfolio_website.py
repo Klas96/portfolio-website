@@ -13,7 +13,7 @@ def render_portfolio():
 
     from jinja2 import Environment, FileSystemLoader
 
-    file_loader = FileSystemLoader('templatese')
+    file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
     template = env.get_template('index.html')
     rendered = template.render(**data_dict)
