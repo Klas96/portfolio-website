@@ -524,7 +524,6 @@ body.navToggleActive {
   margin-left: auto;
 }
 
-
 h5 {
   display: flex;
 }
@@ -648,7 +647,6 @@ h5 {
   .keySkillCard + .keySkillCard {
   	padding-top: 20px;
   }
-
   .cs1Title {
   	min-height: auto;
   }
@@ -656,7 +654,7 @@ h5 {
   .innerPageBannerCol{
   	padding: 120px 0 50px;
   }
-  .portfolioRow .pColMain:nth-child(2n-1) .pCol {
+  .portfolioRow .pColMain .pCol {
   	margin-top: -70px;
   }
   .portfolioContentMain {
