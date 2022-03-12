@@ -16,6 +16,9 @@
 	--lightBg: #292424;
 }
 
+@font-face {
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -696,9 +699,6 @@ h5 {
 	}
 	.innerPageBannerCol{
 		padding: 120px 0 50px;
-	}
-	.portfolioRow .pColMain .pCol {
-		margin-top: -70px;
 	}
 	.portfolioContentMain {
 		padding: 30px 0;
