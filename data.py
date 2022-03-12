@@ -25,7 +25,7 @@ linux_skill = {
 
 
 web_skill = {
-    'title': 'Linux',
+    'title': 'web',
     'procentige': 65
 }
 
