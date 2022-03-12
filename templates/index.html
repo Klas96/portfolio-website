@@ -85,7 +85,7 @@
                       <div class="row g-2 align-items-center">
                         <div class="col">
                           <div class="progress progressStyle">
-                            <div class="progress-bar" role="progressbar" style="width: {{skill.procentige}}%" aria-valuenow="{{skill.procentige}}" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="{{skill.title}}" role="progressbar" style="width: 0%" aria-valuenow="{{skill.procentige}}" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </div>
                         <div class="col-auto">
@@ -218,4 +218,9 @@
     <!-- ================================
     End Content
     ================================= -->
+    <script>
+      {% for skill in skills %}
+        document.getElementById("{{skill.title}}").style.width = "{{skill.procentige}} %"
+      {% endfor %}
+    </script>
 {% endblock %}
