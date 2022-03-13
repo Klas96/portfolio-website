@@ -922,13 +922,6 @@ form {
 		justify-content: center;  
 	}
 }
-
-
-/* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
-   ========================================================================== */
-   
-   /* ---- stats.js ---- */
    
    .count-particles{
 	 background: #000022;
@@ -955,10 +948,7 @@ form {
 	 margin-top: 5px;
 	 margin-left: 5px;
    }
-   
-   
-   /* ---- particles.js container ---- */
-   
+      
    #particles-js{
 	 background-position: 50% 50%;
 	 background-repeat: no-repeat;
