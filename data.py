@@ -129,7 +129,16 @@ google_api = {
     'skills': ['API']
 }
 
-projects = [cell_tracker, processing_games, video_to_text_generator, high_Preformace_computing, fractal_explorer, stocastic_optimization, google_api]
+sklern_open_source = {
+    'titel': 'scikit-learn',
+    'year': 2022,
+    'description': "Contributer to the open source project scikit-learn by adding new metrics for error estimation.",
+    'image': 'scikit-learn-logo.svg',
+    'href': 'https://github.com/Klas96/scikit-learn',
+    'skills': ['Open Source', 'sklearn', 'GitHub', 'Code Review', 'Formating', 'Testing', 'Documentation']
+}
+
+projects = [sklern_open_source, cell_tracker, processing_games, video_to_text_generator, high_Preformace_computing, fractal_explorer, stocastic_optimization, google_api]
 
 projects = sorted(projects, key=lambda d: d['year'], reverse=True) 
 

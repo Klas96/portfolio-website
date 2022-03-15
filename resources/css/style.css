@@ -16,9 +16,6 @@
   --lightBg: #292424;
 }
 
-@font-face {
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -67,8 +64,7 @@ a,
 }
 
 .lightBg {
-  background: var(--lightBg);
-  opacity: 0.5;
+  background: rgba(29, 24, 24, 0.5);
   padding-bottom: 20px;
   padding-top: 20px;
 }
