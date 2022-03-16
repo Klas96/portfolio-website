@@ -429,13 +429,18 @@ a,
   position: initial;
 }
 
+.portfolioOption {
+  display: flex;
+  padding: 5px 0 16px;
+}
+
 .portfolioOption li {
   display: inline-block;
   padding-right: 20px;
 }
 
-.portfolioOption {
-  padding: 5px 0 16px;
+.portfolioOption li:last-child {
+  flex: 1;
 }
 
 .portfolioContentCol > p:last-child {
