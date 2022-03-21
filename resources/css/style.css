@@ -185,7 +185,7 @@ a, .btn {
 	color: var(--primaryColor);
 }
 
-.navCol a::before {
+.navCol a:before {
 	background: var(--primaryColor);
 	border-radius: 2px;
 	bottom: 0;
@@ -198,14 +198,14 @@ a, .btn {
 	transition: all 500ms ease-in-out 0s;
 }
 
-.navCol a.active::before {
+.navCol a.active:before {
 	left: 0;
 	opacity: 1;
 	right: auto;
 	width: 27px;
 }
 
-.navCol a:hover::before {
+.navCol a:hover:before {
 	left: 0;
 	opacity: 1;
 	right: 0;
@@ -294,7 +294,7 @@ a, .btn {
 	width: 100%;
 }
 
-.bannerUserImg::before {
+.bannerUserImg:before {
 	background: #270949;
 	border-radius: 50%;
 	content: "";
@@ -369,7 +369,7 @@ a, .btn {
 	padding-left: 40px;
 }
 
-.cardOptionCol > li + li::before {
+.cardOptionCol > li + li:before {
 	content: "|";
 	left: 16px;
 	position: absolute;
@@ -497,7 +497,7 @@ a, .btn {
 	width: 35px;
 }
 
-.swiper-button-next.swiperBtnStyle::after, .swiper-button-prev.swiperBtnStyle::after {
+.swiper-button-next.swiperBtnStyle:after, .swiper-button-prev.swiperBtnStyle:after {
 	font-size: 16px;
 }
 
@@ -611,17 +611,9 @@ h5 {
 		display: none;
 	}
 }
-@media (min-width:992px) {
-	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-		max-width: 890px;
-	}
-	.headerCol .container-fluid {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-}
+
 @media (min-width:1200px) {
-	.headerCol .container-fluid {
+	.headerCol .timeline li -fluid {
 		padding-left: 55px;
 		padding-right: 55px;
 	}
@@ -734,7 +726,7 @@ h5 {
 	.navCol li {
 		display: block;
 	}
-	.navCol a::before {
+	.navCol a:before {
 		display: none;
 	}
 	.navCol a {
@@ -880,7 +872,7 @@ h5 {
 		width: 30px;
 	}
 
-	.swiper-button-next.swiperBtnStyle::after, .swiper-button-prev.swiperBtnStyle::after {
+	.swiper-button-next.swiperBtnStyle:after, .swiper-button-prev.swiperBtnStyle:after {
 		font-size: 14px;
 	}
 }
@@ -958,4 +950,142 @@ form {
 	 width: 100%;
 	 z-index: -1;
    }
-   
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+	margin: 0 auto;
+	padding-top: 100px;
+	max-width: 960px;
+	position: relative;
+	background: transparent;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline:after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background: #b3adaa;
+	top: 120px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+  }
+  
+  /* timeline li  around content */
+  .timeline li {
+	margin-left: 0;
+	padding: 10px 40px;
+	position: relative;
+	width: 50%;
+
+  }
+
+  .timeline li > * {
+	display: block;
+	padding: 20px 30px;
+	background: rgb(124, 114, 114);
+	border-radius: 6px;
+  }
+
+  .timeline h2 {
+	  margin: 0;
+	  border-radius: 10px 10px 0 0;
+	  padding-bottom: 0;
+  }
+  
+
+  .timeline p {
+	border-radius: 0 0 10px 10px;
+	font-size: 1.5em;
+  }
+
+  /* The circles on the timeline */
+  .timeline li:after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: black;
+	border: 4px solid #FF9F55;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+  }
+  
+  /* Place the timeline li  to the right */
+  .timeline li:nth-child(2n) {
+	left: 50%;
+  }
+  
+  /* Add arrows to the left timeline li  (pointing right) */
+  .timeline li:nth-child(2n+1):before {
+	content: "";
+	height: 0;
+	position: absolute;
+	top: 18px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right timeline li  (pointing left) */
+  .timeline li:nth-child(2n):before {
+	content: "";
+	height: 0;
+	position: absolute;
+	top: 18px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for timeline li s on the right side */
+  .timeline li:nth-child(2n):after {
+	left: -13px;
+  }
+
+  .timeline li:nth-child(2n+1):after {
+	right: -13px;
+  }
+
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+	.timeline:after {
+	  left: 31px;
+	}
+  
+  /* Full-width timeline li s */
+	.timeline li {
+	  width: 100%;
+	  padding-left: 70px;
+	  padding-right: 25px;
+	}
+  	
+	.timeline li:nth-child(2n):before,
+	.timeline li:nth-child(2n+1):before {
+		border-width: 10px;
+		left: 50px;
+		border-color: transparent white transparent transparent;
+	}
+	
+
+  /* Make sure all circles are at the same spot */
+  	.timeline li:nth-child(2n):after, .timeline li:nth-child(2n+1):after {
+	  left: 19px;
+	}
+  
+  /* Make all right timeline li s behave like the left ones */
+  	.timeline li:nth-child(2n) {
+	  left: 0%;
+	}
+
+
+  }

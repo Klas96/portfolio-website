@@ -32,6 +32,12 @@ def render_portfolio():
 
     with open('contact.html', 'w') as file:
         file.write(rendered)
+    
+    template = env.get_template('timeline.html')
+    rendered = template.render(**data_dict)
+
+    with open('timeline.html', 'w') as file:
+        file.write(rendered)
 
 
 if __name__ == '__main__':
