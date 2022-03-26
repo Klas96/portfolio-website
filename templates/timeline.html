@@ -1,0 +1,13 @@
+{% extends "head_foot.html" %}
+{% block content %}
+  <section>
+    <ul class="timeline">
+      {% for time_item in time_line %}
+      <li>
+        <h2><time datetime="{{time_item.time_span}}">2016</time></h2>
+        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </script>
+{% endblock %}

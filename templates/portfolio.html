@@ -1,0 +1,41 @@
+{% extends "head_foot.html" %}
+{% block content %}
+    <section>
+      <div class="innerPageBannerCol">
+        <div class="container">
+          <div class="row g-4 g-md-3  align-items-center">
+            <div class="col-md-6">
+              <div class="bannerContent">
+                <h1 class="xlTitle pb-md-3">See my recent projects below</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="lightBg">
+        <div class="container">
+          <div class="portfolioContentMain">
+            <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
+              {% for project in projects %}
+              <div class="col-md-6 pColMain">
+                <div class="pCol">
+                  <h5><span>{{project.titel}}</span>
+                    <span>
+                      <time class="dateLbl">{{project.year}}</time>
+                    </span>
+                  </h5>
+                  <a href="{{project.href}}">
+                    <img src="resources/images/portfolio/{{project.image}}" alt="{{project.titel}}" class="pImg">
+                  </a>
+                  <p>{{project.description}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

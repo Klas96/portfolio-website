@@ -1,0 +1,242 @@
+{% extends "head_foot.html" %}
+{% block content %}
+    <section>
+      <div class="bannerSection">
+        <div class="container">
+          <div class="row g-4 g-md-3  align-items-center">
+            <div class="col-md-auto order-md-last">
+              <div class="bannerUserImg">
+                <img src="resources/images/user-img.jpg" alt="...">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="bannerContent">
+                <h1 class="xlTitle pb-3">Hello, I am <br>Klas Holmgren, <br> a Data Scientist</h1>
+                <p>Seeking a challenging career with opportunities to apply my skills as well as to learn and grow.</p>
+                <div class="bannerBtnCol">
+                  <div class="row">
+                    <div class="col-auto">
+                      <a download href="resources/CV/KlasHolmgrenCVDataScience.pdf" class="btn btnPrimary">Download Resume</a>
+                    </div>
+                    <div class="col-auto">
+                      <a href="contact.html" class="btn btnOutline">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionSpace pt-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto">
+              <div class="keySkillCol">
+                <h4 class="smTitle pb-3">Personal Traites</h4>
+                <div class="keySkillCard">
+                  <div class="ksIconCol">
+                    <i class="fa fa-4x fa-handshake-o" aria-hidden="true"></i>
+                  </div>
+                  <span class="ksText">Inclusive</span>
+                </div>
+                <div class="keySkillCard">
+                  <div class="ksIconCol">
+                    <i class="fa fa-4x fa-crosshairs" aria-hidden="true"></i>
+                  </div>
+                  <span class="ksText">Goal Oriented</span>
+                </div>
+                <div class="keySkillCard">
+                  <div class="ksIconCol">
+                    <i class="fa fa-4x fa-connectdevelop" aria-hidden="true"></i>
+                  </div>
+                  <span class="ksText">Analytical</span>
+                </div>
+                <div class="keySkillCard">
+                  <div class="ksIconCol">
+                    <i class="fa fa-4x fa-comments" aria-hidden="true"></i>
+                  </div>
+                  <span class="ksText">Honest</span>
+                </div>
+                <div class="keySkillCard">
+                  <div class="ksIconCol">
+                    <i class="fa fa-4x fa-heart" aria-hidden="true"></i>
+                  </div>
+                  <span class="ksText">Kind</span>
+                </div>
+                <div class="keySkillCard">
+                  <div class="ksIconCol">
+                    <i class="fa fa-4x fa-thumbs-up" aria-hidden="true"></i>
+                  </div>
+                  <span class="ksText">Supportive</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <h4 class="smTitle pb-3">Coding Skills</h4>
+              <div class="progressCol">
+                <div class="progressCard">
+                  {% for skill in skills %}
+                    <div class="progressCol">
+                      <span class="progressLbl">{{skill.title}}</span>
+                      <div class="row g-2 align-items-center">
+                        <div class="col">
+                          <div class="progress progressStyle">
+                            <div class="progress-bar" id="{{skill.title}}" role="progressbar" style="width: 0%" aria-valuenow="{{skill.procentige}}" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <span class="pLbl" id="pro{{skill.title}}">{{skill.procentige}}%</span>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionSpaceSm lightBg">
+        <div class="container">
+          <div class="row pb-3">
+            <div class="col">
+              <h4 class="smText regular">Certificates and Education</h4>
+            </div>
+          </div>
+          <div class="sliderOuter">
+            <div class="swiper certificatesSlider">
+              <div class="swiper-wrapper">
+                {% for certificate in certificates %}
+                  <div class="swiper-slide">
+                    <div class="cardStyle1">
+                      <h4 class="mdTitle cs1Title">
+                        <a href="{{certificate.href}}">{{certificate.titel}}</a>
+                      </h4>
+                      <ul class="cardOptionCol">
+                        <li>{{certificate.year}}</li>
+                        <li>{{certificate.school}}</li>
+                      </ul>
+                      <p>{{certificate.description}}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>            
+            <div class="cert-swiper-button-next swiper-button-next swiperBtnStyle"></div>
+            <div class="cert-swiper-button-prev swiper-button-prev swiperBtnStyle"></div>
+            <div class="swiper-pagination swiperPaginationStyle posInitial"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionSpace">
+        <div class="container">
+          <div class="portfolioCol">
+            <div class="row pb-3">
+              <div class="col">
+                <h4 class="smText regular">Featured Work</h4>
+              </div>
+              <div class="col-auto">
+                <a href="portfolio.html" class="simpleLink">View all</a>
+              </div>
+            </div>
+            {% for project in projects[:3] %}
+                <div class="portfolioCard">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-md-auto">
+                      <div class="portfolioImgCol">
+                        <a href="{{project.href}}"><img src="resources/images/portfolio/{{project.image}}" alt="{{project.titel}}"></a>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="portfolioContentCol">
+                        <h4 class="lgTitle"><a href="{{project.href}}">{{project.titel}}</a></h4>
+                        <ul class="portfolioOption">
+                          <li><span class="dateLbl">{{project.year}}</span></li>
+                          <li>
+                          {% for skill in project.skills[:-1] %}
+                            {{skill}},
+                          {% endfor %}
+                          {{project.skills[-1]}}
+                          </li>
+                        </ul>
+                        <p>{{project.description}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+
+          <!-- ================================
+          ETestimonials
+          ================================= -->          
+
+          <div class="testimonialCol">
+            <h4 class="smText regular d-block">Testimonials</h4>
+            <div class="testimonialSlider">
+              <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                  {% for testimonial in testimonials %}
+                  <div class="swiper-slide">
+                    <div class="testimonialCard">
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto">
+                          <div class="tImgCol">
+                            <img src="resources/images/{{testimonial.image}}" alt="Logo">
+                          </div>
+                        </div>
+                        <div class="col-sm">
+                          <div class="tContentCol">
+                            <h4 class="xsTitle bold">{{testimonial.author}}</h4>
+			                      <p><i class="fa fa-2x fa-quote-left"></i>{{testimonial.quote}}<i class="fa fa-2x fa-quote-right"></i></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="test-swiper-button-next swiper-button-next swiperBtnStyle"></div>
+                <div class="test-swiper-button-prev swiper-button-prev swiperBtnStyle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ================================
+    End Content
+    ================================= -->
+    <script>
+      {% for skill in skills %}
+        document.getElementById("{{skill.title}}").style.width = "{{skill.procentige}}%"
+        document.getElementById("pro{{skill.title}}").style.opacity = "1"
+      {% endfor %}
+
+      /* 
+      function anim_stat() {
+        $({countNum: 0}).animate({countNum: $('#counter').text()}, {
+          duration: 5000,
+          easing:'linear',
+          step: function() {
+            $('#counter').text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $('#counter').text(this.countNum);
+          }
+        });
+      }
+      */
+    </script>
+{% endblock %}
