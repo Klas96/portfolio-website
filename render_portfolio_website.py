@@ -1,12 +1,13 @@
 from jinja2 import Template
-from data import skills, certificates, projects, testamonials
+from data import skills, certificates, projects, testamonials, time_line
 
 
 data_dict = {
     'testimonials': testamonials,
     'projects': projects,
     'certificates': certificates,
-    'skills': skills
+    'skills': skills,
+    "time_line": time_line
 }
 
 def render_portfolio():
@@ -33,10 +34,10 @@ def render_portfolio():
     with open('contact.html', 'w') as file:
         file.write(rendered)
     
-    template = env.get_template('timeline.html')
+    template = env.get_template("timeline.html")
     rendered = template.render(**data_dict)
 
-    with open('timeline.html', 'w') as file:
+    with open("timeline.html", 'w') as file:
         file.write(rendered)
 
 

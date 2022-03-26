@@ -4,9 +4,11 @@
     <ul class="timeline">
       {% for time_item in time_line %}
       <li>
-        <h2><time datetime="{{time_item.time_span}}">2016</time></h2>
-        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-      </li>
+        <h2>{{time_item.title}} <time datetime="{{time_item.time_span}}">2016</time></h2>
+        {% for description_point in time_item.description_points %}
+          <p>{{description_point}}</p>
+        {% endfor %}
+        </li>
       {% endfor %}
     </ul>
   </script>

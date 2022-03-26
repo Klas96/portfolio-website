@@ -1,14 +1,15 @@
 # Introduction
 
-Portfolio Webiste for Klas Holmgren
+Portfolio Webiste for Klas Holmgren.
+
+Jinja implementation.
 
 
 # Braches
 
 Main - Contains html for website.
 
-Jinja - Jinja implementaion of website
 
-Jango - Jango implementaion of website.
+Django - Django implementaion of website.
 
 
