@@ -142,13 +142,20 @@ projects = [sklern_open_source, cell_tracker, processing_games, video_to_text_ge
 
 projects = sorted(projects, key=lambda d: d['year'], reverse=True) 
 
-
-
+#############
+# Testamonial
+#############
 
 testamonialEricsson = {
     'author': 'Ericsson Manager',
     'quote': 'Klas Holmgren has preformed his work and tasks with considerable care and great intrest, to our satisfaction. He also works easily with other people.',
     'image': 'EricssonLogo.png'
+}
+
+testamonial_felix = {
+    'author': "Felix Matsson",
+    'quote': "My good friend and previous classmate Klas helped my through my high paced studies at Chalmers by inspiring me to see the fun in learning and with his actions always reminding me that any obstacles in life can be handled with the right mindset.",
+    'image': "FelixMatsson.jpg"
 }
 
 testamonialHenrik = {
@@ -157,7 +164,7 @@ testamonialHenrik = {
     'image': 'HenrikLogo.jpg'
 }
 
-testamonials = [testamonialEricsson, testamonialHenrik]
+testamonials = [testamonialEricsson, testamonial_felix, testamonialHenrik]
 
 promo_soft = {
     'title': 'Data Scientist',

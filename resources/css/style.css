@@ -509,6 +509,7 @@ a,
   height: 95px;
   margin-right: 5px;
   width: 95px;
+  display: flex;
 }
 
 .tImgCol img {
