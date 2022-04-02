@@ -7,9 +7,8 @@ Jinja implementation.
 
 # Braches
 
-Main - Contains html for website.
+Main - Contains html for website as well as tempelets for changing content.
 
-
-Django - Django implementaion of website.
+Django - Django implementaion of website. [WIP]
 
 
