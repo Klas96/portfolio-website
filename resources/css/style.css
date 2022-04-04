@@ -355,6 +355,11 @@ a,
 
 .keySkillCard + .keySkillCard {
   padding-bottom: 25px;
+  transition: 1s;
+}
+
+.keySkillCard:hover {
+  transform: scale(1.1);
 }
 
 .keySkillCol {
