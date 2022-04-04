@@ -310,6 +310,11 @@ a,
   margin-left: 30px;
   position: relative;
   width: 240px;
+  transition: 1s;
+}
+
+.bannerUserImg:hover {
+  transform: scale(1.2) rotate(360deg);
 }
 
 .bannerUserImg img {
@@ -708,7 +713,11 @@ h5 {
 		margin-left: 20px;
 		width: 220px;
 		height: 220px;
+    transition: 1s;
 	}
+  .bannerUserImg:hover {
+    transform: scale(1.25) rotateY(360deg);
+  }
 	.btn {
 		font-size: 16px;
 	}
