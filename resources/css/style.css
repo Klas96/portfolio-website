@@ -37,6 +37,10 @@ img {
   max-width: 100%;
 }
 
+section {
+  position: relative;
+}
+
 a {
   color: inherit;
 }
@@ -552,6 +556,7 @@ body.navToggleActive {
 }
 
 .footerCol {
+  position: relative;
   padding: 50px 0;
   text-align: center;
 }
@@ -1300,19 +1305,19 @@ form {
   }
   
   /* timeline li  around content */
-  .timeline li {
-	margin-left: 0;
-	padding: 10px 40px;
-	position: relative;
-	width: 50%;
+  .timeline > li {
+    margin-left: 0;
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
 
   }
 
-  .timeline li > * {
-	display: block;
-	padding: 20px 30px;
-	background: rgb(124, 114, 114);
-	border-radius: 6px;
+  .timeline > li > * {
+    display: block;
+    padding: 20px 30px;
+    background: rgb(124, 114, 114);
+    border-radius: 6px;
   }
 
   .timeline h2 {
@@ -1322,31 +1327,32 @@ form {
   }
   
 
-  .timeline p {
-	border-radius: 0 0 10px 10px;
-	font-size: 1.5em;
+  .timeline p,
+  .timeline ul {
+    border-radius: 0 0 10px 10px;
+    font-size: 1.5em;
   }
 
   /* The circles on the timeline */
-  .timeline li:after {
-	content: '';
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	background: black;
-	border: 4px solid #FF9F55;
-	top: 15px;
-	border-radius: 50%;
-	z-index: 1;
+  .timeline > li:after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: black;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
   }
   
   /* Place the timeline li  to the right */
-  .timeline li:nth-child(2n) {
-	left: 50%;
+  .timeline > li:nth-child(2n) {
+	  left: 50%;
   }
   
   /* Add arrows to the left timeline li  (pointing right) */
-  .timeline li:nth-child(2n+1):before {
+  .timeline > li:nth-child(2n+1):before {
 	content: "";
 	height: 0;
 	position: absolute;
@@ -1360,7 +1366,7 @@ form {
   }
   
   /* Add arrows to the right timeline li  (pointing left) */
-  .timeline li:nth-child(2n):before {
+  .timeline > li:nth-child(2n):before {
 	content: "";
 	height: 0;
 	position: absolute;
@@ -1374,11 +1380,11 @@ form {
   }
   
   /* Fix the circle for timeline li s on the right side */
-  .timeline li:nth-child(2n):after {
+  .timeline > li:nth-child(2n):after {
 	left: -13px;
   }
 
-  .timeline li:nth-child(2n+1):after {
+  .timeline > li:nth-child(2n+1):after {
 	right: -13px;
   }
 
@@ -1390,14 +1396,14 @@ form {
 	}
   
   /* Full-width timeline li s */
-	.timeline li {
+	.timeline > li {
 	  width: 100%;
 	  padding-left: 70px;
 	  padding-right: 25px;
 	}
   	
-	.timeline li:nth-child(2n):before,
-	.timeline li:nth-child(2n+1):before {
+	.timeline > li:nth-child(2n):before,
+	.timeline > li:nth-child(2n+1):before {
 		border-width: 10px;
 		left: 50px;
 		border-color: transparent white transparent transparent;

@@ -5,10 +5,12 @@
       {% for time_item in time_line %}
       <li>
         <h2>{{time_item.title}} <time datetime="{{time_item.time_span}}">2016</time></h2>
+        <ul>
         {% for description_point in time_item.description_points %}
-          <p>{{description_point}}</p>
+          <li>{{description_point}}</li>
         {% endfor %}
-        </li>
+        </ul>
+      </li>
       {% endfor %}
     </ul>
   </script>
