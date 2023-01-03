@@ -4,7 +4,7 @@
     <ul class="timeline">
       {% for time_item in time_line %}
       <li>
-        <h2>{{time_item.title}} <time datetime="{{time_item.time_span}}">2016</time></h2>
+        <h2>{{time_item.title}} <time datetime="{{time_item.time_span}}">{{time_item.time_span}}</time></h2>
         <ul>
         {% for description_point in time_item.description_points %}
           <li>{{description_point}}</li>
