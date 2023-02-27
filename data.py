@@ -138,7 +138,17 @@ sklern_open_source = {
     'skills': ['Open Source', 'sklearn', 'GitHub', 'Code Review', 'Formating', 'Testing', 'Documentation']
 }
 
-projects = [sklern_open_source, cell_tracker, processing_games, video_to_text_generator, high_Preformace_computing, fractal_explorer, stocastic_optimization, google_api]
+kaggle_competitions = {
+    'titel': 'kaggle-competitions',
+    'year': 2023,
+    'description': "Follower of Kaggle competitions",
+    'image': 'Kaggle-logo.png',
+    'href': 'https://www.kaggle.com/klasholmgren',
+    'skills': ['Open Source', 'sklearn', 'TensorFlow', 'Kaggle']
+}
+
+
+projects = [kaggle_competitions, sklern_open_source, cell_tracker, processing_games, video_to_text_generator, high_Preformace_computing, fractal_explorer, stocastic_optimization, google_api]
 
 projects = sorted(projects, key=lambda d: d['year'], reverse=True) 
 
