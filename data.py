@@ -121,9 +121,9 @@ stocastic_optimization = {
 }
 
 google_api = {
-    'titel': 'Google API',
+    'titel': 'Google Cloud API',
     'year': 2022,
-    'description': "Using Google Speach to Text API to record and translate voice to text. Also using Googles text to speach API to translate text to speach.",
+    'description': "Using Google Cloud and API Sevices to record and translate voice to text and hosting with virtual machines.",
     'image': 'APICloud.png',
     'href': 'https://github.com/Klas96/Google-Voice-Echo',
     'skills': ['API', 'Google Cloud']
