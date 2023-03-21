@@ -224,3 +224,15 @@ private_teacher = {
     }
 
 time_line = [promo_soft, ericsson, image_analysis, teaching_assistant, private_teacher]
+
+
+######################
+# Personal Description
+######################
+
+introduction = {
+    'titel': 'Introduction',
+    'content': 'Hi, my name is Klas my intrest evoulve around lerning and analysing.'
+    }
+
+personal_description = [introduction]
