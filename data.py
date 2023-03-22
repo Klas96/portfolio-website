@@ -236,3 +236,15 @@ introduction = {
     }
 
 personal_description = [introduction]
+
+##############
+# Book Reviews
+##############
+
+book1 = {
+    'titel': '',
+    'content': '',
+    'img': ''
+    }
+
+book_reviews = [book1]
