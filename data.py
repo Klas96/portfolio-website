@@ -235,4 +235,9 @@ introduction = {
     'content': 'Hi, my name is Klas my intrest evoulve around lerning and analysing.'
     }
 
-personal_description = [introduction]
+education = {
+    'titel': 'Education',
+    'content': 'I have gone thrught the swedish educational '
+    }
+
+personal_description = [introduction, education]
