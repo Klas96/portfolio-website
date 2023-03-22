@@ -241,3 +241,15 @@ education = {
     }
 
 personal_description = [introduction, education]
+
+##############
+# Book Reviews
+##############
+
+book1 = {
+    'titel': '',
+    'content': '',
+    'img': ''
+    }
+
+book_reviews = [book1]
