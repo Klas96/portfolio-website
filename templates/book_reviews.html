@@ -5,18 +5,18 @@
       <div class="portfolioContentMain">
         <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
           {% for book in book_reviews %}
-              <div class="book-container">
-                <img class="book-image" src="resources/images/books/{{book.img}}" alt="{{book.title}}">
-                <div class="book-review">
-                  <h2 class="book-title">{{book.title}}</h2>
-                  <p class="book-author">{{book.author}}</p>
-                  <p class="book-description">{{book.review}}</p>
-                </div>
+            <div class="book-container">
+              <img class="book-image" src="resources/images/books/{{book.img}}" alt="{{book.title}}">
+              <div class="book-details">
+                <h2 class="book-title">{{book.title}}</h2>
+                <p class="book-author">{{book.author}}</p>
+                <p class="book-description">{{book.review}}</p>
               </div>
-            {% endfor %}
-          </div>
+            </div>          
+          {% endfor %}
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {% endblock %}

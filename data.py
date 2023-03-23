@@ -257,7 +257,7 @@ personal_description = [introduction, education]
 filosofer = {
     'title': '20 filosofer',
     'year': 2000,
-    'review': 'The book goes thrugh 20 philosofers in chronological order.',
+    'review': 'The book goes thrugh 20 philosofers in chronological order. Staring of with Plato then following how idees evolve thrugh time by looking at diffrent famus thinkers life and thought throught time.',
     'img': '20_filosofer.jpg'
     }
 

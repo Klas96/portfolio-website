@@ -68,7 +68,7 @@ a,
 }
 
 .lightBg {
-  background: rgba(29, 24, 24, 0.5);
+  background: rgba(0, 0, 0, 0);
   padding-bottom: 20px;
   padding-top: 20px;
 }
@@ -1483,4 +1483,44 @@ form {
   position: fixed;
   width: 100%;
   z-index: -1;
+}
+
+
+.book-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.book-image {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.book-details {
+  display: 1;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.book-title {
+  text-align: left;
+  align-items: flex-start;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.book-author {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.book-description {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
