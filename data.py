@@ -246,10 +246,19 @@ personal_description = [introduction, education]
 # Book Reviews
 ##############
 
-book1 = {
-    'titel': '',
-    'content': '',
-    'img': ''
+'''
+    Start with a couple of sentences describing what the book is about. ...
+    Discuss what you particularly liked about the book. ...
+    Mention anything you disliked about the book. ...
+    Round up your review. ...
+    You can give the book a rating, for example a mark out of five or ten, if you like!
+'''
+
+filosofer = {
+    'title': '20 filosofer',
+    'year': 2000,
+    'review': 'The book goes thrugh 20 philosofers in chronological order.',
+    'img': '20_filosofer.jpg'
     }
 
-book_reviews = [book1]
+book_reviews = [filosofer]

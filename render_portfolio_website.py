@@ -1,5 +1,6 @@
 from jinja2 import Template
-from data import skills, certificates, projects, testamonials, time_line, personal_description
+from data import skills, certificates, projects, testamonials, time_line, personal_description, book_reviews
+from jinja2 import Environment, FileSystemLoader
 
 
 data_dict = {
@@ -8,45 +9,25 @@ data_dict = {
     'certificates': certificates,
     'skills': skills,
     "time_line": time_line,
-    "personal_description": personal_description
+    "personal_description": personal_description,
+    "book_reviews": book_reviews
 }
 
 def render_portfolio():
-
-    from jinja2 import Environment, FileSystemLoader
-
+    
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
-    template = env.get_template('index.html')
-    rendered = template.render(**data_dict)
 
-    with open('index.html', 'w') as file:
-        file.write(rendered)
+    #TODO make to for loop
+    templets = ['index.html','portfolio.html', 'contact.html', "timeline.html", 'personal_letter.html', 'book_reviews.html']
 
-    template = env.get_template('portfolio.html')
-    rendered = template.render(**data_dict)
+    for templ in templets:
+        template = env.get_template(templ)
+        rendered = template.render(**data_dict)
 
-    with open('portfolio.html', 'w') as file:
-        file.write(rendered)
+        with open(templ, 'w') as file:
+            file.write(rendered)
     
-    template = env.get_template('contact.html')
-    rendered = template.render(**data_dict)
-
-    with open('contact.html', 'w') as file:
-        file.write(rendered)
-    
-    template = env.get_template("timeline.html")
-    rendered = template.render(**data_dict)
-
-    with open("timeline.html", 'w') as file:
-        file.write(rendered)
-
-    template = env.get_template("personal_letter.html")
-    rendered = template.render(**data_dict)
-
-    with open("personal_letter.html", 'w') as file:
-        file.write(rendered)
-
 
 if __name__ == '__main__':
     print("Happy Voilance...🦄🐉")

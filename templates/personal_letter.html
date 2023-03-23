@@ -1,0 +1,17 @@
+{% extends "head_foot.html" %}
+{% block content %}
+  <section>
+    <div>
+        {% for section_item in personal_description %}
+        <div class="innerPageBannerCol">
+            <details>
+                <h1>
+                    <summary>{{section_item.titel}}</summary>
+                </h1>
+                <p>{{section_item.content}}</p>
+            </details>
+        </div>
+        {% endfor %}
+    </div>
+  </script>
+{% endblock %}

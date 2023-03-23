@@ -6,7 +6,7 @@
         <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
           {% for book in book_reviews %}
               <div class="book-container">
-                <img class="book-image" src="https://images.pexels.com/photos/209363/pexels-photo-209363.jpeg" alt="Pride and Prejudice cover">
+                <img class="book-image" src="resources/images/books/{{book.img}}" alt="{{book.title}}">
                 <div class="book-review">
                   <h2 class="book-title">{{book.title}}</h2>
                   <p class="book-author">{{book.author}}</p>
