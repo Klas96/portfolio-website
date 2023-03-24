@@ -19,11 +19,11 @@ def render_portfolio():
     env = Environment(loader=file_loader)
 
     #TODO make to for loop
-    templets = ['index.html','portfolio.html', 'contact.html', "timeline.html", 'personal_letter.html', 'book_reviews.html']
+    templets = ['index.html','portfolio.html', 'contact.html', "timeline.html", 'about_me.html', 'book_reviews.html']
 
     for templ in templets:
         template = env.get_template(templ)
-        rendered = template.render(**data_dict)
+        rendered = template.render(**data_dict, current_page=templ)
 
         with open(templ, 'w') as file:
             file.write(rendered)

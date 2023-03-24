@@ -232,15 +232,32 @@ time_line = [promo_soft, ericsson, image_analysis, teaching_assistant, private_t
 
 introduction = {
     'titel': 'Introduction',
-    'content': 'Hi, my name is Klas my intrest evoulve around lerning and analysing.'
+    'content': """My name is Klas and I'm excited to share a little bit about myself with you.
+
+                I have a passion for learning and analyzing, which has led me to explore many different topics and fields over the years.
+                """
     }
 
-education = {
-    'titel': 'Education',
-    'content': 'I have gone thrught the swedish educational '
+background = {
+    'titel': 'Background',
+    'content': ''
     }
 
-personal_description = [introduction, education]
+
+#Dancing
+#Kiteing
+interests = {
+    'titel': 'Interests',
+    'content': ''
+    }
+
+#Personality test
+personality = {
+    'titel': 'Personality',
+    'content': ''
+    }
+
+personal_description = [introduction, background, interests, personality]
 
 ##############
 # Book Reviews
@@ -257,7 +274,11 @@ personal_description = [introduction, education]
 filosofer = {
     'title': '20 filosofer',
     'year': 2000,
-    'review': 'The book goes thrugh 20 philosofers in chronological order. Staring of with Plato then following how idees evolve thrugh time by looking at diffrent famus thinkers life and thought throught time.',
+    'review': """
+              The book covers 20 famous philosophers in the westen tradition throughout time. Starting with Plato and ending with Heidegger. The philosophers are presented in chronological order with some attention given to their personal lives and some given to what they contributed in form of thought.
+              \n
+              Personally I found the book interesting to read and it gave a look on the evolution of philosophy as well as how different philosophers' ideas have contributed.
+              """,
     'img': '20_filosofer.jpg'
     }
 
