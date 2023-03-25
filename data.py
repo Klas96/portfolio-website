@@ -230,34 +230,56 @@ time_line = [promo_soft, ericsson, image_analysis, teaching_assistant, private_t
 # Personal Description
 ######################
 
+#Begin by introducing yourself and providing some background information about your education and career in engineering.
+#You can also include any specific areas of engineering that you specialize in or have a particular interest in.
 introduction = {
     'titel': 'Introduction',
     'content': """My name is Klas and I'm excited to share a little bit about myself with you.
 
                 I have a passion for learning and analyzing, which has led me to explore many different topics and fields over the years.
+                
+                
                 """
     }
 
-background = {
-    'titel': 'Background',
+professional_experience = {
+    'titel': 'Experience',
+    'content': 'Highlight your relevant work experience in engineering, including any notable projects you have worked on or industries you have worked in. You can also mention any awards or recognition you have received for your work.'
+}
+
+#Provide a list of your engineering skills and areas of expertise, including any software or tools you are proficient in. You can also explain how you have applied these skills in your past work.
+skills_and_expertise = {
+    'titel': 'Skills and Expertise',
+    'content': ''
+}
+
+#Personality test
+#Include a brief summary of your personal qualities and work ethic, such as your attention to detail, problem-solving abilities, or teamwork skills.
+personal_qualities = {
+    'titel': 'Qualities',
+    'content': ''
+}
+
+#Share your career goals and what you hope to achieve as an engineer. This can demonstrate your passion for the field and your commitment to continued growth and development.
+career_goals = {
+    'titel': 'Career Goals',
     'content': ''
     }
 
 
-#Dancing
-#Kiteing
-interests = {
+#You can also include some personal interests or hobbies that are relevant to your engineering work, such as building or designing projects in your spare time. This can add some personality to your profile and help potential employers or clients get to know you better.
+personal_interests = {
     'titel': 'Interests',
     'content': ''
     }
 
-#Personality test
-personality = {
-    'titel': 'Personality',
+#Call to Action: Finally, include a call to action, such as inviting visitors to view your portfolio or contact you for more information.
+Finally = {
+    'titel': 'Finaly',
     'content': ''
     }
 
-personal_description = [introduction, background, interests, personality]
+personal_description = [introduction, career_goals, personal_qualities, personal_interests, Finally]
 
 ##############
 # Book Reviews
