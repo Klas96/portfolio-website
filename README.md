@@ -1,3 +1,9 @@
+# How to Use
+
+1. add data in data.py
+
+2. run render_portfolio
+
 # Introduction
 
 Portfolio Webiste for Klas Holmgren.
