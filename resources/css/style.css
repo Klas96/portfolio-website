@@ -355,7 +355,6 @@ a,
 
 .keySkillCard + .keySkillCard {
   padding-bottom: 25px;
-  transition: 1s;
 }
 
 .keySkillCard:hover {
@@ -1239,6 +1238,7 @@ textarea {
   padding-top: 0px;
   text-align: center;
   width: 49%;
+  transition: 1s;
 }
 
 .row {
