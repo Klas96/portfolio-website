@@ -178,15 +178,15 @@ testamonials = [testamonialEricsson, testamonial_felix, testamonialHenrik]
 
 promo_soft = {
     'title': 'Data Scientist',
-    'company': 'PromoSoft',
+    'organization': 'PromoSoft',
     'location': 'Gothenburg',
-    'time_span': [2021, 'now'],
+    'time_span': [2021, 'NOW'],
     'description_points': ['This role include developing a demand forecasting model for inventory planning using python and the Sklearn library.']
 }
 
 ericsson = {
     'title': 'Developer',
-    'company': 'Ericsson',
+    'organization': 'Ericsson',
     'location': 'Gothenburg',
     'time_span': [2020, 2021],
     'description_points': ['Working as developer at Ericsson 5G core.',
@@ -196,7 +196,7 @@ ericsson = {
 
 image_analysis = {
     'title': 'Image analysis of yeast cell lineages',
-    'company': 'Chalmers: Cvijovic Lab',
+    'organization': 'Cvijovic Lab',
     'location': 'Gothenburg',
     'time_span': [2020, 2020],
     'description_points': ['Master thesis project at Chalmers analysing microscopy time-laps data of growing yeast cells.',
@@ -206,7 +206,7 @@ image_analysis = {
 
 teaching_assistant = {
     'title': 'Teaching Assistant',
-    'company': 'Chalmers University of Technology',
+    'organization': 'Chalmers',
     'location': 'Gothenburg',
     'time_span': [2020, 2020],
     'description_points': ['The role of the teaching assistant is to help with a course by holding certain lectures as well as correcting assignments etc.',
@@ -216,7 +216,7 @@ teaching_assistant = {
 
 private_teacher = {
     'title': 'Private Teacher',
-    'company': 'Chalmers University of Technology',
+    'organization': 'Chalmers',
     'location': 'Gothenburg',
     'time_span': [2015, 2020],
     'description_points': ['I have worked as a private teacher for younger students needing help with mathematics and natural science.',

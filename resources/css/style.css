@@ -1335,9 +1335,18 @@ form {
   }
 
   .timeline h2 {
+    margin-left: 0;
 	  margin: 0;
 	  border-radius: 10px 10px 0 0;
 	  padding-bottom: 0;
+  }
+
+  .timeline h3 {
+    margin-left: 0;
+	  border-radius: 0 0 0 0;
+	  margin: 0;
+	  padding-bottom: 0;
+	  padding-top: 0;
   }
   
 
@@ -1367,30 +1376,30 @@ form {
   
   /* Add arrows to the left timeline li  (pointing right) */
   .timeline > li:nth-child(2n+1):before {
-	content: "";
-	height: 0;
-	position: absolute;
-	top: 18px;
-	width: 0;
-	z-index: 1;
-	right: 30px;
-	border: medium solid white;
-	border-width: 10px 0 10px 10px;
-	border-color: transparent transparent transparent white;
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 18px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
   }
   
   /* Add arrows to the right timeline li  (pointing left) */
   .timeline > li:nth-child(2n):before {
-	content: "";
-	height: 0;
-	position: absolute;
-	top: 18px;
-	width: 0;
-	z-index: 1;
-	left: 30px;
-	border: medium solid white;
-	border-width: 10px 10px 10px 0;
-	border-color: transparent white transparent transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 18px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
   }
   
   /* Fix the circle for timeline li s on the right side */
