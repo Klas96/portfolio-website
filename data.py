@@ -234,49 +234,49 @@ time_line = [promo_soft, ericsson, image_analysis, teaching_assistant, private_t
 #You can also include any specific areas of engineering that you specialize in or have a particular interest in.
 introduction = {
     'titel': 'Introduction',
-    'content': """My name is Klas and I'm excited to share a little bit about myself with you.
-
-                I have a passion for learning and analyzing, which has led me to explore many different topics and fields over the years.
-                
-                
+    'content': """My name is Klas and I'm excited to share a little bit about myself with you.\n
+                I have a passion for learning and analyzing, which has led me to explore data science and programing
                 """
     }
 
 professional_experience = {
     'titel': 'Experience',
-    'content': 'Highlight your relevant work experience in engineering, including any notable projects you have worked on or industries you have worked in. You can also mention any awards or recognition you have received for your work.'
+    'content': ''
+    #'Highlight your relevant work experience in engineering, including any notable projects you have worked on or industries you have worked in. You can also mention any awards or recognition you have received for your work.'
 }
 
 #Provide a list of your engineering skills and areas of expertise, including any software or tools you are proficient in. You can also explain how you have applied these skills in your past work.
 skills_and_expertise = {
     'titel': 'Skills and Expertise',
-    'content': ''
+    'content': 'I like developing in newer frameworks and often use frameworks within python. However I still se the value in lower level languages such as C or C++. I also have experience with engineering with thrugh the web.'
 }
 
 #Personality test
 #Include a brief summary of your personal qualities and work ethic, such as your attention to detail, problem-solving abilities, or teamwork skills.
 personal_qualities = {
     'titel': 'Qualities',
-    'content': ''
+    'content': 'As a person I am quite energetic but also calm and methodic. I like learning by doing thith a clear goal to strive for.'
+
 }
 
 #Share your career goals and what you hope to achieve as an engineer. This can demonstrate your passion for the field and your commitment to continued growth and development.
 career_goals = {
     'titel': 'Career Goals',
-    'content': ''
+    'content': 'As an engineer and data scientist, my career goals are focused on continuous learning and development. I believe that staying up-to-date with the latest technologies and trends is critical to success in these fields, and I am committed to expanding my knowledge and skillset through ongoing training and education.'
+                #+ 'Specifically, I am committed to using my expertise in data science and engineering to solve complex problems and develop innovative solutions. I believe that my combination of technical knowledge and comunication skills gives me a competitive edge in [insert your industry or field].'
     }
 
 
 #You can also include some personal interests or hobbies that are relevant to your engineering work, such as building or designing projects in your spare time. This can add some personality to your profile and help potential employers or clients get to know you better.
 personal_interests = {
     'titel': 'Interests',
-    'content': ''
+    'content': 'My personal intrest revolve around kitesurfing, dancing and art. But I am also intrested in several theroretical fields such as programing, matematics and philosophy.'
     }
 
 #Call to Action: Finally, include a call to action, such as inviting visitors to view your portfolio or contact you for more information.
 Finally = {
     'titel': 'Finaly',
-    'content': ''
+    'content': 'Finaly I would like to say feel free to contact me. I am open to hering about buissnes opertuneties or just meeting new intresting pepole.'
     }
 
 personal_description = [introduction, career_goals, personal_qualities, personal_interests, Finally]
@@ -303,5 +303,9 @@ filosofer = {
               """,
     'img': '20_filosofer.jpg'
     }
+
+#Brawe New world
+#1984
+
 
 book_reviews = [filosofer]

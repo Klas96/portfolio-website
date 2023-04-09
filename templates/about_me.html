@@ -1,15 +1,24 @@
 {% extends "head_foot.html" %}
 {% block content %}
+<style>
+  details {
+      transition: all 1.0s ease-in-out;
+      cursor: pointer;
+  }
+  summary {
+      outline: none;
+  }
+</style>
 <div class="lightBg">
   <div class="container">
     <div class="portfolioContentMain">
       <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
         {% for section_item in personal_description %}
         <div style="text-align: left;">
-            <details>
-              <summary><h1>{{section_item.titel}}</h1></summary>
-                <p>{{section_item.content}}</p>
-            </details>
+          <details>
+            <summary><h1>{{section_item.titel}}</h1></summary>
+              <p>{{section_item.content}}</p>
+          </details>
         </div>
         {% endfor %}
       </div>
