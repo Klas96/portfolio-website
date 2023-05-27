@@ -176,11 +176,21 @@ testamonialHenrik = {
 
 testamonials = [testamonialEricsson, testamonial_felix, testamonialHenrik]
 
+
+
+data_varde = {
+    'title': 'Developer',
+    'organization': 'Data Värde',
+    'location': 'Gothenburg',
+    'time_span': [2023, 'Now'],
+    'description_points': ['']
+}
+
 promo_soft = {
     'title': 'Data Scientist',
     'organization': 'PromoSoft',
     'location': 'Gothenburg',
-    'time_span': [2021, 'NOW'],
+    'time_span': [2021, 2023],
     'description_points': ['This role include developing a demand forecasting model for inventory planning using python and the Sklearn library.']
 }
 
@@ -223,7 +233,7 @@ private_teacher = {
                             'This has been through diﬀerent organization such as Intize and Study Buddy but Also privately.']
     }
 
-time_line = [promo_soft, ericsson, image_analysis, teaching_assistant, private_teacher]
+time_line = [data_varde, promo_soft, ericsson, image_analysis, teaching_assistant, private_teacher]
 
 
 ######################
@@ -270,7 +280,7 @@ career_goals = {
 #You can also include some personal interests or hobbies that are relevant to your engineering work, such as building or designing projects in your spare time. This can add some personality to your profile and help potential employers or clients get to know you better.
 personal_interests = {
     'titel': 'Interests',
-    'content': 'My personal intrest revolve around kitesurfing, dancing and art. But I am also intrested in several theroretical fields such as programing, matematics and philosophy.'
+    'content': 'My personal intrest revolve around kitesurfing, dancing and art. But I am also intrested in several theroretical fields such as matematics, economics and philosophy.'
     }
 
 #Call to Action: Finally, include a call to action, such as inviting visitors to view your portfolio or contact you for more information.
