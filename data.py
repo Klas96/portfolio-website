@@ -174,8 +174,17 @@ walking_dragon = {
     'skills': ['Color', 'Dragon']
 }
 
+line_one_line = {
+    'titel': 'Line One Line',
+    'year': 2018,
+    'description': "",
+    'image': 'line_one_line.jpg',
+    'url': 'line_one_line.jpg',
+    'skills': ['Color', 'Line', 'Fractal']
+}
 
-art_projects = [walking_dragon, split_eyes]
+
+art_projects = [line_one_line ,walking_dragon, split_eyes]
 
 #############
 # Testamonial
