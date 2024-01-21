@@ -165,7 +165,17 @@ split_eyes = {
     'skills': ['Color', 'Eyes', 'Trinity', 'Duality']
 }
 
-art_projects = [split_eyes]
+walking_dragon = {
+    'titel': 'Walking Dragon',
+    'year': 2018,
+    'description': "Trying to figure out colors...",
+    'image': 'walking_dragon.jpg',
+    'url': 'walking_dragon.jpg',
+    'skills': ['Color', 'Dragon']
+}
+
+
+art_projects = [walking_dragon, split_eyes]
 
 #############
 # Testamonial
