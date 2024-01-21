@@ -1,0 +1,42 @@
+{% extends "head_foot.html" %}
+{% block content %}
+    <!--TODO Make this for art art_projects -->
+    <section>
+      <div class="innerPageBannerCol">
+        <div class="container">
+          <div class="row g-4 g-md-3  align-items-center">
+            <div class="col-md-6">
+              <div class="bannerContent">
+                <h1 class="xlTitle pb-md-3">See my art  below</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="lightBg">
+        <div class="container">
+          <div class="portfolioContentMain">
+            <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
+              {% for art_project in art_projects %}
+              <div class="col-md-6 pColMain">
+                <div class="pCol">
+                  <h5><span>{{art_project.titel}}</span>
+                    <span>
+                      <time class="dateLbl">{{art_project.year}}</time>
+                    </span>
+                  </h5>
+                  <a href="{{art_project.href}}">
+                    <img src="resources/images/art/{{art_project.url}}" alt="{{art_project.titel}}" class="pImg">
+                  </a>
+                  <p>{{art_project.description}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

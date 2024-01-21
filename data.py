@@ -152,6 +152,21 @@ projects = [cell_tracker, processing_games, video_to_text_generator, high_Prefor
 
 projects = sorted(projects, key=lambda d: d['year'], reverse=True) 
 
+##############
+# Art Projects
+##############
+
+split_eyes = {
+    'titel': 'Split Eyes',
+    'year': 2018,
+    'description': "Forgotten exactly what I was thinking when I drew this but now I think the message is pritty clear.",
+    'image': 'split_eyes.jpg',
+    'url': 'split_eyes.jpg',
+    'skills': ['Color', 'Eyes', 'Trinity', 'Duality']
+}
+
+art_projects = [split_eyes]
+
 #############
 # Testamonial
 #############

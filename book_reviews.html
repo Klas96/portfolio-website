@@ -50,7 +50,7 @@
                     <li><a class="nav-link" href="portfolio.html">Codeing</a></li>
                     <li><a class="nav-link" href="art_portfolio.html">Art</a></li>
                     <li><a class="nav-link" href="timeline.html">Timeline</a></li>
-                    <li><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
                   </ul>
                 </div>
               </div>
@@ -64,63 +64,30 @@
     ================================= -->
 
     
-    <!-- ================================
-    Start Content
-    ================================= -->
-    <section>
-      <div class="innerPageBannerCol">
-        <div class="container">
-          <div class="row g-4 g-md-3  align-items-center">
-            <div class="col-md-6">
-              <div class="bannerContent">
-                <h1 class="xlTitle pb-md-3">Contact me below</h1>
+  <div class="lightBg">
+    <div class="container">
+      <div class="portfolioContentMain">
+        <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
+          
+            <div class="book-container">
+              <img class="book-image" src="resources/images/books/20_filosofer.jpg" alt="20 filosofer">
+              <div class="book-details">
+                <h2 class="book-title">20 filosofer</h2>
+                <p class="book-author"></p>
+                <p class="book-description">
+              The book covers 20 famous philosophers in the westen tradition throughout time. Starting with Plato and ending with Heidegger. The philosophers are presented in chronological order with some attention given to their personal lives and some given to what they contributed in form of thought.
+              
+
+              Personally I found the book interesting to read and it gave a look on the evolution of philosophy as well as how different philosophers' ideas have contributed.
+              </p>
               </div>
-            </div>
-          </div>
+            </div>          
+          
         </div>
       </div>
-    </section>
-
-    <section>
-      <div class="lightBg">
-        <div class="container">
-          <form
-          id="contactForm"
-          action="https://formspree.io/f/mpzbpvok"
-          method="post"
-          >
-          <label>
-            Your email:
-            <input type="email" id="email" name="email" placeholder="Email">
-          </label>
-          <label>
-            Your message:
-            <textarea name="message" placeholder="Write something.." rows="6"></textarea>
-          </label>
-          <!-- your other form fields go here -->
-          <button type="submit" class='btn btnPrimary'>Send</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <script>
-    document.getElementsByTagName("form")[0].onsubmit = function(event) {
-	event.preventDefault()
-        xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState == 4) {
-            document.getElementsByTagName("form")[0].innerHTML = "<h1>Thank You! We will be in touch soon. 😀 </h1>";
-          }
-        };
-        xhr.open("post", "https://formspree.io/f/mpzbpvok", true);
-	formData = new FormData();
-	formData.append('eamil', document.getElementsByName("email")[0].value)
-	formData.append('message', document.getElementsByName("message")[0].value)
-        xhr.send(formData);
-    }
-    </script>	
-
+    </div>
+  </div>
+</section>
 
     
 
