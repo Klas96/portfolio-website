@@ -10,12 +10,11 @@
     <meta name="description" content="Portfolio for Klas Holmgren a coder.">
     <meta name="keywords" content="Klas, Holmgren, Code">
 
-    <link rel="shortcut icon" type="image/x-icon" href="resources/images/user-img.jpg">
-    <link rel="apple-touch-icon" type="image/jpg" href="resources/images/user-img.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/icon.jpg">
+    <link rel="apple-touch-icon" type="image/jpg" href="resources/images/icon.jpg">
     <!-- ================================
       Start CSS
       ================================= -->
-      
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
 
@@ -46,11 +45,10 @@
               <div class="navCollapseCol">
                 <div class="navCol">
                   <ul>
-                    <li><a class="nav-link{% if current_page == 'index.html' %} active{% endif %}" href="index.html">Home</a></li>
-                    <li><a class="nav-link{% if current_page == 'portfolio.html' %} active{% endif %}" href="portfolio.html">Codeing</a></li>
-                    <li><a class="nav-link{% if current_page == 'portfolio.html' %} active{% endif %}" href="art_portfolio.html">Art</a></li>
-                    <li><a class="nav-link{% if current_page == 'timeline.html' %} active{% endif %}" href="timeline.html">Timeline</a></li>
-                    <li><a class="nav-link{% if current_page == 'contact.html' %} active{% endif %}" href="contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
               </div>
@@ -63,7 +61,31 @@
     End Navigation Bar
     ================================= -->
 
-    {% block content %}{% endblock %}
+    
+  <section>
+    <div>
+        
+        <div class="innerPageBannerCol">
+            <details>
+                <h1>
+                    <summary>Introduction</summary>
+                </h1>
+                <p>Hi, my name is Klas my intrest evoulve around lerning and analysing.</p>
+            </details>
+        </div>
+        
+        <div class="innerPageBannerCol">
+            <details>
+                <h1>
+                    <summary>Education</summary>
+                </h1>
+                <p>I have gone thrught the swedish educational </p>
+            </details>
+        </div>
+        
+    </div>
+  </script>
+
     
 
 
@@ -100,10 +122,9 @@
         <div class="container">
           <ul class="socialCol">
             <li><a href="https://www.facebook.com/klas.holmgren.7/"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></a></li>
-            <li><a href="https://instagram.com/klasholmgren96?igshid=ZDdkNTZiNTM="><i class="fa fa-3x fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/Klas_holmgren/"><i class="fa fa-3x fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="https://www.linkedin.com/in/klas-holmgren-155233121/"><i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a></li>
             <li><a href="https://github.com/Klas96"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a></li>
-            <li><a href="https://open.spotify.com/user/klas.?si=a51fb9c37c6545bc"><i class="fa fa-3x fa-spotify" aria-hidden="true"></i></a></li>
           </ul>
         </div>
       </div>
