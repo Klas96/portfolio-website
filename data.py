@@ -156,6 +156,16 @@ projects = sorted(projects, key=lambda d: d['year'], reverse=True)
 # Art Projects
 ##############
 
+
+red_flower_triangel_base = {
+    'titel': 'Red Flower',
+    'year': 2024,
+    'description': "In the ceter is a circel contained by a squere contained by a triangel contained by a circle contained by red flower pedals ilustrated on a paper.",
+    'image': 'blue_red_flower.jpg',
+    'url': 'blue_red_flower.jpg',
+    'skills': ['Color', 'Red', 'Geometry', 'Pastell']
+}
+
 split_eyes = {
     'titel': 'Split Eyes',
     'year': 2018,
@@ -177,14 +187,14 @@ walking_dragon = {
 line_one_line = {
     'titel': 'Line One Line',
     'year': 2018,
-    'description': "",
+    'description': "Line fractal filled with colors.",
     'image': 'line_one_line.jpg',
     'url': 'line_one_line.jpg',
     'skills': ['Color', 'Line', 'Fractal']
 }
 
 
-art_projects = [line_one_line ,walking_dragon, split_eyes]
+art_projects = [red_flower_triangel_base, line_one_line ,walking_dragon, split_eyes ]
 
 #############
 # Testamonial
