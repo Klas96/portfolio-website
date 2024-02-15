@@ -15,8 +15,6 @@ Jinja implementation.
 
 Main - Contains html for website as well as tempelets for changing content.
 
-Django - Django implementaion of website. [WIP]
-
 
 # TODO
 
