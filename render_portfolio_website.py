@@ -1,9 +1,11 @@
 from jinja2 import Template
-from data_depricate import skills, certificates, projects, testamonials, personal_description
+from data_depricate import certificates, testamonials, personal_description
 from jinja2 import Environment, FileSystemLoader
 from data.art import art_projects
 from data.book_reviews import book_reviews
 from data.time_line_enteries import time_line
+from data.programing import projects, skills 
+
 
 data_dict = {
     'testimonials': testamonials,
