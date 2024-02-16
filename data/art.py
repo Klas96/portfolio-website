@@ -78,4 +78,4 @@ line_one_line = {
 }
 
 
-art_projects = [red_flower_triangel_base, eart_water_colors, line_one_line ,walking_dragon, split_eyes, colorful_girl, wolf_drawing, red_dear]
+art_projects = [red_flower_triangel_base, wolf_drawing, eart_water_colors, line_one_line ,walking_dragon, split_eyes, colorful_girl, red_dear]
