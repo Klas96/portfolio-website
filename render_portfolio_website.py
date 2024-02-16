@@ -1,7 +1,9 @@
 from jinja2 import Template
-from data import skills, certificates, projects, testamonials, time_line, personal_description, book_reviews, art_projects
+from data_depricate import skills, certificates, projects, testamonials, personal_description
 from jinja2 import Environment, FileSystemLoader
-
+from data.art import art_projects
+from data.book_reviews import book_reviews
+from data.time_line_enteries import time_line
 
 data_dict = {
     'testimonials': testamonials,
