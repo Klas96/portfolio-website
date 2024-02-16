@@ -1504,6 +1504,7 @@ form {
 .book-image {
   max-width: 200px;
   margin-right: 20px;
+  float: left;
 }
 
 .book-details {
