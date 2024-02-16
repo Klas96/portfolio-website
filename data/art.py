@@ -2,11 +2,19 @@
 # Art Projects
 ##############
 
+wolf_drawing = {
+    'titel': 'Wolf Drawing',
+    'year': 2019,
+    'description': "A wolf drawn with pencil.",
+    'image': 'wolf_drawing.jpg',
+    'url': 'wolf_drawing.jpg',
+    'skills': ['Nature', 'gray', 'animal']
+}
 
 red_dear = {
     'titel': 'Red Dear',
     'year': 2017,
-    'description': "A red dear painted with color pecils that was given to my by my grand parents.",
+    'description': "A red deer painted with color pencils that was given to my by my grand parents. This drawing is tributed to them.",
     'image': 'red_dear.jpg',
     'url': 'red_dear.jpg',
     'skills': ['Iconic', 'Nature', 'Colors']
@@ -16,7 +24,7 @@ red_dear = {
 colorful_girl = {
     'titel': 'Colorful girl',
     'year': 2018,
-    'description': "Colorful girl holding her phone.",
+    'description': "Colorful girl holding her phone. Illustrating the cooler full yet sometimes inauthentic nature of online communication.",
     'image': 'colorful_girl.jpg',
     'url': 'colorful_girl.jpg',
     'skills': ['Human',  'Colors']
@@ -26,7 +34,7 @@ colorful_girl = {
 eart_water_colors = {
     'titel': 'Water Color Earth',
     'year': 2018,
-    'description': "The earth painted with water colors.",
+    'description': "The earth painted with watercolors. The wonderful wet rock floating in space that we live on. <3",
     'image': 'earth_in_space_water_color.jpg',
     'url': 'earth_in_space_water_color.jpg',
     'skills': ['Water Colors', 'Space', 'Earth']
@@ -54,7 +62,7 @@ split_eyes = {
 walking_dragon = {
     'titel': 'Walking Dragon',
     'year': 2018,
-    'description': "Trying to figure out colors...",
+    'description': "Trying to figure out colors. In this image yellow are used as highlights and blue as shadows.",
     'image': 'walking_dragon.jpg',
     'url': 'walking_dragon.jpg',
     'skills': ['Color', 'Dragon']
@@ -70,4 +78,4 @@ line_one_line = {
 }
 
 
-art_projects = [red_flower_triangel_base, eart_water_colors, line_one_line ,walking_dragon, split_eyes, colorful_girl, red_dear]
+art_projects = [red_flower_triangel_base, eart_water_colors, line_one_line ,walking_dragon, split_eyes, colorful_girl, wolf_drawing, red_dear]
