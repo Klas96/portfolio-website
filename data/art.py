@@ -24,7 +24,7 @@ colorful_girl = {
 
 
 eart_water_colors = {
-    'titel': 'Red Flower',
+    'titel': 'Water Color Earth',
     'year': 2018,
     'description': "The earth painted with water colors.",
     'image': 'earth_in_space_water_color.jpg',
