@@ -78,4 +78,24 @@ line_one_line = {
 }
 
 
-art_projects = [red_flower_triangel_base, wolf_drawing, eart_water_colors, line_one_line ,walking_dragon, split_eyes, colorful_girl, red_dear]
+painted_heart = {
+    'titel': 'Painted Heart',
+    'year': 2017,
+    'description': "Painted Heart by water coolors",
+    'image': 'painted_heart.jpg',
+    'url': 'painted_heart.jpg',
+    'skills': ['Color', 'hearth']
+}
+
+dubbel_spiral = {
+    'titel': 'Dubbel Spiral',
+    'year': 2017,
+    'description': "Dubbel Spiral",
+    'image': 'dubbel_spiral.jpg',
+    'url': 'dubbel_spiral.jpg',
+    'skills': ['Color', 'spiral']
+}
+
+art_projects = [red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+                line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
+                red_dear, painted_heart]
