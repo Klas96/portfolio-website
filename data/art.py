@@ -96,6 +96,27 @@ dubbel_spiral = {
     'skills': ['Color', 'spiral']
 }
 
+castle_in_the_sky = {
+    'titel': 'Castel in the sky',
+    'year': 2017,
+    'description': "Castel in the sky",
+    'image': 'castle_in_the_sky.jpg',
+    'url': 'castle_in_the_sky.jpg',
+    'skills': ['Color', 'sky']
+}
+
+
+in_giving_we_receive = {
+    'titel': 'In giving we receive',
+    'year': 2017,
+    'description': "In giving we receive",
+    'image': 'in_giving_we_receive.jpg',
+    'url': 'in_giving_we_receive.jpg',
+    'skills': ['Hands']
+}
+
+
+
 art_projects = [red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
-                red_dear, painted_heart]
+                in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart]

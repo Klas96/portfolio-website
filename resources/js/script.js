@@ -47,3 +47,14 @@ var swiper = new Swiper(".certificatesSlider", {
     },
   },
 });
+
+function toggleImage() {
+  var image = document.getElementById('myImage');
+  if (image.style.display === 'none') {
+    // If image is currently hidden, show it
+    image.style.display = 'block';
+  } else {
+    // If image is currently visible, hide it
+    image.style.display = 'none';
+  }
+}
