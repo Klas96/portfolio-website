@@ -1499,6 +1499,7 @@ form {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
+  float: left;
 }
 
 .book-image {
