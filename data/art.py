@@ -134,9 +134,17 @@ fruit_and_light = {
     'skills': ['Flower of Life']
 }
 
+portal = {
+    'titel': 'Portal',
+    'year': 2024,
+    'description': "Lite ofocuserat kladdande.",
+    'image': 'portal.jpg',
+    'url': 'portal.jpg',
+    'skills': ['Portal', 'painting']
+}
 
 
-art_projects = [fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+art_projects = [portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
