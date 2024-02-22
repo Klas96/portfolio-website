@@ -27,7 +27,7 @@ colorful_girl = {
     'description': "Colorful girl holding her phone. Illustrating the cooler full yet sometimes inauthentic nature of online communication.",
     'image': 'colorful_girl.jpg',
     'url': 'colorful_girl.jpg',
-    'skills': ['Human',  'Colors']
+    'skills': ['Human',  'Colors', 'phone']
 }
 
 
