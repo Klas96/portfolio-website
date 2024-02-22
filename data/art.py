@@ -116,7 +116,18 @@ in_giving_we_receive = {
 }
 
 
+bird_back = {
+    'titel': 'Bird Back',
+    'year': 2017,
+    'description': "Flying Away",
+    'image': 'bird_back.jpg',
+    'url': 'bird_back.jpg',
+    'skills': ['Bird']
+}
 
 art_projects = [red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
-                in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart]
+                in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
+
+
+# TODO Sort after year
