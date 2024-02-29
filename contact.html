@@ -7,8 +7,8 @@
     <title>Klas Holmgren</title>
     <meta name="Klas Holmgren" content="">
     <link rel="home" href=""/>
-    <meta name="description" content="Portfolio for Klas Holmgren a coder.">
-    <meta name="keywords" content="Klas, Holmgren, Code">
+    <meta name="description" content="Portfolio page for Klas Holmgren.">
+    <meta name="keywords" content="Klas, Holmgren, Code, art">
 
     <!--
     <link rel="shortcut icon" type="image/x-icon" href="resources/images/art/blue_red_flower.jpg">
@@ -89,7 +89,7 @@
         <div class="container">
           <form
           id="contactForm"
-          action="https://formspree.io/f/mpzbpvok"
+          action="TODO"
           method="post"
           >
           <label>
@@ -107,22 +107,21 @@
       </div>
     </section>
 
-    <script>
-    document.getElementsByTagName("form")[0].onsubmit = function(event) {
-	event.preventDefault()
-        xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState == 4) {
-            document.getElementsByTagName("form")[0].innerHTML = "<h1>Thank You! We will be in touch soon. 😀 </h1>";
-          }
-        };
-        xhr.open("post", "https://formspree.io/f/mpzbpvok", true);
-	formData = new FormData();
-	formData.append('eamil', document.getElementsByName("email")[0].value)
-	formData.append('message', document.getElementsByName("message")[0].value)
-        xhr.send(formData);
-    }
-    </script>	
+  <script>
+
+    //document.getElementsByTagName("form")[0].onsubmit = function(event) {
+    //  event.preventDefault()
+    //    xhr = new XMLHttpRequest();
+    //    xhr.onreadystatechange = function() {
+    //      if (xhr.readyState == 4) {
+    //        document.getElementsByTagName("form")[0].innerHTML = "<h1>Under development at the moment!</h1>";
+    //      }
+    //    };
+    //    formData = new FormData();
+    //    formData.append('eamil', document.getElementsByName("email")[0].value)
+    //    formData.append('message', document.getElementsByName("message")[0].value)
+    //}
+  </script>	
 
 
     

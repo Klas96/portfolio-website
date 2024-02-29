@@ -28,7 +28,7 @@
                       <time class="dateLbl">{{art_project.year}}</time>
                     </span>
                   </h5>
-                  <a href="{{art_project.href}}">
+                  <a href="{{art_project.href}}" onclick="enlargeImage('resources/images/art/{{art_project.url}}')">
                     <img src="resources/images/art/{{art_project.url}}" alt="{{art_project.titel}}"< class="pImg">
                   </a>
                   <p>{{art_project.description}}</p>
@@ -41,4 +41,5 @@
         </div>
       </div>
     </section>
+
 {% endblock %}

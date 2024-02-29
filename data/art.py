@@ -105,7 +105,6 @@ castle_in_the_sky = {
     'skills': ['Color', 'sky']
 }
 
-
 in_giving_we_receive = {
     'titel': 'In giving we receive',
     'year': 2017,
@@ -128,10 +127,10 @@ bird_back = {
 fruit_and_light = {
     'titel': 'Fruit of Light',
     'year': 2024,
-    'description': "Flying Away",
+    'description': "",
     'image': 'fruit_and_light.jpg',
     'url': 'fruit_and_light.jpg',
-    'skills': ['Flower of Life']
+    'skills': ['Circels']
 }
 
 portal = {

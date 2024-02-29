@@ -58,3 +58,17 @@ function toggleImage() {
     image.style.display = 'none';
   }
 }
+
+function enlargeImage(src) {
+  var image = new Image;
+  
+  image.src = src;
+
+  image.classList.add('enlarged-image');
+
+  image.addEventListener('click', function(){
+    document.body.removeChild(this);
+  })
+
+  document.body.appendChild(image)
+}
