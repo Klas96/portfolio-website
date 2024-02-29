@@ -44,10 +44,10 @@ eart_water_colors = {
 red_flower_triangel_base = {
     'titel': 'Red Flower',
     'year': 2024,
-    'description': "In the ceter is a circel contained by a squere contained by a triangel contained by a circle contained by red flower pedals ilustrated on a paper.",
+    'description': "In the center is a circel contained by a squere contained by a triangel contained by a circle contained by red flower pedals illustrated on a paper.",
     'image': 'blue_red_flower.jpg',
     'url': 'blue_red_flower.jpg',
-    'skills': ['Color', 'Red', 'Geometry', 'Pastell']
+    'skills': ['Color', 'Red', 'Green', 'Geometry', 'Pastell']
 }
 
 split_eyes = {
@@ -56,7 +56,7 @@ split_eyes = {
     'description': "Forgotten exactly what I was thinking when I drew this but now I think the message is pritty clear.",
     'image': 'split_eyes.jpg',
     'url': 'split_eyes.jpg',
-    'skills': ['Color', 'Eyes', 'Trinity', 'Duality']
+    'skills': ['Color', 'Eyes', 'Trinity', 'Duality', 'Crayons']
 }
 
 walking_dragon = {
@@ -81,7 +81,7 @@ line_one_line = {
 painted_heart = {
     'titel': 'Painted Heart',
     'year': 2017,
-    'description': "Painted Heart by water coolors",
+    'description': "Painted a heart by using water coolors.",
     'image': 'painted_heart.jpg',
     'url': 'painted_heart.jpg',
     'skills': ['Color', 'hearth']
@@ -136,7 +136,7 @@ fruit_and_light = {
 portal = {
     'titel': 'Portal',
     'year': 2024,
-    'description': "Lite ofocuserat kladdande.",
+    'description': "Lite ofocuserat kladdande. Liknar lite en inramad portal.",
     'image': 'portal.jpg',
     'url': 'portal.jpg',
     'skills': ['Portal', 'painting']

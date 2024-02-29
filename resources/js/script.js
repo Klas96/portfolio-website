@@ -61,7 +61,7 @@ function toggleImage() {
 
 function enlargeImage(src) {
   var image = new Image;
-  
+  console.log(src);  
   image.src = src;
 
   image.classList.add('enlarged-image');
@@ -71,4 +71,5 @@ function enlargeImage(src) {
   })
 
   document.body.appendChild(image)
+
 }
