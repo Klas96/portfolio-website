@@ -143,6 +143,23 @@ portal = {
 }
 
 
+what_you_see = {
+	'title': 'What You See',
+	'year': 2024,
+	'description': "",
+	'url': 'what_you_see.jpg',
+	'skills': ['sketch', 'abstract']
+}
+
+butterfly = {
+	'title': 'butterfly',
+	'year': 2018,
+	'description': "",
+	'url': 'butterfly_black_white.jpg',
+	'skills': ['sketch']
+}
+
+
 art_projects = [portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]

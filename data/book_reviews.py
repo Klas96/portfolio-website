@@ -13,16 +13,16 @@
 
 ruels_for_life = {
     'title': 'CURENTLY READING: 12 Rules for Life',
-    'year': 2000,
+    'year': 2024,
     'review': """
-              In this book 12 ruels are presented as an antidote to chaos. My expectation when reading this book was a set off strict ruels to follow on faith. However I find that the auter describes the ruels quiet lenient. The book also gives a basis for the ruels by ilustarating with senarios or providening examples from biology or drawing interpretations from the bilbe; wich pertson regards as a meta-truth, a manifestation of the highest transcendent pattern. 
+              In this book 12 ruels are presented as an antidote to chaos. My expectation when reading this book was a set off strict ruels to follow on faith. However I find that the author describes the ruels quiet mildly. The book also gives a basis for the ruels by illustarating with senarios or providening examples from biology or drawing interpretations from the bilbe; wich pertson regards as a meta-truth, a manifestation of the highest transcendent pattern. 
               """,
     'img': '12_ruels_for_life.jpg',
     'author': 'Jordan B. Peterson'
 }
 
 
-filosofer = {
+filosofer_20 = {
     'title': '20 filosofer',
     'year': 2024,
     'review': """
@@ -38,4 +38,4 @@ filosofer = {
 #1984
 
 
-book_reviews = [ruels_for_life, filosofer]
+book_reviews = [ruels_for_life, filosofer_20]
