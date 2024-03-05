@@ -143,14 +143,6 @@ portal = {
 }
 
 
-what_you_see = {
-	'title': 'What You See',
-	'year': 2024,
-	'description': "",
-	'url': 'what_you_see.jpg',
-	'skills': ['sketch', 'abstract']
-}
-
 butterfly = {
 	'title': 'butterfly',
 	'year': 2018,
