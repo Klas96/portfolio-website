@@ -144,7 +144,7 @@ portal = {
 
 
 butterfly = {
-	'title': 'butterfly',
+	'titel': 'butterfly',
 	'year': 2018,
 	'description': "",
 	'url': 'butterfly_black_white.jpg',
@@ -152,17 +152,18 @@ butterfly = {
 }
 
 another_abstract = {
-	'title': 'Another Abstract',
+	'titel': 'Another Abstract',
 	'year': 2024,
-	'description': "It's just another abstarct mae",
+	'description': "It's just another abstarct.",
 	'url': 'Another_Abstract.jpg',
 	'skills': ['oil pastel']
 }
 
 
-art_projects = [another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+art_projects = [butterfly ,another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
 
-# TODO Sort after year
+art_projects = sorted(art_projects, key=lambda d: d['year'], reverse=True)
+
