@@ -127,7 +127,7 @@ bird_back = {
 fruit_and_light = {
     'titel': 'Fruit of Light',
     'year': 2024,
-    'description': "One Circle and six circles placed around it with common intersections.",
+    'description': "One Circle and six circles placed around it with common intersections with the one circle.",
     'image': 'fruit_and_light.jpg',
     'url': 'fruit_and_light.jpg',
     'skills': ['Circels']
