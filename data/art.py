@@ -159,8 +159,16 @@ butterfly = {
 	'skills': ['sketch']
 }
 
+another_abstract = {
+	'title': 'Another Abstract',
+	'year': 2024,
+	'description': "It's just another abstarct mae",
+	'url': 'Another_Abstract.jpg',
+	'skills': ['oil pastel']
+}
 
-art_projects = [portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+
+art_projects = [another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
