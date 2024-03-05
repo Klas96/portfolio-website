@@ -127,7 +127,7 @@ bird_back = {
 fruit_and_light = {
     'titel': 'Fruit of Light',
     'year': 2024,
-    'description': "",
+    'description': "One Circle and six circles placed around it with common intersections.",
     'image': 'fruit_and_light.jpg',
     'url': 'fruit_and_light.jpg',
     'skills': ['Circels']
@@ -136,7 +136,8 @@ fruit_and_light = {
 portal = {
     'titel': 'Portal',
     'year': 2024,
-    'description': "Lite ofocuserat kladdande. Liknar lite en inramad portal.",
+    'description': "A bit unfocused scribbling. Looks a bit like a framed portal",
+    'description_sve': "Lite ofocuserat kladdande. Liknar lite en inramad portal.",
     'image': 'portal.jpg',
     'url': 'portal.jpg',
     'skills': ['Portal', 'painting']
@@ -146,7 +147,7 @@ portal = {
 butterfly = {
 	'titel': 'butterfly',
 	'year': 2018,
-	'description': "",
+	'description': "A sketch of a butterfly",
 	'url': 'butterfly_black_white.jpg',
 	'skills': ['sketch']
 }
@@ -160,7 +161,7 @@ another_abstract = {
 }
 
 
-art_projects = [butterfly ,another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+art_projects = [butterfly, another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
