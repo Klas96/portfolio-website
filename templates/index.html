@@ -6,14 +6,16 @@
           <div class="row g-4 g-md-3  align-items-center">
             <div class="col-md-auto order-md-last">
               <div class="bannerUserImg">
-                <img src="resources/images/user-img.jpg" alt="...">
+                <img src="resources/images/user-img.jpg" alt="Profile-Img">
               </div>
             </div>
             <div class="col-md">
               <div class="bannerContent">
                 <h1 class="pb-3">Hello, I am Klas Holmgren.</h1>
                 <p>Hello, my name is Klas and welcome to my webpage. I am currently working as a programer but I also do and enyoy art, dance and philosophy.</p>
+                <!--
                 <p>Right now I am seeking a challenging career with opportunities to apply my skills as well as to learn and grow.</p>
+                -->
                 <div class="bannerBtnCol">
                   <div class="row">
                     <div class="col-auto">
@@ -218,9 +220,6 @@
       </div>
     </section>
     
-    <!-- ================================
-    End Content
-    ================================= -->
     <script>
       {% for skill in skills %}
         document.getElementById("{{skill.title}}").style.width = "{{skill.procentige}}%"
