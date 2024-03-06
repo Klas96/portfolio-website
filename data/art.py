@@ -157,6 +157,7 @@ another_abstract = {
 	'year': 2024,
 	'description': "It's just another abstarct.",
 	'url': 'Another_Abstract.jpg',
+    'image': 'Another_Abstract.jpg',
 	'skills': ['oil pastel']
 }
 

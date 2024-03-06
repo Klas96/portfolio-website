@@ -232,12 +232,13 @@
     </section>
     
     <script>
+
+      /* 
       {% for skill in skills %}
         document.getElementById("{{skill.title}}").style.width = "{{skill.procentige}}%"
         document.getElementById("pro{{skill.title}}").style.opacity = "1"
       {% endfor %}
 
-      /* 
       function anim_stat() {
         $({countNum: 0}).animate({countNum: $('#counter').text()}, {
           duration: 5000,
