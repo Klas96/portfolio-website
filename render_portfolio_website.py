@@ -18,23 +18,27 @@ data_dict = {
     "book_reviews": book_reviews
 }
 
-def render_portfolio():
+def render_portfolio(language):
     
-    file_loader = FileSystemLoader('templates')
-    env = Environment(loader=file_loader)
+    if language == "en":
+        file_loader = FileSystemLoader('templates')
+        env = Environment(loader=file_loader)
 
-    #TODO make to for loop
-    templets = ['index.html','portfolio.html', 'contact.html', "timeline.html", 'about_me.html', 'book_reviews.html', 'art_portfolio.html']
+        #TODO make to for loop
+        templets = ['index.html','portfolio.html', 'contact.html', "timeline.html", 'about_me.html', 'book_reviews.html', 'art_portfolio.html']
 
-    for templ in templets:
-        template = env.get_template(templ)
-        rendered = template.render(**data_dict, current_page=templ)
+        for templ in templets:
+            template = env.get_template(templ)
+            rendered = template.render(**data_dict, current_page=templ)
 
-        with open(templ, 'w') as file:
-            file.write(rendered)
-    
+            with open(templ, 'w') as file:
+                file.write(rendered)
+    if language == "sv":
+        print("TODO: Svenska är inte implementerat")
+
+
 
 if __name__ == '__main__':
     print("Happy Voilance...🦄🐉")
-    render_portfolio()
+    render_portfolio("en")
 

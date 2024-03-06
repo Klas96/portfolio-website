@@ -1268,29 +1268,29 @@ form {
 }
    
    .count-particles{
-	 background: #000022;
-	 position: absolute;
-	 top: 48px;
-	 left: 0;
-	 width: 80px;
-	 color: #13E8E9;
-	 font-size: .8em;
-	 text-align: left;
-	 text-indent: 4px;
-	 line-height: 14px;
-	 padding-bottom: 2px;
-	 font-weight: bold;
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-weight: bold;
    }
    
    .js-count-particles{
-	 font-size: 1.1em;
+	  font-size: 1.1em;
    }
    
    #stats,
    .count-particles{
-	 -webkit-user-select: none;
-	 margin-top: 5px;
-	 margin-left: 5px;
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
    }
       
    #particles-js{
