@@ -160,8 +160,16 @@ another_abstract = {
 	'skills': ['oil pastel']
 }
 
+cap_girl = {
+	'titel': 'Cap Girl',
+	'year': 2018,
+	'description': "Girl with a cap.",
+	'description_sv': "Tjej med keps.",
+	'url': 'cap_girl.jpg',
+	'skills': ['crayons']
+}
 
-art_projects = [butterfly, another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+art_projects = [cap_girl, butterfly, another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
