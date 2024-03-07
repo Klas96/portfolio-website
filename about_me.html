@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,9 +12,9 @@
     <meta name="keywords" content="Klas, Holmgren, Code, art">
 
     <!--
-    <link rel="shortcut icon" type="image/x-icon" href="resources/images/art/blue_red_flower.jpg">
-    <link rel="apple-touch-icon" type="image/jpg" href="resources/images/art/blue_red_flower.jpg">
+      TODO Make Translation buttons to translate the web page.
     -->
+
     <!-- ================================
       Start CSS
       ================================= -->
@@ -134,7 +135,6 @@
     <!-- stats.js -->
     <script src="resources/js/particles.js"></script>
     <script src="resources/js/app.js"></script>
-    <!--<link rel="stylesheet" media="screen" href="css/style.css">-->
     <script src="resources/js/lib/stats.js"></script>
     <script>
       var count_particles, stats, update;
@@ -144,13 +144,13 @@
       stats.domElement.style.left = '0px';
       stats.domElement.style.top = '0px';
       document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector('.js-count-particles');
+      //count_particles = document.querySelector('.js-count-particles');
       update = function() {
         stats.begin();
         stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
+        //if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        //  count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        //}
         requestAnimationFrame(update);
       };
       requestAnimationFrame(update);
