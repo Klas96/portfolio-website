@@ -53,7 +53,7 @@ red_flower_triangel_base = {
 split_eyes = {
     'titel': 'Split Eyes',
     'year': 2018,
-    'description': "Forgotten exactly what I was thinking when I drew this but now I think the message is pritty clear.",
+    'description': "Forgotten exactly what I was thinking when I drew this.",
     'image': 'split_eyes.jpg',
     'url': 'split_eyes.jpg',
     'skills': ['Color', 'Eyes', 'Trinity', 'Duality', 'Crayons']
