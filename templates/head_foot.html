@@ -43,7 +43,7 @@
               <div class="navCollapseCol">
                 <div class="navCol">
                   <ul>
-                    {% for header_link in header_links%}
+                    {% for header_link in header_links %}
                     <li><a class="nav-link{% if current_page == '{{header_link.url}}' %} active{% endif %}" href="{{header_link.url}}">{{header_link.name}}</a></li>
                     {% endfor %}
                   </ul>

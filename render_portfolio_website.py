@@ -3,7 +3,7 @@ from jinja2 import Environment, FileSystemLoader
 from data.art import art_projects
 from data.book_reviews import book_reviews
 from data.time_line_enteries import time_line
-from data.programing import projects, skills 
+from data.programing import code_projects, skills 
 
 
 header_links = [
@@ -21,7 +21,7 @@ header_links = [
 data_dict = {
     'header_links': header_links,
     'testimonials': testamonials,
-    'projects': projects,
+    'code_projects': code_projects,
     'art_projects': art_projects,
     'certificates': certificates,
     'skills': skills,

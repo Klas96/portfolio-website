@@ -117,6 +117,6 @@ kaggle_competitions = {
 }
 
 
-projects = [cell_tracker, processing_games, video_to_text_generator, high_Preformace_computing, fractal_explorer, stocastic_optimization, google_api]
+code_projects = [cell_tracker, processing_games, video_to_text_generator, high_Preformace_computing, fractal_explorer, stocastic_optimization, google_api]
 
-projects = sorted(projects, key=lambda d: d['year'], reverse=True) 
+code_projects = sorted(code_projects, key=lambda d: d['year'], reverse=True) 

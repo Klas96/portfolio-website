@@ -50,7 +50,7 @@ private_teacher = {
     'location': 'Gothenburg',
     'time_span': [2015, 2020],
     'description_points': ['I have worked as a private teacher for younger students needing help with mathematics and natural science.',
-                            'This has been through diﬀerent organization such as Intize and Study Buddy but Also privately.']
+                           'This has been through diﬀerent organization such as Intize and Study Buddy but Also privately.']
     }
 
 time_line = [data_varde, promo_soft, ericsson, image_analysis, teaching_assistant, private_teacher]
