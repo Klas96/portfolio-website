@@ -3,7 +3,8 @@ data_varde = {
     'organization': 'Data Värde',
     'location': 'Gothenburg',
     'time_span': [2023, 'Now'],
-    'description_points': ['']
+    'description_points': ['Worked with a simulation for boat stearing using controll theory including PID controller and MPC.',
+                           'Worked as fullstack developer for using HTMX and fastAPI.']
 }
 
 promo_soft = {
@@ -17,7 +18,6 @@ promo_soft = {
 ericsson = {
     'title': 'Developer',
     'organization': 'Ericsson',
-    'location': 'Gothenburg',
     'time_span': [2020, 2021],
     'description_points': ['Working as developer at Ericsson 5G core.',
                            'This role included working in an agile environment using Scrum.',
