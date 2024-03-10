@@ -7,6 +7,16 @@ from data.time_line_enteries import time_line
 from data.programing import projects, skills 
 
 
+header_links = [
+    {"name": "Home",
+     "url": "index.html"},
+    {"name": "Code",
+     "url": "code_portfolio.html"},
+    {"name": "Art",
+     "url": "timeline.html"},
+    {"name": "Contact",
+     "url": "contact.html"}]
+
 data_dict = {
     'testimonials': testamonials,
     'projects': projects,
@@ -19,15 +29,23 @@ data_dict = {
 }
 
 def render_portfolio(language):
-    
+    """
+    Render the template in template with data from data.
+
+    param:
+        - language
+    """
     if language == "en":
         file_loader = FileSystemLoader('templates')
         env = Environment(loader=file_loader)
 
         #TODO make to for loop
-        templets = ['index.html','portfolio.html', 'contact.html', "timeline.html", 'about_me.html', 'book_reviews.html', 'art_portfolio.html']
+        #'book_reviews.html',
+        #'About_me.html',
+        #templets = ['index.html','code_portfolio.html', 'contact.html', "timeline.html", 'art_portfolio.html']
 
-        for templ in templets:
+        for head_link in header_links:
+            templ = head_link["url"]
             template = env.get_template(templ)
             rendered = template.render(**data_dict, current_page=templ)
 

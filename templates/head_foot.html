@@ -49,8 +49,11 @@
               <div class="navCollapseCol">
                 <div class="navCol">
                   <ul>
+                    {% for header_link in header_links%}
+                    <li><a class="nav-link{% if current_page == '{{header_link.url}}' %} active{% endif %}" href="{{header_link.url}}">{{header_link.name}}</a></li>
+                    {% endfor %}
                     <li><a class="nav-link{% if current_page == 'index.html' %} active{% endif %}" href="index.html">Home</a></li>
-                    <li><a class="nav-link{% if current_page == 'portfolio.html' %} active{% endif %}" href="portfolio.html">Code</a></li>
+                    <li><a class="nav-link{% if current_page == 'code_portfolio.html' %} active{% endif %}" href="code_portfolio.html">Code</a></li>
                     <li><a class="nav-link{% if current_page == 'art_portfolio.html' %} active{% endif %}" href="art_portfolio.html">Art</a></li>
                     <!--
                     <li><a class="nav-link{% if current_page == 'book_reviews.html' %} active{% endif %}" href="book_reviews.html">Books</a></li>
