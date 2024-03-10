@@ -1,4 +1,3 @@
-from jinja2 import Template
 from data_depricate import certificates, testamonials, personal_description
 from jinja2 import Environment, FileSystemLoader
 from data.art import art_projects
@@ -13,11 +12,14 @@ header_links = [
     {"name": "Code",
      "url": "code_portfolio.html"},
     {"name": "Art",
+     "url": "art_portfolio.html"},
+    {"name": "Timeline",
      "url": "timeline.html"},
     {"name": "Contact",
      "url": "contact.html"}]
 
 data_dict = {
+    'header_links': header_links,
     'testimonials': testamonials,
     'projects': projects,
     'art_projects': art_projects,
@@ -57,6 +59,6 @@ def render_portfolio(language):
 
 
 if __name__ == '__main__':
-    print("Happy Voilance...🦄🐉")
+    print("Rendering Web Pages...")
     render_portfolio("en")
 

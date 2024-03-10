@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ojuju+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap");
 
 :root {
   --primaryColor: #fffb00;
@@ -8,7 +8,7 @@
   --baseColor: #ddd8c7;
   --cardColor: #ac9f77;
   --baseFont: "Heebo", sans-serif;
-  --titleFont: "Courier Prime", monospace;
+  --titleFont: "Ojuju Prime", monospace;
   --regular: 400;
   --medium: 500;
   --bold: 700;

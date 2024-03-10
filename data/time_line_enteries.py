@@ -4,7 +4,7 @@ data_varde = {
     'location': 'Gothenburg',
     'time_span': [2023, 'Now'],
     'description_points': ['Worked with a simulation for boat stearing using controll theory including PID controller and MPC.',
-                           'Worked as fullstack developer for using HTMX and fastAPI.']
+                           'Worked as fullstack developer using HTMX and fastAPI.']
 }
 
 promo_soft = {

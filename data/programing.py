@@ -1,6 +1,6 @@
-################
+########
 # Skills
-################
+########
 
 python_skill = {
     'title': 'Python',
@@ -11,7 +11,6 @@ git_skill = {
     'title': 'Git',
     'procentige': 85
 }
-
 
 cplus_skill = {
     'title': 'C++',
@@ -32,7 +31,7 @@ web_skill = {
 skills = [python_skill, git_skill, cplus_skill, linux_skill, web_skill]
 
 ###########
-# Programing projects
+# Code projects
 ###########
 
 cell_tracker = {
