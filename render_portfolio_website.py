@@ -15,8 +15,9 @@ header_links = [
      "url": "art_portfolio.html"},
     {"name": "Timeline",
      "url": "timeline.html"},
-    {"name": "Contact",
-     "url": "contact.html"}]
+    #{"name": "Contact",
+    # "url": "contact.html"}
+     ]
 
 data_dict = {
     'header_links': header_links,
