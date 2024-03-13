@@ -54,6 +54,8 @@ def render_portfolio(language):
 
             with open(templ, 'w') as file:
                 file.write(rendered)
+            print(f"Rendered {templ}")
+
     if language == "sv":
         print("TODO: Svenska är inte implementerat")
 
