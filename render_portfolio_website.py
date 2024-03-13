@@ -17,6 +17,8 @@ header_links = [
      "url": "timeline.html"},
     #{"name": "Contact",
     # "url": "contact.html"}
+    #'book_reviews.html',
+    #'About_me.html',
      ]
 
 data_dict = {
@@ -38,15 +40,9 @@ def render_portfolio(language):
     param:
         - language
     """
+    file_loader = FileSystemLoader('templates')
+    env = Environment(loader=file_loader)
     if language == "en":
-        file_loader = FileSystemLoader('templates')
-        env = Environment(loader=file_loader)
-
-        #TODO make to for loop
-        #'book_reviews.html',
-        #'About_me.html',
-        #templets = ['index.html','code_portfolio.html', 'contact.html', "timeline.html", 'art_portfolio.html']
-
         for head_link in header_links:
             templ = head_link["url"]
             template = env.get_template(templ)
@@ -57,11 +53,32 @@ def render_portfolio(language):
             print(f"Rendered {templ}")
 
     if language == "sv":
+        #TODO replace all texts to swedish
         print("TODO: Svenska är inte implementerat")
+        fodler = "sve/"
+        for head_link in header_links:
+            templ = head_link["url"]
+            template = env.get_template(templ)
+            for data_key, data in data_dict.items():
+                for data_item in data:
+                    if 'title' in data_item and 'title_sv' in data_item:
+                        data_item['title'] = data_item['title_sv']
+                    if 'description' in data_item and 'description_sv' in data_item:
+                        data_item['description'] = data_item['description_sv']
+        
+            rendered = template.render(**data_dict, current_page=templ)
+
+            with open(fodler+templ, 'w') as file:
+                file.write(rendered)
+
+            print(f"Rendered {templ}")
+
+
 
 
 
 if __name__ == '__main__':
     print("Rendering Web Pages...")
     render_portfolio("en")
+    render_portfolio("sv")
 
