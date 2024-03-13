@@ -170,7 +170,25 @@ cap_girl = {
 	'skills': ['crayons']
 }
 
-art_projects = [cap_girl, butterfly, another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+guy_with_glasses = {
+	'titel': 'Guy with Glasses',
+	'year': 2024,
+	'description': "Guy with glasses painted with Ipad.",
+	'description_sv': "Kille med keps målad på en Ipad.",
+	'url': 'guy_with_glasses.png',
+	'skills': ['digirtal', 'portarait', 'human', 'glasses']
+}
+
+girl_with_hands = {
+	'titel': 'Girl with Hands',
+	'year': 2023,
+	'description': "Girl with hands.",
+	'description_sv': "Tjej med händer.",
+	'url': 'girl_with_hands.png',
+	'skills': ['digirtal', 'portarait', 'human', 'hands']
+}
+
+art_projects = [girl_with_hands, guy_with_glasses, cap_girl, butterfly, another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
