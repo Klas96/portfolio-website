@@ -202,7 +202,7 @@ yennefer = {
 	'year': 2022,
 	'description': "Yennefer from the witcher.",
 	'description_sv': "Yennefer från the witcher.",
-	'url': 'jinx.png',
+	'url': 'yennefer_the_witcher.png',
 	'skills': ['digirtal', 'portarait', 'human']
 }
 
