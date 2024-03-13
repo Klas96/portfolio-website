@@ -188,7 +188,26 @@ girl_with_hands = {
 	'skills': ['digirtal', 'portarait', 'human', 'hands']
 }
 
-art_projects = [girl_with_hands, guy_with_glasses, cap_girl, butterfly, another_abstract, portal, fruit_and_light ,red_flower_triangel_base, wolf_drawing, eart_water_colors, 
+jinx = {
+	'titel': 'Jinx',
+	'year': 2022,
+	'description': "Jinx from league of legends.",
+	'description_sv': "Jinx från league of legends.",
+	'url': 'jinx.png',
+	'skills': ['digirtal', 'portarait', 'human']
+}
+
+yennefer = {
+	'titel': 'Yennefer',
+	'year': 2022,
+	'description': "Yennefer from the witcher.",
+	'description_sv': "Yennefer från the witcher.",
+	'url': 'jinx.png',
+	'skills': ['digirtal', 'portarait', 'human']
+}
+
+#fruit_and_light ,
+art_projects = [yennefer, jinx, girl_with_hands, guy_with_glasses, cap_girl, butterfly, another_abstract, portal, red_flower_triangel_base, wolf_drawing, eart_water_colors, 
                 line_one_line ,walking_dragon, split_eyes, colorful_girl,dubbel_spiral, 
                 in_giving_we_receive, red_dear, castle_in_the_sky, painted_heart, bird_back]
 
