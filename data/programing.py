@@ -77,7 +77,7 @@ fractal_explorer = {
     'description': "Fractal Generators using C. Fractals generated included MandelBrot, Julia, Generalized Mandelbrot.",
     'image': 'fractal-explorer.png',
     'href': 'https://github.com/Klas96/Fractal-Explorer',
-    'skills': ['C']
+    'skills': ['C', 'mathematics']
 }
 
 stocastic_optimization = {

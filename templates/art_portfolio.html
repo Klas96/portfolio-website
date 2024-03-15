@@ -24,13 +24,13 @@
               {% for art_project in art_projects %}
               <div class="col-md-6 pColMain">
                 <div class="pCol">
-                  <h5><span>{{art_project.titel}}</span>
+                  <h5><span>{{art_project.title}}</span>
                     <span>
                       <time class="dateLbl">{{art_project.year}}</time>
                     </span>
                   </h5>
                   <a onclick="enlargeImage('resources/images/art/{{art_project.url}}')">
-                    <img src="resources/images/art/{{art_project.url}}" alt="{{art_project.titel}}"< class="pImg">
+                    <img src="resources/images/art/{{art_project.url}}" alt="{{art_project.title}}"< class="pImg">
                   </a>
                   <p>{{art_project.description}}</p>
                 </div>

@@ -66,7 +66,7 @@ def render_portfolio(language):
                     if 'description' in data_item and 'description_sv' in data_item:
                         data_item['description'] = data_item['description_sv']
         
-            rendered = template.render(**data_dict, current_page=templ)
+            rendered = template.render(lang = 'sve', **data_dict, current_page=templ)
 
             with open(fodler+templ, 'w') as file:
                 file.write(rendered)
