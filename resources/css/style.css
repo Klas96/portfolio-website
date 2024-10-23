@@ -331,16 +331,6 @@ a,
   width: 100%;
 }
 
-.bannerUserImg:before {
-	background: #270949;
-	border-radius: 50%;
-	content: "";
-	height: 100%;
-	left: -5px;
-	position: absolute;
-	top: 13px;
-  width: 100%;
-}
 
 .bannerBtnCol {
   padding-top: 15px;
@@ -600,7 +590,7 @@ body.navToggleActive {
 }
 
 .innerPageBannerCol {
-  padding: 90px 0 75px;
+  padding: 90px 0 25px;
 }
 
 .portfolioContentMain {

@@ -1,9 +1,3 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
-
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-
 particlesJS.load('particles-js', 'resources/js/particles.json', function() {
   console.log('particles.js loaded - callback');
 });
@@ -15,14 +9,14 @@ particlesJS('particles-js',
   {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 10,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#ADD8E6"
       },
       "shape": {
         "type": "circle",
@@ -50,7 +44,7 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 5,
+        "value": 75,
         "random": true,
         "anim": {
           "enable": false,
@@ -60,15 +54,15 @@ particlesJS('particles-js',
         }
       },
       "line_linked": {
-        "enable": true,
-        "distance": 150,
+        "enable": false,
+        "distance": 30,
         "color": "#ffffff",
         "opacity": 0.4,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 3,
         "direction": "none",
         "random": false,
         "straight": false,
@@ -95,7 +89,7 @@ particlesJS('particles-js',
       },
       "modes": {
         "grab": {
-          "distance": 400,
+          "distance": 800,
           "line_linked": {
             "opacity": 1
           }
