@@ -1,0 +1,86 @@
+{% extends "head_foot.html" %}
+{% load static %}
+{% block content %}
+<body class="home">
+<section>
+  <div class="bannerSection">
+    <div class="container">
+      <div class="row g-2 g-md-1 align-items-center">
+        <div class="col-md-auto order-md-last">
+          <div class="bannerUserImg">
+            <img src="{% static 'images/user-img.jpg' %}" alt="Profile-Img">
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="bannerContent">
+            <h1 class="pb-2 xlTitle">Klas Holmgren</h1>
+            <p>{{personal_description.content}}</p>
+            <div class="bannerBtnCol">
+              <div class="row">
+                <div class="col-auto">
+                  <a download href="/static/CV/KlasHolmgrenCV.pdf" class="btn btnPrimary">Download Resume</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sectionSpace">
+  <div class="container">
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular"><a href="{% url 'code_page' %}">About Code</a></h4>
+        </div>
+        <p class="pb-2">
+          Programing is really fun. Writing instructions that can be run on computers is a creative and productive way to solve problems. I mostly program in high level languages (Python and JavaScript) but are also intrested in C++. The project range from smale games to AI aplications and imagea analysis.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular"><a href="{% url 'art_page' %}">About Artworks</a></h4>
+        </div>
+        <p>
+          The art is made to relax and to give form to my fealings and thoughts. The medium for the art differ quite broadly, from simple sketches, oil-paintings and digital art. I like coloutful dynamic art aiming for a sense of movement and life.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular"><a href="{% url 'discussion_page' %}">About Discussions</a></h4>
+        </div>
+        <p>
+          The discussions category is for toghther and insights I have had. Also there are discussions with others, just talking and also exploration of varius topics.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular">Contact</h4>
+        </div>
+        <p>
+          I value all resonable and respectful communication. Feel free to contact me at klas0holmgren@gmail.com or socailmedia. I don't use snapchat tho.
+        </p>
+        <p>
+          bc1q88na538qmsac5tp6hdn7pc53eegwy758usez99
+        </p>
+        <p style="word-break: break-all;">
+          49WsBWHdQ9y5ZGA25ZF1WtP3Cfze4aXQbNnzjdmVdVBtXxpegfdN3m1K8dUCdM3fGqG68kRDZEStJfo6GPKxcFM1PeroqRy
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+{% endblock %}

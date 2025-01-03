@@ -1,0 +1,22 @@
+{% extends "head_foot.html" %}
+{% block content %}
+<body class="code-page">
+<section>
+  <div class="lightBg">
+    <div class="container">
+      <div class="portfolioContentMain">
+        <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
+          {% for project in code_projects %}
+          <a href="{{project.href}}">
+            <div class="pCol">
+              <p class="description">{{ project.description|safe }}</p>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+{% endblock %}

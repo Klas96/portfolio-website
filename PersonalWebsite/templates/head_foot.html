@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Klas Holmgren</title>
+    <meta name="Klas Holmgren" content="">
+    <link rel="home" href=""/>
+    <meta name="description" content="Portfolio page for Klas Holmgren.">
+    <meta name="keywords" content="Klas, Holmgren, Code, art">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  </head>
+  <body>
+    <header>
+      <div class="headerCol">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="d-md-none">
+                <button class="navToggle">
+                  <span class="navToggle__text">Toggle Menu</span>
+                </button>
+              </div>
+              <div class="navCollapseCol">
+                <div class="navCol">
+                  <ul>
+                    {% for header_link in header_links %}
+                    <li><a class="nav-link
+                      {% if current_page == header_link.url %} active {% endif %}"
+                      href="{{header_link.url}}">{{header_link.name}}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/lib/stats.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

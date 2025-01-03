@@ -1,0 +1,51 @@
+{% extends "head_foot.html" %}
+<!---->
+{% block content %}
+<body class="discussion-page">
+  <section>
+    <div class="innerPageBannerCol">
+      <div class="container">
+        <div class="row g-4 g-md-3  align-items-center">
+          <div class="col-md-6">
+            <div class="bannerContent">
+              <h1 class="pb-md-3 xlTitle">Discussion</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h1>Audio</h1>
+    <ul class="audio-files">
+      {% for audio_file in audio_files %}
+      <li style="margin-bottom: 20px;">
+        <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
+          <summary>
+            <h2>{{audio_file.title}} </h2>
+          </summary>
+          <p>{{audio_file.description}}</p>
+          <audio controls volume="1.0">
+            <source src="{{audio_file.file.url}}" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </details>
+      </li>
+      {% endfor %}
+    </ul>
+    <h1>Texts</h1>
+    <ul class="markdown-files">
+      {% for text_file in text_files reversed %}
+      <li style="margin-bottom: 20px;">
+        <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
+          <summary>
+            <h2>{{text_file.title}} </h2>
+          </summary>
+          {{text_file.description}}
+        </details>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</body>
+{% endblock %}
