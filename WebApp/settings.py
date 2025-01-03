@@ -26,7 +26,7 @@ SECRET_KEY = 'dfskjlsdnfhdkljsgdfkjak.lfdgsil(m^3o7%8eldsghdfa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.100', 'personal-website-a6e4a5ee3146.herokuapp.com', 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.100', 'peresonal-website-a6e4a5ee3146.herokuapp.com', 
                  'www.klasholmgren.com', 'klasholmgren.se', 'www.klasholmgren.se', 'klasholmgren.com', 'www.klasholmgren.net']
 
 INSTALLED_APPS = [
