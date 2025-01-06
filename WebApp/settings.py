@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,10 +76,17 @@ WSGI_APPLICATION = 'WebApp.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'klasholmgren',
+        #'USER': 'klas',
+        #'PASSWORD': 'klas',
+        #'HOST': 'localhost',
+        #'PORT': '5432',
+    #}
 }
 
 
@@ -128,3 +136,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Testtset ljud filom/{GS_BUCKET_NAME}/'
+
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#AWS_ACCESS_KEY_ID = 'your-access-key-id'
+#AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
+#AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+#AWS_S3_REGION_NAME = 'your-region'  # e.g., 'us-west-2'
+#AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+#MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
