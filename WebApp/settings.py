@@ -76,17 +76,17 @@ WSGI_APPLICATION = 'WebApp.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': BASE_DIR / 'db.sqlite3',
-        #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'klasholmgren',
-        #'USER': 'klas',
-        #'PASSWORD': 'klas',
-        #'HOST': 'localhost',
-        #'PORT': '5432',
-    #}
+    #'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
+    #postgres://u60o7k976enpsk:p4b01135da2040aa8eb91e7c15bf168fdbd9ff9bcf4bb6835d0a7c4f4cef1e3e8@c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d2mli1j1ii4cdo
+
+'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'd2mli1j1ii4cdo',
+    'USER': 'u60o7k976enpsk',
+    'PASSWORD': 'p4b01135da2040aa8eb91e7c15bf168fdbd9ff9bcf4bb6835d0a7c4f4cef1e3e8',
+    'HOST': 'c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
+    'PORT': '5432',
+}
 }
 
 

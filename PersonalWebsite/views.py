@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from pathlib import Path
-from PersonalWebsite.models import CodeProject, ArtProject, Certificate, Testimonial, PersonalDescription, TextFiled, AudioFile
+from PersonalWebsite.models import CodeProject, ArtProject, Certificate, Testimonial, TextFiled, AudioFile
 import markdown
 import requests
 
@@ -21,7 +21,6 @@ data_dict = {
     'code_projects': CodeProject.objects.all(),
     'art_projects': ArtProject.objects.all(),
     'certificates': Certificate.objects.all(),
-    'personal_description': PersonalDescription.objects.last(),
     'text_files': TextFiled.objects.all(),
     'audio_files': AudioFile.objects.all(),
 }
