@@ -34,7 +34,6 @@ cymem==2.0.8
 dataclasses-json==0.5.7
 datasets==2.21.0
 dbus-python==1.2.18
-defer==1.0.6
 defusedxml==0.7.1
 deprecation==2.1.0
 dill==0.3.8
