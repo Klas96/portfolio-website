@@ -667,7 +667,7 @@ body.navToggleActive {
 }
 
 .innerPageBannerCol {
-  padding: 90px 0 25px;
+  padding: 90px 0 75px;
 }
 
 .portfolioContentMain {
@@ -1335,77 +1335,6 @@ form {
 	}
 }
    
-   .count-particles{
-    background: #000022;
-    position: absolute;
-    top: 48px;
-    left: 0;
-    width: 80px;
-    color: #13E8E9;
-    font-size: .8em;
-    text-align: left;
-    text-indent: 4px;
-    line-height: 14px;
-    padding-bottom: 2px;
-    font-weight: bold;
-   }
-   
-   .js-count-particles{
-	  font-size: 1.1em;
-   }
-   
-   #stats,
-   .count-particles{
-    -webkit-user-select: none;
-    margin-top: 5px;
-    margin-left: 5px;
-   }
-      
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline {
-	margin: 0 auto;
-	padding-top: 100px;
-	max-width: 960px;
-	position: relative;
-	background: transparent;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline:after {
-	content: '';
-	position: absolute;
-	width: 6px;
-	background: #b3adaa;
-	top: 120px;
-	bottom: 0;
-	left: 50%;
-	margin-left: -3px;
-  }
-  
-  /* timeline li  around content */
-  .timeline > li {
-    margin-left: 0;
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-
-  }
-
-  .timeline > li > * {
-    display: block;
-    padding: 20px 30px;
-    background: rgb(124, 114, 114);
-    border-radius: 6px;
-  }
-
-  .timeline h2 {
-    margin-left: 0;
-	  margin: 0;
-	  border-radius: 10px 10px 0 0;
-	  padding-bottom: 0;
-  }
-
   body {
     text-align: center;
   }

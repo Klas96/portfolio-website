@@ -41,7 +41,7 @@ class TextFiled(models.Model):
     description = models.TextField()
     #optional ulr
     href = models.URLField(null=True, blank=True)
-
+    file = models.FileField(upload_to='static/text_files/', null=True, blank=True)
 
 class AudioFile(models.Model):
     title = models.CharField(max_length=255)
