@@ -96,9 +96,14 @@ def art_page(request):
     return render(request, 'art_page.html', data_dict)
 
 def discussion_page(request):
-    print(data_dict["text_files"])
-    print(data_dict["audio_files"])
+    import os
     data_dict["current_page"] = "/discussion"
     data_dict["text_files"] = TextFiled.objects.all()
     data_dict["audio_files"] = AudioFile.objects.all()
+    for file in data_dict["text_files"]:
+        if file.file:
+            file.basename = os.path.basename(file.file.name)
+        else:
+            file.basename = None
+
     return render(request, 'discussion_page.html', data_dict)

@@ -6,7 +6,7 @@
     <div class="container">
       <div class="portfolioContentMain">
         <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
-          {% for project in code_projects %}
+          {% for project in code_projects reversed %}
           <a href="{{project.href}}">
             <div class="pCol">
               <p class="description">{{ project.description|safe }}</p>
