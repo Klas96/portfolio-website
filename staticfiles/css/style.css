@@ -684,6 +684,11 @@ body.navToggleActive {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  border: 5px solid rgb(34, 10, 47);
+  color: #f2f2f2;
+  font-family: monospace;
+  position: relative;
+  z-index: 1;
 }
 
 .pCol span + span,
@@ -693,14 +698,6 @@ body.navToggleActive {
 
 h5 {
   display: flex;
-}
-
-.pCol {
-  border: 5px solid rgb(34, 10, 47);
-  color: #000;
-  font-family: monospace;
-  position: relative;
-  z-index: 1;
 }
 
 .pCol h5,
