@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from PersonalWebsite.views import index, code_page, art_page, discussion_page
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +26,6 @@ urlpatterns = [
     path('code/', code_page, name='code_page'),
     path('art/', art_page, name='art_page'),
     path('discussion/', discussion_page, name='discussion_page'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 print("URLs loaded.")  # Debugging statement

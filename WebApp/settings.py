@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.conf import settings
+from django.conf.urls.static import static
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -147,3 +149,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #AWS_S3_REGION_NAME = 'your-region'  # e.g., 'us-west-2'
 #AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 #MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
+
+#MEDIA_URL = '/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
