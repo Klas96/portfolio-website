@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Ojuju+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap");
 
+@font-face {
+  font-family: 'bdgitalona-contras-thin';
+  src: url('/static/bdgitalona-contras-thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'toraja_2';
+  src: url('/static/fonts/toraja_2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primaryColor: #fffb00;
   --primaryDarkColor: #1b1131;
@@ -7,8 +21,8 @@
   --secondaryColor: #f9b000;
   --baseColor: #ddd8c7;
   --cardColor: #ac9f77;
-  --baseFont: "Heebo", sans-serif;
-  --titleFont: "Ojuju Prime", monospace;
+  --titleFont: "bdgitalona-contras-thin", monospace;
+  --baseFont: "toraja_2", serif;
   --regular: 400;
   --medium: 500;
   --bold: 700;
@@ -16,12 +30,20 @@
   --lightBg: #0e0c0c;
 }
 
+body {
+  font-family: var(--baseFont);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--titleFont);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: var(--baseFont);
   color: #ffffff;
   background-color: #000000;
   margin: 0;
@@ -686,7 +708,7 @@ body.navToggleActive {
   z-index: 1;
   border: 5px solid rgb(34, 10, 47);
   color: #f2f2f2;
-  font-family: monospace;
+  font-family: var(--baseFont);
   position: relative;
   z-index: 1;
 }

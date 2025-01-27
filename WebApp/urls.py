@@ -27,4 +27,3 @@ urlpatterns = [
     path('art', art_page, name='art_page'),
     path('discussion', discussion_page, name='discussion_page'),
 ]
-
