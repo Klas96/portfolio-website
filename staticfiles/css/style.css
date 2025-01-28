@@ -1376,7 +1376,6 @@ form {
 }
 
 .enlarged-image {
-  /* Place in midle over */
   width: auto;
   height: auto;
   max-width: 80%;
@@ -1386,6 +1385,22 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.image-text {
+  position: fixed;
+  top: 91%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: block;
+  text-align: center;
+  color: #fff;
+  background-color: black;
+  font-size: 1.2em; /* Larger text */
+  border-radius: 5px; /* Rounded edges */
 }
 
 .pCol h5 a {

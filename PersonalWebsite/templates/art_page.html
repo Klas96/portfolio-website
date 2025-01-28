@@ -23,10 +23,11 @@
             <div class="col-md-4 pColMain">
               <div class="pCol" style="position: relative; width: 100%; padding-top: 100%;">
                 <a onclick="enlargeImage('{{art_project.image.url}}', '{{art_project.title}}')" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
-                  <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;" onload="freezeGif(this)">
                 </a>
               </div>
             </div>
+            
             {% endfor %}
           </div>
         </div>
@@ -38,4 +39,28 @@
 
 {% load static %}
 <script src="{% static 'js/shader/first.js' %}"></script>
+<script>
+function freezeGif(img) {
+    if (img.src.endsWith('.gif')) {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        const gif = new Image();
+        gif.src = img.src;
+        gif.onload = function() {
+            const aspectRatio = gif.width / gif.height;
+            canvas.width = gif.width;
+            canvas.height = gif.height;
+            context.drawImage(gif, 0, 0, gif.width, gif.height);
+            // Set canvas styles to match the image
+            canvas.style.position = 'absolute';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.objectFit = 'cover';
+            img.parentNode.replaceChild(canvas, img);
+        };
+    }
+}
+</script>
 {% endblock %}

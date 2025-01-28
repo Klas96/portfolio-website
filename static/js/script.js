@@ -64,6 +64,7 @@ function toggleImage() {
 
 function enlargeImage(src, altText) {
   var imageContainer = document.createElement('div');
+  var imageWrapper = document.createElement('div');
   var image = new Image();
   var imageText = document.createElement('p');
 
@@ -77,7 +78,13 @@ function enlargeImage(src, altText) {
     document.body.removeChild(imageContainer);
   });
 
-  imageContainer.appendChild(image);
-  imageContainer.appendChild(imageText);
+  // Apply styles to ensure text appears directly below the image
+  imageWrapper.style.display = 'block';
+  imageText.style.display = 'block';
+  imageText.style.marginTop = '10px'; // Optional: Add some space between image and text
+
+  imageWrapper.appendChild(image);
+  imageWrapper.appendChild(imageText);
+  imageContainer.appendChild(imageWrapper);
   document.body.appendChild(imageContainer);
 }
