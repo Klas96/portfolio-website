@@ -1,29 +1,5 @@
 from django.db import models
-
-
-# Create your models here.
-class Certificate(models.Model):
-    title = models.CharField(max_length=255)
-    year = models.CharField(max_length=255)
-    school = models.CharField(max_length=255)
-    href = models.URLField()
-    description = models.TextField()
-
-    def save(self, *args, **kwargs):
-        print(f'Saving Certificate: {self.title}')
-        super().save(*args, **kwargs)
-
-
-class Testimonial(models.Model):
-    author = models.CharField(max_length=255)
-    quote = models.TextField()
-
-
-class PersonalDescription(models.Model):
-    title = models.CharField(max_length=255)
-    content = models.TextField()
-
-
+from django.db.models import TextChoices
 class CodeProject(models.Model):
     title = models.CharField(max_length=255)
     readme_url = models.URLField(null=True, blank=True)
@@ -34,9 +10,16 @@ class CodeProject(models.Model):
         return self.title
 
 
+class ArtMedium(TextChoices):
+    DIGITAL = 'DIGITAL', 'Digital'
+    SKETCH = 'SKETCH', 'Sketch'
+    PASTEL = 'PASTEL', 'Pastel'
+
+
 class ArtProject(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to='static/images/art_projects/')
+    medium = models.CharField(max_length=255, choices=ArtMedium.choices, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -45,7 +28,6 @@ class ArtProject(models.Model):
 class TextFiled(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    #optional ulr
     href = models.URLField(null=True, blank=True)
     file = models.FileField(upload_to='static/text_files/', null=True, blank=True)
 

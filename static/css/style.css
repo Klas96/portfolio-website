@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Ojuju+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Ojuju+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap"); */
 
 @font-face {
   font-family: 'bdgitalona-contras-thin';
-  src: url('/static/bdgitalona-contras-thin.otf') format('opentype');
+  src: url('/static/fonts/bdgitalona-contras-thin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -87,6 +87,8 @@ header, footer {
   border-bottom: 1px solid #333333;
   position: relative;
   z-index: 100;
+  font-size: large;
+  font-family: var(--titleFont);
 }
 
 nav {
@@ -1421,4 +1423,41 @@ form {
   padding: 5px 10px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  background: yellow;
+  border-radius: 5px;
+  color: var(--primaryDarkColor);
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: var(--bold);
+  line-height: 1;
+  border: none;
+  margin-right: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background-color: var(--primaryDarkColor);
+  color: var(--primaryColor);
 }

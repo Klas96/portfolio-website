@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from pathlib import Path
-from PersonalWebsite.models import CodeProject, ArtProject, Certificate, Testimonial, TextFiled, AudioFile
+from PersonalWebsite.models import CodeProject, ArtProject, TextFiled, AudioFile
 import markdown
 import requests
 
@@ -17,10 +17,8 @@ header_links = [
 
 data_dict = {
     'header_links': header_links,
-    'testimonials': Testimonial.objects.all(),
     'code_projects': CodeProject.objects.all(),
     'art_projects': ArtProject.objects.all(),
-    'certificates': Certificate.objects.all(),
     'text_files': TextFiled.objects.all(),
     'audio_files': AudioFile.objects.all(),
 }
