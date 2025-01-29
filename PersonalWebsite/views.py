@@ -3,6 +3,8 @@ from pathlib import Path
 from PersonalWebsite.models import CodeProject, ArtProject, TextFiled, AudioFile
 import markdown
 import requests
+from django.http import JsonResponse, HttpResponse
+from django.template.loader import render_to_string
 
 header_links = [
     {"name": "Home",
@@ -81,16 +83,24 @@ def code_page(request):
     # TOODO
     for project in data_dict["code_projects"]:
         if project.readme_url:
-            print(project.readme_url)
             markdown_content = requests.get(project.readme_url).text
-            print(markdown_content)
             project.description = markdown.markdown(markdown_content)
 
     return render(request, 'code_page.html', data_dict)
 
 def art_page(request):
     data_dict["current_page"] = "/art"
-    data_dict["art_projects"] = ArtProject.objects.all()
+    selected_filters = request.GET.getlist('filters')
+    
+    if selected_filters:
+        data_dict["art_projects"] = ArtProject.objects.filter(medium__in=selected_filters)
+    elif request.META.get('HTTP_HX_REQUEST'):
+        data_dict["art_projects"] = []
+    
+    if request.META.get('HTTP_HX_REQUEST'):
+        html = render_to_string('partials/art_gallery.html', data_dict)
+        return HttpResponse(html)
+    
     return render(request, 'art_page.html', data_dict)
 
 def discussion_page(request):

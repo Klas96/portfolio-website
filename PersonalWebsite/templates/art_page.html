@@ -15,45 +15,52 @@
     </div>
   </section>
   <section>
-    <div class="checkbox-container">
-      <label class="checkbox-label">
-        <input type="checkbox" class="checkbox-input" id="DIGITAL" />
-        <span class="checkbox-custom">Digital</span>
-      </label>
-      <label class="checkbox-label">
-        <input type="checkbox" class="checkbox-input" id="PASTEL" />
-        <span class="checkbox-custom">Pastel</span>
-      </label>
-      <label class="checkbox-label">
-        <input type="checkbox" class="checkbox-input" id="SKETCH" />
-        <span class="checkbox-custom">Sketch</span>
-      </label>
-    </div>
+    <form id="filter-form" hx-get="{% url 'art_page' %}" hx-target="#art-gallery" hx-trigger="change">
+      <div class="checkbox-container">
+        <label class="checkbox-label">
+          <input type="checkbox" class="checkbox-input" name="filters" value="DIGITAL" checked />
+          <span class="checkbox-custom">Digital</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" class="checkbox-input" name="filters" value="PASTEL" checked />
+          <span class="checkbox-custom">Pastel</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" class="checkbox-input" name="filters" value="SKETCH" checked />
+          <span class="checkbox-custom">Sketch</span>
+        </label>
+      </div>
+    </form>
   </section>
   <section>
     <div class="lightBg">
       <div class="container">
-        <div class="portfolioContentMain">
+        <div class="portfolioContentMain" id="art-gallery">
+          {% if art_projects or art_projects|length == 0 %}
           <div class="row g-4 g-md-4 g-lg-5 portfolioRow">
             {% for art_project in art_projects reversed %}
             <div class="col-md-4 pColMain">
               <div class="pCol" style="position: relative; width: 100%; padding-top: 100%;">
                 <a onclick="enlargeImage('{{art_project.image.url}}', '{{art_project.title}}')" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" data-type="{{art_project.medium}}">
-                  <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;" onload="freezeGif(this)">
+                  <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+                  <!-- onload="freezeGif(this)" -->
                 </a>
               </div>
             </div>
             {% endfor %}
           </div>
+          {% else %}
+          <p>Här fans det inga konstverk kvar</p>
+          {% endif %}
         </div>
       </div>
     </div>
-    <canvas id=shader1></canvas>
   </section>
 </body>
 
 {% load static %}
 <script src="{% static 'js/shader/first.js' %}"></script>
+<script src="https://unpkg.com/htmx.org@1.9.5"></script>
 <script>
 function freezeGif(img) {
     if (img.src.endsWith('.gif')) {
@@ -77,34 +84,5 @@ function freezeGif(img) {
         };
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const checkboxes = document.querySelectorAll('.checkbox-input');
-  const images = document.querySelectorAll('.pCol a');
-
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', filterImages);
-  });
-
-  function filterImages() {
-    const activeFilters = Array.from(checkboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.id);
-
-    images.forEach(image => {
-      const imageType = image.getAttribute('data-type');
-      // Show image if its type is in the active filters or if all filters are active
-      if (activeFilters.length === checkboxes.length || activeFilters.includes(imageType)) {
-        
-        image.parentElement.style.display = 'none';
-      } else {
-        image.parentElement.style.display = 'block';
-      }
-    });
-  }
-
-  // Initial call to display all images
-  filterImages();
-});
 </script>
 {% endblock %}

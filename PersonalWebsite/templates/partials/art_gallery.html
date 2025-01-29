@@ -1,0 +1,11 @@
+<div class="row g-4 g-md-4 g-lg-5 portfolioRow">
+  {% for art_project in art_projects reversed %}
+  <div class="col-md-4 pColMain">
+    <div class="pCol" style="position: relative; width: 100%; padding-top: 100%;">
+      <a onclick="enlargeImage('{{art_project.image.url}}', '{{art_project.title}}')" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" data-type="{{art_project.medium}}">
+        <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
