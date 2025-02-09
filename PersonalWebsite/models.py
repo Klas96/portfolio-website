@@ -30,6 +30,7 @@ class TextFiled(models.Model):
     description = models.TextField()
     href = models.URLField(null=True, blank=True)
     file = models.FileField(upload_to='static/text_files/', null=True, blank=True)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
@@ -40,6 +41,7 @@ class AudioFile(models.Model):
     description = models.TextField(null=True, blank=True)
     file = models.FileField(upload_to='static/audio_files/')
     duration = models.DurationField(null=True, blank=True)
+    active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
