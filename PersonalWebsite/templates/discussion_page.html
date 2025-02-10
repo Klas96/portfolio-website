@@ -19,6 +19,7 @@
     <h1>Ljud</h1>
     <ul class="audio-files">
       {% for audio_file in audio_files reversed %}
+      {% if audio_file.active %}
       <li style="margin-bottom: 20px;">
         <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
           <summary>
@@ -31,11 +32,13 @@
           </audio>
         </details>
       </li>
+      {% endif %}
       {% endfor %}
     </ul>
     <h1>Texter</h1>
     <ul>
       {% for text_file in text_files reversed %}
+      {% if text_file.active %}
       <li style="margin-bottom: 20px;">
         <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
           <summary>
@@ -50,6 +53,7 @@
           {% endif %}
         </details>
       </li>
+      {% endif %}
       {% endfor %}
     </ul>
   </section>
