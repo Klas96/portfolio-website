@@ -16,46 +16,54 @@
     </div>
   </section>
   <section>
-    <h1>Ljud</h1>
-    <ul class="audio-files">
-      {% for audio_file in audio_files reversed %}
-      {% if audio_file.active %}
-      <li style="margin-bottom: 20px;">
-        <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
-          <summary>
-            <h2>{{audio_file.title}} </h2>
-          </summary>
-          <p>{{audio_file.description}}</p>
-          <audio controls volume="1.0">
-            <source src="{{audio_file.file.url}}" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </details>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-    <h1>Texter</h1>
-    <ul>
-      {% for text_file in text_files reversed %}
-      {% if text_file.active %}
-      <li style="margin-bottom: 20px;">
-        <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
-          <summary>
-            <h2>{{text_file.title}} </h2>
-          </summary>
-          <p>{{text_file.description}}</p>
-          {% if text_file.href %}
-          <p><a href="{{text_file.href}}">Link</a></p>
-          {% endif %}
-          {% if text_file.file %}
-          <p><a href="{{text_file.file.url}}" target="_blank">{{text_file.basename}}</a></p>
-          {% endif %}
-        </details>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Ljud</h1>
+          <ul class="audio-files">
+            {% for audio_file in audio_files reversed %}
+            {% if audio_file.active %}
+            <li style="margin-bottom: 20px;">
+              <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
+                <summary>
+                  <h2>{{audio_file.title}} </h2>
+                </summary>
+                <p>{{audio_file.description}}</p>
+                <audio controls volume="1.0">
+                  <source src="{{audio_file.file.url}}" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+              </details>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h1>Texter</h1>
+          <ul>
+            {% for text_file in text_files reversed %}
+            {% if text_file.active %}
+            <li style="margin-bottom: 20px;">
+              <details style="background-color: black; color: white; border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">
+                <summary>
+                  <h2>{{text_file.title}} </h2>
+                </summary>
+                <p>{{text_file.description}}</p>
+                {% if text_file.href %}
+                <p><a href="{{text_file.href}}">Link</a></p>
+                {% endif %}
+                {% if text_file.file %}
+                <p><a href="{{text_file.file.url}}" target="_blank">{{text_file.basename}}</a></p>
+                {% endif %}
+              </details>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 {% endblock %}
