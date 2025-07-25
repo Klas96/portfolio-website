@@ -24,13 +24,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'dfskjlsdnfhdkljsgdfkjak.lfdgsil(m^3o7%8eldsghdfa'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'dfskjlsdnfhdkljsgdfkjak.lfdgsil(m^3o7%8eldsghdfa')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.100', 'peresonal-website-a6e4a5ee3146.herokuapp.com', 
-                 'www.klasholmgren.com', 'klasholmgren.se', 'www.klasholmgren.se', 'klasholmgren.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    'localhost', 
+    '192.168.1.100', 
+    'peresonal-website-a6e4a5ee3146.herokuapp.com', 
+    'www.klasholmgren.com', 
+    'klasholmgren.se', 
+    'www.klasholmgren.se', 
+    'klasholmgren.com',
+    '.appspot.com',  # Google App Engine domain
+    '.run.app',      # Google Cloud Run domain
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -77,22 +87,27 @@ WSGI_APPLICATION = 'WebApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    #'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
-    #postgres://u60o7k976enpsk:p4b01135da2040aa8eb91e7c15bf168fdbd9ff9bcf4bb6835d0a7c4f4cef1e3e8@c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d2mli1j1ii4cdo
-    #'default': {
-    #    'ENGINE': 'django.db.backends.postgresql',
-    #    'NAME': 'd2mli1j1ii4cdo',
-    #    'USER': 'u60o7k976enpsk',
-    #    'PASSWORD': 'p4b01135da2040aa8eb91e7c15bf168fdbd9ff9bcf4bb6835d0a7c4f4cef1e3e8',
-    #    'HOST': 'c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
-    #    'PORT': '5432',
-    #},
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+# Use Google Cloud SQL in production, SQLite in development
+if os.environ.get('GOOGLE_CLOUD_PROJECT'):
+    # Production settings for Google Cloud
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DB_NAME', 'portfolio_db'),
+            'USER': os.environ.get('DB_USER', 'postgres'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+            'HOST': os.environ.get('DB_HOST', '/cloudsql/your-project-id:region:instance-name'),
+            'PORT': os.environ.get('DB_PORT', '5432'),
+        }
     }
-}
+else:
+    # Development settings
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': str(BASE_DIR / 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -136,19 +151,34 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # Add this line to specify the directory for collected static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Google Cloud Storage for static files in production
+if os.environ.get('GOOGLE_CLOUD_PROJECT'):
+    from storages.backends.gcloud import GoogleCloudStorage
+    from django.conf import settings
+    
+    GS_BUCKET_NAME = os.environ.get('GS_BUCKET_NAME', 'your-bucket-name')
+    GS_DEFAULT_ACL = 'publicRead'
+    GS_FILE_OVERWRITE = False
+    
+    # Use Google Cloud Storage for static files
+    STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
+
+# Media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 #DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-#Testtset ljud filom/{GS_BUCKET_NAME}/'
 
-#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#AWS_ACCESS_KEY_ID = 'your-access-key-id'
-#AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
-#AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
-#AWS_S3_REGION_NAME = 'your-region'  # e.g., 'us-west-2'
-#AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-#MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
-
-#MEDIA_URL = '/media/'
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Security settings for production
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    X_FRAME_OPTIONS = 'DENY'
