@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'bdgitalona-contras-thin';
-  src: url('/static/fonts/bdgitalona-contras-thin.otf') format('opentype');
+  src: url('../../static/fonts/bdgitalona-contras-thin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'toraja_2';
-  src: url('/static/fonts/toraja_2.ttf') format('truetype');
+  src: url('../../static/fonts/toraja_2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,14 +51,14 @@ body {
 }
 
 body.home {
-  background-image: url('/static/images/background_home.jpg');
+  background-image: url('../../static/images/background_home.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body.code-page {
-  background-image: url('/static/images/background_code.jpg');
+  background-image: url('../../static/images/background_code.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,14 +66,14 @@ body.code-page {
 }
 
 body.art-page {
-  background-image: url('/static/images/background_art.jpg');
+  background-image: url('../../static/images/background_art.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body.discussion-page {
-  background-image: url('/static/images/background_discussion.jpg');
+  background-image: url('../../static/images/background_discussion.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

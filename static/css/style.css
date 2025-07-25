@@ -1,15 +1,62 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Ojuju+Prime:wght@400;700&family=Heebo:wght@400;500;700;900&display=swap"); */
 
+/* Project Navigation Styles */
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-links .btn {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.nav-links .btn:hover {
+  background-color: #ffca2c;
+  border-color: #ffca2c;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links .btn:active {
+  background-color: #e0a800;
+  border-color: #e0a800;
+  color: #000;
+}
+
+.nav-links .btn:focus {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.nav-links .btn.active {
+  background-color: #e0a800;
+  border-color: #e0a800;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 @font-face {
   font-family: 'bdgitalona-contras-thin';
-  src: url('/static/fonts/bdgitalona-contras-thin.otf') format('opentype');
+  src: url('../fonts/bdgitalona-contras-thin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'toraja_2';
-  src: url('/static/fonts/toraja_2.ttf') format('truetype');
+  src: url('../fonts/toraja_2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,14 +98,14 @@ body {
 }
 
 body.home {
-  background-image: url('/static/images/background_home.jpg');
+  background-image: url('../images/background_home.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body.code-page {
-  background-image: url('/static/images/background_code.jpg');
+  background-image: url('../images/background_code.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,14 +113,14 @@ body.code-page {
 }
 
 body.art-page {
-  background-image: url('/static/images/background_art.jpg');
+  background-image: url('../images/background_art.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body.discussion-page {
-  background-image: url('/static/images/background_discussion.jpg');
+  background-image: url('../images/background_discussion.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
