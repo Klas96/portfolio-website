@@ -8,8 +8,24 @@ import os
 import re
 from datetime import datetime
 
-def create_index_html():
-    """Create index.html (Home page)"""
+def copy_original_index_html():
+    """Copy the original index.html from main branch"""
+    import subprocess
+    try:
+        # Get the original index.html from main branch
+        result = subprocess.run(['git', 'show', 'main:index.html'], 
+                              capture_output=True, text=True, check=True)
+        
+        with open('index.html', 'w', encoding='utf-8') as f:
+            f.write(result.stdout)
+        
+        print("✅ Copied original index.html from main branch")
+    except subprocess.CalledProcessError:
+        print("⚠️  Could not get original index.html from main, using fallback")
+        create_fallback_index_html()
+
+def create_fallback_index_html():
+    """Create a fallback index.html if main branch is not available"""
     content = '''<!doctype html>
 <html lang="en">
   <head>
@@ -69,15 +85,27 @@ def create_index_html():
     </header>
 
     
-<body class="home-page">
+<body class="home">
 <section>
-  <div class="innerPageBannerCol">
+  <div class="bannerSection">
     <div class="container">
-      <div class="row g-4 g-md-3 align-items-center">
-        <div class="col-md-6">
+      <div class="row g-2 g-md-1 align-items-center">
+        <div class="col-md-auto order-md-last">
+          <div class="bannerUserImg">
+            <img src="static/images/user-img.jpg" alt="Profile-Img">
+          </div>
+        </div>
+        <div class="col-md">
           <div class="bannerContent">
-            <h1 class="pb-md-3 xlTitle">Welcome to My Portfolio</h1>
-            <p>Explore my work in programming, art, and creative projects.</p>
+            <h1 class="pb-2 xlTitle">Klas Holmgren</h1>
+            <p>Under dagarna så dansar, målar och filosoferar samt kodar jag. Dansar Lindyhop och West-coast-swing. Jag jobbar som Ingenjör.</p>
+            <div class="bannerBtnCol">
+              <div class="row">
+                <div class="col-auto">
+                  <a download href="static/CV/KlasHolmgrenCV.pdf" class="btn btnPrimary">Download Resume</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,41 +113,61 @@ def create_index_html():
   </div>
 </section>
 
-<section>
-  <div class="lightBg">
-    <div class="container">
-      <div class="portfolioContentMain">
-        <div class="row g-4 g-md-4 g-lg-5 portfolioRow">
-          
-          <div class="col-md-6 pColMain">
-            <div class="pCol">
-              <h3>Code Projects</h3>
-              <p>Explore my programming projects and contributions to the open-source community.</p>
-              <a href="code.html" class="btn btnPrimary">View Projects</a>
-            </div>
-          </div>
-          
-          <div class="col-md-6 pColMain">
-            <div class="pCol">
-              <h3>Art Gallery</h3>
-              <p>Browse through my creative works and artistic projects.</p>
-              <a href="art.html" class="btn btnPrimary">View Gallery</a>
-            </div>
-          </div>
-          
-          <div class="col-md-6 pColMain">
-            <div class="pCol">
-              <h3>Discussion</h3>
-              <p>Read my thoughts on various topics and listen to audio content.</p>
-              <a href="discussion.html" class="btn btnPrimary">Read More</a>
-            </div>
-          </div>
-          
+<div class="sectionSpace">
+  <div class="container">
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular"><a href="code.html">About Code</a></h4>
         </div>
+        <p class="pb-2">
+          Writing instructions that can be run on computers is a creative and productive way to solve problems. I mostly program in high level languages (Python and JavaScript) but are also intrested in C++. The project range from smale games to AI aplications and imagea-analysis. My favorite web extention is <a href='https://darkreader.org/' style="color: yellow;">Dark Reader</a> and the best site is ofcourse <a href="sökmotorn.se" style="color: yellow;">sökmotorn.se</a>. :) As editors I use <a href="https://cursor.com/" style="color: yellow;">Cursor</a> and Vim. As OS I use Ubuntu and here is my <a href="https://github.com/Klas96?tab=repositories" style="color: yellow;">Github</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular"><a href="art.html">About Artworks</a></h4>
+        </div>
+        <p>
+          The art is made to relax and to explore and form my fealings and thoughts. The medium for the art differ from simple sketches, oil-paintings and digital art. I like coloutful dynamic art aiming for a sense of movement and life.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular"><a href="discussion.html">About Discussions</a></h4>
+        </div>
+        <p>
+          The discussions category is for thoughts and insights. Also for exploration of varius topics and discussions with others.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolioCol">
+      <div class="row pb-2">
+        <div class="col">
+          <h4 class="lgTitle regular">Contact</h4>
+        </div>
+        <p>
+          Feel free to contact me at <a href="mailto:klas0holmgren@gmail.com" style="color: yellow;">klas0holmgren@gmail.com</a> or <a href="https://www.facebook.com/klas.holmgren.7/" style="color: yellow;">socailmedia</a>. I don't use snapchat tho. I value all resonable communication. :D
+        </p>
+        <p>
+          bc1q88na538qmsac5tp6hdn7pc53eegwy758usez99
+        </p>
+        <p style="word-break: break-all;">
+          49WsBWHdQ9y5ZGA25ZF1WtP3Cfze4aXQbNnzjdmVdVBtXxpegfdN3m1K8dUCdM3fGqG68kRDZEStJfo6GPKxcFM1PeroqRy
+        </p>
+        <!--
+      -->
       </div>
     </div>
   </div>
-</section>
+</div>
 </body>
 
 
@@ -134,7 +182,7 @@ def create_index_html():
     
     with open('index.html', 'w', encoding='utf-8') as f:
         f.write(content)
-    print("✅ Generated index.html")
+    print("✅ Generated fallback index.html")
 
 def create_code_html():
     """Create code.html (Code projects page)"""
@@ -285,6 +333,7 @@ def create_code_html():
               <h3 style="color: white; margin-bottom: 15px;">SiteMonitor</h3>
               <p style="color: #ccc; margin-bottom: 15px;">Website monitoring and uptime tracking system.</p>
               <div class="project-links">
+                <a href="sitemonitor.html" class="btn btn-warning btn-sm">View Details</a>
                 <a href="https://github.com/Klas96/SiteMonitor" class="btn btn-primary btn-sm">GitHub</a>
               </div>
             </div>
@@ -326,13 +375,15 @@ def main():
     """Main function to generate static files"""
     print("🚀 Generating static HTML files for GitHub Pages...")
     
-    # Generate main pages
-    create_index_html()
+    # Copy original index.html from main branch
+    copy_original_index_html()
+    
+    # Generate code.html
     create_code_html()
     
     print("✅ Static HTML files generated successfully!")
     print("📁 Files created:")
-    print("   - index.html (Home page)")
+    print("   - index.html (Original from main branch)")
     print("   - code.html (Code projects)")
     print("")
     print("🌐 Ready for GitHub Pages deployment!")
