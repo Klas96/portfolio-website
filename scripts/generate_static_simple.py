@@ -1,16 +1,154 @@
-<!doctype html>
+#!/usr/bin/env python3
+"""
+Simple static HTML generator for GitHub Pages
+No Django dependency required
+"""
+
+import os
+import re
+from datetime import datetime
+
+def create_index_html():
+    """Create index.html (Home page)"""
+    content = '''<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Klas Holmgren</title>
+    <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+    <link rel="icon" type="image/png" href="static/favicon.png">
+    <link rel="shortcut icon" href="static/favicon.png">
+    <meta name="Klas Holmgren" content="Klas Holmgren">
+    <link rel="home" href="index.html"/>
+    <meta name="description" content="Portfolio page for Klas Holmgren.">
+    <meta name="keywords" content="Klas, Holmgren, Code, art">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="headerCol">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="d-md-none">
+                <button class="navToggle">
+                  <span class="navToggle__text">Menu</span>
+                </button>
+              </div>
+              <div class="navCollapseCol">
+                <div class="navCol">
+                  <ul>
+                    
+                    <li><a class="nav-link
+                       active "
+                      href="index.html">Home</a></li>
+                    
+                    <li><a class="nav-link
+                      "
+                      href="code.html">Code</a></li>
+                    
+                    <li><a class="nav-link
+                      "
+                      href="art.html">Art</a></li>
+                    
+                    <li><a class="nav-link
+                      "
+                      href="discussion.html">Discussion</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+<body class="home-page">
+<section>
+  <div class="innerPageBannerCol">
+    <div class="container">
+      <div class="row g-4 g-md-3 align-items-center">
+        <div class="col-md-6">
+          <div class="bannerContent">
+            <h1 class="pb-md-3 xlTitle">Welcome to My Portfolio</h1>
+            <p>Explore my work in programming, art, and creative projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="lightBg">
+    <div class="container">
+      <div class="portfolioContentMain">
+        <div class="row g-4 g-md-4 g-lg-5 portfolioRow">
+          
+          <div class="col-md-6 pColMain">
+            <div class="pCol">
+              <h3>Code Projects</h3>
+              <p>Explore my programming projects and contributions to the open-source community.</p>
+              <a href="code.html" class="btn btnPrimary">View Projects</a>
+            </div>
+          </div>
+          
+          <div class="col-md-6 pColMain">
+            <div class="pCol">
+              <h3>Art Gallery</h3>
+              <p>Browse through my creative works and artistic projects.</p>
+              <a href="art.html" class="btn btnPrimary">View Gallery</a>
+            </div>
+          </div>
+          
+          <div class="col-md-6 pColMain">
+            <div class="pCol">
+              <h3>Discussion</h3>
+              <p>Read my thoughts on various topics and listen to audio content.</p>
+              <a href="discussion.html" class="btn btnPrimary">Read More</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+
+
+    <script src="static/js/app.js"></script>
+    <script src="static/js/lib/stats.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>'''
+    
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("✅ Generated index.html")
+
+def create_code_html():
+    """Create code.html (Code projects page)"""
+    content = '''<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klas Holmgren - Code</title>
-        <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
-    <link rel="icon" type="image/png" href="static/favicon.png">
-    <link rel="shortcut icon" href="static/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
     <link rel="icon" type="image/png" href="static/favicon.png">
     <link rel="shortcut icon" href="static/favicon.png">
     <meta name="Klas Holmgren" content="Klas Holmgren">
-    <link rel="home" href="index.html"/>
+    <link rel="home" href="/"/>
     <meta name="description" content="Klas Holmgren - Code Projects">
     <meta name="keywords" content="Klas, Holmgren, Code, Programming, Projects">
 
@@ -178,4 +316,26 @@
     <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/script.js"></script>
   </body>
-</html>
+</html>'''
+    
+    with open('code.html', 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("✅ Generated code.html")
+
+def main():
+    """Main function to generate static files"""
+    print("🚀 Generating static HTML files for GitHub Pages...")
+    
+    # Generate main pages
+    create_index_html()
+    create_code_html()
+    
+    print("✅ Static HTML files generated successfully!")
+    print("📁 Files created:")
+    print("   - index.html (Home page)")
+    print("   - code.html (Code projects)")
+    print("")
+    print("🌐 Ready for GitHub Pages deployment!")
+
+if __name__ == "__main__":
+    main() 

@@ -17,9 +17,9 @@ fi
 echo "📦 Activating virtual environment..."
 source .venv/bin/activate
 
-# Generate static files
+# Generate static files (using simple generator)
 echo "📄 Generating static HTML files..."
-python3 scripts/generate_static.py
+python3 scripts/generate_static_simple.py
 
 # Fix navigation links for GitHub Pages
 echo "🔧 Fixing navigation links..."
