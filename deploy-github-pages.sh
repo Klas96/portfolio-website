@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GitHub Pages Deployment Script
-# This script helps deploy the static portfolio website to GitHub Pages
+# This script generates static HTML files and deploys to GitHub Pages
 
 echo "🚀 Deploying to GitHub Pages..."
 
@@ -11,6 +11,25 @@ if [ ! -d ".git" ]; then
     echo "Please run 'git init' first."
     exit 1
 fi
+
+# Check if virtual environment exists
+if [ ! -d ".venv" ]; then
+    echo "❌ Error: Virtual environment not found."
+    echo "Please create a virtual environment first:"
+    echo "python3 -m venv .venv"
+    echo "source .venv/bin/activate"
+    echo "pip install -r requirements.txt"
+    exit 1
+fi
+
+# Activate virtual environment and generate static files
+echo "📄 Generating static HTML files..."
+source .venv/bin/activate
+python3 generate_static.py
+
+# Fix navigation links for GitHub Pages
+echo "🔧 Fixing navigation links..."
+python3 fix_github_pages_links.py
 
 # Check if we're on the main branch
 CURRENT_BRANCH=$(git branch --show-current)
@@ -52,4 +71,10 @@ echo "   3. Select 'Deploy from a branch'"
 echo "   4. Choose the main branch"
 echo "   5. Save"
 echo ""
-echo "⏱️  It may take a few minutes for changes to appear." 
+echo "⏱️  It may take a few minutes for changes to appear."
+echo ""
+echo "📁 Generated files:"
+echo "   - index.html (Home page)"
+echo "   - code.html (Code projects)"
+echo "   - art.html (Art gallery)"
+echo "   - discussion.html (Audio and text files)" 
