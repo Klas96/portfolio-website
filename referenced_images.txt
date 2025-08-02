@@ -1,0 +1,72 @@
+static/images/art_projects/5-Ansikten.jpg
+static/images/art_projects/5-Ansikten.jpg" alt="5-Ansikten" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/ailien-portal.png
+static/images/art_projects/ailien-portal.png" alt="Alien Portal" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/Another_Abstract.jpg
+static/images/art_projects/Another_Abstract.jpg" alt="Another Abstract" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/b%C3%A5t-i-halvvind.png
+static/images/art_projects/b%C3%A5t-i-halvvind.png" alt="Båt i Halv-Vind" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/bird_back.jpg
+static/images/art_projects/bird_back.jpg" alt="Bird Back" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/blinkande-hj%C3%A4rna.gif
+static/images/art_projects/blinkande-hj%C3%A4rna.gif" alt="Blinkande Hjärna" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/blond_girl_glasses.png
+static/images/art_projects/blond_girl_glasses.png" alt="GirlWithGlasses" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/blue_red_flower.jpg
+static/images/art_projects/blue_red_flower.jpg" alt="Red Flower" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/buterfly-with-the-stars.png
+static/images/art_projects/buterfly-with-the-stars.png" alt="Butterfly with stars" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/%C3%84pleGrafitti.png
+static/images/art_projects/%C3%84pleGrafitti.png" alt="Äpple som Graffiti" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/CaffeAnimation.gif
+static/images/art_projects/CaffeAnimation.gif" alt="Mugg som Ryker" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/castle_in_the_sky.jpg
+static/images/art_projects/castle_in_the_sky.jpg" alt="Castel in the sky" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/Chaos_art2.jpg
+static/images/art_projects/Chaos_art2.jpg" alt="Kaouus konst" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/colorful_girl.jpg
+static/images/art_projects/colorful_girl.jpg" alt="Colorful girl" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/debiaan.png
+static/images/art_projects/debiaan.png" alt="Debiaaan" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/dubbel_spiral.jpg
+static/images/art_projects/dubbel_spiral.jpg" alt="Dubbel Spiral" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/earth_in_space_water_color.jpg
+static/images/art_projects/earth_in_space_water_color.jpg" alt="Water Color Earth" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/girl_with_hands.png
+static/images/art_projects/girl_with_hands.png" alt="Girl with Hands" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/guy_with_glasses.png
+static/images/art_projects/guy_with_glasses.png" alt="Guy with Glasses" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/hot_air_baloons.png
+static/images/art_projects/hot_air_baloons.png" alt="Mount-Hot-Airbaloon" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/in_giving_we_receive.jpg
+static/images/art_projects/in_giving_we_receive.jpg" alt="In giving we receive" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/jinx.png
+static/images/art_projects/jinx.png" alt="Jinx" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/line_one_line.jpg
+static/images/art_projects/line_one_line.jpg" alt="Line One Line" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/liten-sj%C3%B6.png
+static/images/art_projects/liten-sj%C3%B6.png" alt="Liten Sjö" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/lotr_elf.png
+static/images/art_projects/lotr_elf.png" alt="LOTR-Elf" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/Maskin-Hjarta.png
+static/images/art_projects/Maskin-Hjarta.png" alt="Maskin Hjärta" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/OskarHolmPaintOver.png
+static/images/art_projects/OskarHolmPaintOver.png" alt="Oskar Holm PaintOver" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/painted_heart.jpg
+static/images/art_projects/painted_heart.jpg" alt="Painted Heart" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/phot-overpaint.png
+static/images/art_projects/phot-overpaint.png" alt="Målade Över ett foto" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/red_dear.jpg
+static/images/art_projects/red_dear.jpg" alt="Red Dear" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/skogs-dunge.png
+static/images/art_projects/skogs-dunge.png" alt="Skogs Dunge" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/split_eyes.jpg
+static/images/art_projects/split_eyes.jpg" alt="Split Eyes" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/unnamed_person.png
+static/images/art_projects/unnamed_person.png" alt="Unnamed Person" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/walking_dragon.jpg
+static/images/art_projects/walking_dragon.jpg" alt="Walking Dragon" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/wolf_drawing.jpg
+static/images/art_projects/wolf_drawing.jpg" alt="Wolf Drawing" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+static/images/art_projects/yennefer_the_witcher.png
+static/images/art_projects/yennefer_the_witcher.png" alt="Yennefer" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">

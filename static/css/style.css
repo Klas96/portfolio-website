@@ -229,6 +229,40 @@ a,
   padding: 8px 20px;
 }
 
+.btn-sm {
+  font-size: 14px !important;
+  padding: 4px 12px !important;
+}
+
+/* Ensure buttons in code page are properly sized */
+.code-page .btn-sm {
+  font-size: 14px !important;
+  padding: 4px 12px !important;
+  font-weight: 400 !important;
+}
+
+/* Override any media query button styles for small buttons */
+@media (max-width: 991px) {
+  .btn-sm {
+    font-size: 14px !important;
+    padding: 4px 12px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-sm {
+    font-size: 14px !important;
+    padding: 4px 12px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-sm {
+    font-size: 14px !important;
+    padding: 4px 12px !important;
+  }
+}
+
 .btnPrimary {
   background: var(--primaryColor);
   color: var(--primaryDarkColor);
