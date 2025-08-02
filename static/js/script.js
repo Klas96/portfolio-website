@@ -88,3 +88,35 @@ function enlargeImage(src, altText) {
   imageContainer.appendChild(imageWrapper);
   document.body.appendChild(imageContainer);
 }
+
+function filterArt() {
+  // Get all checked filter values
+  var checkedFilters = [];
+  var checkboxes = document.querySelectorAll('input[name="filters"]:checked');
+  checkboxes.forEach(function(checkbox) {
+    checkedFilters.push(checkbox.value);
+  });
+
+  // Get all art items
+  var artItems = document.querySelectorAll('#art-gallery .pColMain');
+  
+  artItems.forEach(function(item) {
+    var link = item.querySelector('a');
+    var dataType = link.getAttribute('data-type');
+    
+    // Show item if it matches any of the checked filters, or if no filters are checked
+    if (checkedFilters.length === 0 || checkedFilters.includes(dataType)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// Initialize filter when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if we're on the art page
+  if (document.querySelector('#art-gallery')) {
+    filterArt();
+  }
+});

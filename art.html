@@ -90,22 +90,20 @@
     </div>
   </section>
   <section>
-    <form id="filter-form" hx-get="/art/" hx-target="#art-gallery" hx-trigger="change">
-      <div class="checkbox-container">
-        <label class="checkbox-label">
-          <input type="checkbox" class="checkbox-input" name="filters" value="DIGITAL" checked />
-          <span class="checkbox-custom">Digital</span>
-        </label>
-        <label class="checkbox-label">
-          <input type="checkbox" class="checkbox-input" name="filters" value="PASTEL" checked />
-          <span class="checkbox-custom">Pastel</span>
-        </label>
-        <label class="checkbox-label">
-          <input type="checkbox" class="checkbox-input" name="filters" value="SKETCH" checked />
-          <span class="checkbox-custom">Sketch</span>
-        </label>
-      </div>
-    </form>
+    <div class="checkbox-container">
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" name="filters" value="DIGITAL" checked onchange="filterArt()" />
+        <span class="checkbox-custom">Digital</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" name="filters" value="PASTEL" checked onchange="filterArt()" />
+        <span class="checkbox-custom">Pastel</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" name="filters" value="SKETCH" checked onchange="filterArt()" />
+        <span class="checkbox-custom">Sketch</span>
+      </label>
+    </div>
   </section>
   <section>
     <div class="lightBg">
