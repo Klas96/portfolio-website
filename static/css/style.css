@@ -263,6 +263,34 @@ a,
   }
 }
 
+/* Force standard button sizes for all small buttons */
+.btn.btn-sm {
+  font-size: 14px !important;
+  padding: 4px 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Specific styling for project links in code page */
+.project-links .btn-sm {
+  font-size: 14px !important;
+  padding: 4px 12px !important;
+  font-weight: 400 !important;
+  margin-right: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Override any remaining button size issues */
+.btn.btn-sm {
+  font-size: 14px !important;
+  padding: 4px 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  border-radius: 0.25rem !important;
+  min-height: auto !important;
+}
+
 .btnPrimary {
   background: var(--primaryColor);
   color: var(--primaryDarkColor);
@@ -856,7 +884,7 @@ h5 {
 	.mdTitle {
 		font-size: 24px;
 	}
-	.btn {
+	.btn:not(.btn-sm) {
 		font-size: 18px;
 	}
 	.cs1Title {
@@ -898,7 +926,7 @@ h5 {
 		height: 220px;
     transition: 1s;
 	}
-	.btn {
+	.btn:not(.btn-sm) {
 		font-size: 16px;
 	}
 	.bannerBtnCol {
@@ -1188,7 +1216,7 @@ input[type=text], input[type=email], select, textarea {
     width: 220px;
     height: 220px;
   }
-  .btn {
+  .btn:not(.btn-sm) {
     font-size: 16px;
   }
   .bannerBtnCol {
@@ -1368,7 +1396,7 @@ input[type=text], input[type=email], select, textarea {
     padding: 15px;
   }
 
-  .btn {
+  .btn:not(.btn-sm) {
     font-size: 14px;
   }
 
