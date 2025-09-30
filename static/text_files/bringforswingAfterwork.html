@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bring to Swing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a1a1a;
+            font-family: 'Georgia', serif;
+            padding: 20px;
+        }
+        
+        .poster {
+            width: 100%;
+            max-width: 1400px;
+            aspect-ratio: 297 / 210;
+            background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 50%, #0d0705 100%);
+            border: 15px solid #d4af37;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), inset 0 0 100px rgba(212,175,55,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 0;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            body {
+                background: #1a1a1a !important;
+                padding: 0;
+            }
+            .poster {
+                width: 297mm;
+                height: 210mm;
+                max-width: none;
+                box-shadow: none;
+                background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 50%, #0d0705 100%) !important;
+            }
+        }
+        
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.1) 2px,
+                    rgba(0,0,0,0.1) 4px
+                );
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        
+        .art-deco-top {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 60px;
+            border-top: 3px solid #d4af37;
+            border-bottom: 3px solid #d4af37;
+        }
+        
+        .art-deco-top::before,
+        .art-deco-top::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border: 3px solid #d4af37;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .art-deco-top::before {
+            left: -20px;
+        }
+        
+        .art-deco-top::after {
+            right: -20px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 120px 60px 60px;
+        }
+        
+        .title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 8px;
+            text-shadow: 
+                3px 3px 0 #8b7355,
+                6px 6px 20px rgba(212,175,55,0.4);
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: #f5e6d3;
+            letter-spacing: 0.5em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        
+        .decorative-line {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 10px auto;
+        }
+        
+        .silhouettes {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        
+        .dancer {
+            width: 120px;
+            height: 180px;
+            background: #000;
+            opacity: 0.6;
+            position: relative;
+        }
+        
+        .dancer1 {
+            clip-path: polygon(50% 0%, 30% 20%, 20% 40%, 30% 60%, 20% 80%, 30% 100%, 40% 90%, 50% 100%, 60% 90%, 70% 100%, 80% 80%, 70% 60%, 80% 40%, 70% 20%);
+        }
+        
+        .dancer2 {
+            clip-path: polygon(50% 0%, 40% 15%, 20% 30%, 15% 50%, 25% 70%, 15% 90%, 30% 100%, 50% 85%, 70% 100%, 85% 90%, 75% 70%, 85% 50%, 80% 30%, 60% 15%);
+        }
+        
+        .dancer3 {
+            clip-path: polygon(50% 0%, 35% 25%, 25% 45%, 35% 65%, 25% 85%, 35% 100%, 45% 95%, 50% 100%, 55% 95%, 65% 100%, 75% 85%, 65% 65%, 75% 45%, 65% 25%);
+        }
+        
+        .musical-notes {
+            position: absolute;
+            font-size: 3rem;
+            color: #d4af37;
+            opacity: 0.3;
+        }
+        
+        .note1 { top: 20%; left: 10%; transform: rotate(-15deg); }
+        .note2 { top: 30%; right: 15%; transform: rotate(20deg); }
+        .note3 { top: 60%; left: 8%; transform: rotate(10deg); }
+        .note4 { top: 50%; right: 10%; transform: rotate(-20deg); }
+        
+        .tagline {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d4af37;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        
+        .info-box {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 700px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(20,20,20,0.9) 50%, rgba(0,0,0,0.8) 100%);
+            border: 3px solid #d4af37;
+            border-radius: 15px;
+            padding: 25px 35px;
+            text-align: center;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.6),
+                inset 0 1px 0 rgba(212,175,55,0.3),
+                0 0 20px rgba(212,175,55,0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .info-text {
+            color: #f5e6d3;
+            font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+            line-height: 1.7;
+            letter-spacing: 0.08em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            font-weight: 500;
+        }
+        
+        .qr-code {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            width: 120px;
+            height: 120px;
+            background: white;
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border: 3px solid #d4af37;
+        }
+        
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="art-deco-top"></div>
+        
+        <div class="musical-notes note1">♪</div>
+        <div class="musical-notes note2">♫</div>
+        <div class="musical-notes note3">♪</div>
+        <div class="musical-notes note4">♫</div>
+        
+        <div class="content">
+            <div class="title">Bring</div>
+            <div class="decorative-line"></div>
+            <div class="subtitle">to</div>
+            <div class="decorative-line"></div>
+            <div class="title" style="font-size: clamp(3.5rem, 9vw, 7rem);">Swing</div>
+            <div class="decorative-line"></div>
+            <div class="subtitle">After Work</div>
+        </div>
+        
+        <div class="silhouettes">
+            <div class="dancer dancer1"></div>
+            <div class="dancer dancer2"></div>
+            <div class="dancer dancer3"></div>
+        </div>
+        
+        <div class="info-box">
+            <div class="info-text">
+                Join us for an evening of Shim Sham and social dancing!<br>
+                Everyone welcome - WCJ members and guests alike.<br>
+                Bring for Swing After Work!
+            </div>
+        </div>
+        
+        <div class="tagline">Swing After Work - 18:00 at Forum</div>
+        
+        <div class="qr-code">
+            <img src="qr_code.png" alt="QR Code">
+        </div>
+    </div>
+</body>
+</html>
