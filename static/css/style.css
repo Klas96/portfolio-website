@@ -1588,3 +1588,34 @@ form {
   background-color: var(--primaryColor);
   color: var(--primaryDarkColor);
 }
+
+.art-pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 30px 0;
+}
+.art-pager .page-btn {
+  background: transparent;
+  color: rgb(231, 205, 205);
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 200ms ease;
+}
+.art-pager .page-btn:hover:not(:disabled) {
+  border-color: var(--primaryColor);
+  color: var(--primaryColor);
+}
+.art-pager .page-btn.active {
+  background: var(--primaryColor);
+  color: var(--primaryDarkColor);
+  border-color: var(--primaryColor);
+}
+.art-pager .page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
