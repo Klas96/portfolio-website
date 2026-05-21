@@ -434,8 +434,7 @@ a,
 .navCol a.active:before {
 	left: 0;
 	opacity: 1;
-	right: auto;
-	width: 27px;
+	right: 0;
 }
 
 .navCol a:hover:before {
@@ -457,8 +456,7 @@ a,
 .navCol a.active::before {
   left: 0;
   opacity: 1;
-  right: auto;
-  width: 27px;
+  right: 0;
 }
 
 .navCol a:hover::before {
