@@ -22,6 +22,8 @@ Portfolio-Website/
 ├── cell-tracker.html     # YeastTrack project details
 ├── fractal-explorer.html # Fractal Explorer details
 ├── processing-games.html # Processing Games details
+├── echoes-of-elysium.html # Echoes of Elysium game page
+├── games/echoes-of-elysium/ # Echoes of Elysium Flutter web build (playable)
 ├── static/               # CSS, JS, images, fonts
 ├── scripts/              # Deployment & utility scripts
 ├── docs/                 # Documentation
