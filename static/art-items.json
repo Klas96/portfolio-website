@@ -1,21 +1,25 @@
 [
   {
     "image": "static/images/art_projects/OskarHolmPaintOver.png",
+    "thumb": "static/images/art_projects/thumbs/OskarHolmPaintOver.webp",
     "title": "Oskar Holm PaintOver",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/unnamed_person.png",
+    "thumb": "static/images/art_projects/thumbs/unnamed_person.webp",
     "title": "Unnamed Person",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/skogs-dunge.png",
+    "thumb": "static/images/art_projects/thumbs/skogs-dunge.webp",
     "title": "Skogs Dunge",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/Maskin-Hjarta.png",
+    "thumb": "static/images/art_projects/thumbs/Maskin-Hjarta.webp",
     "title": "Maskin Hjärta",
     "type": "DIGITAL"
   },
@@ -31,61 +35,73 @@
   },
   {
     "image": "static/images/art_projects/phot-overpaint.png",
+    "thumb": "static/images/art_projects/thumbs/phot-overpaint.webp",
     "title": "Målade Över ett foto",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/båt-i-halvvind.png",
+    "thumb": "static/images/art_projects/thumbs/båt-i-halvvind.webp",
     "title": "Båt i Halv-Vind",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/debiaan.png",
+    "thumb": "static/images/art_projects/thumbs/debiaan.webp",
     "title": "Debiaaan",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/ÄpleGrafitti.png",
+    "thumb": "static/images/art_projects/thumbs/ÄpleGrafitti.webp",
     "title": "Äpple som Graffiti",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/buterfly-with-the-stars.png",
+    "thumb": "static/images/art_projects/thumbs/buterfly-with-the-stars.webp",
     "title": "Butterfly with stars",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/ailien-portal.png",
+    "thumb": "static/images/art_projects/thumbs/ailien-portal.webp",
     "title": "Alien Portal",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/liten-sjö.png",
+    "thumb": "static/images/art_projects/thumbs/liten-sjö.webp",
     "title": "Liten Sjö",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/hot_air_baloons.png",
+    "thumb": "static/images/art_projects/thumbs/hot_air_baloons.webp",
     "title": "Mount-Hot-Airbaloon",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/lotr_elf.png",
+    "thumb": "static/images/art_projects/thumbs/lotr_elf.webp",
     "title": "LOTR-Elf",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/blond_girl_glasses.png",
+    "thumb": "static/images/art_projects/thumbs/blond_girl_glasses.webp",
     "title": "GirlWithGlasses",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/5-Ansikten.jpg",
+    "thumb": "static/images/art_projects/thumbs/5-Ansikten.webp",
     "title": "5-Ansikten",
     "type": "SKETCH"
   },
   {
     "image": "static/images/art_projects/Chaos_art2.jpg",
+    "thumb": "static/images/art_projects/thumbs/Chaos_art2.webp",
     "title": "Kaouus konst",
     "type": "None"
   },
@@ -151,31 +167,37 @@
   },
   {
     "image": "static/images/art_projects/jinx.png",
+    "thumb": "static/images/art_projects/thumbs/jinx.webp",
     "title": "Jinx",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/yennefer_the_witcher.png",
+    "thumb": "static/images/art_projects/thumbs/yennefer_the_witcher.webp",
     "title": "Yennefer",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/girl_with_hands.png",
+    "thumb": "static/images/art_projects/thumbs/girl_with_hands.webp",
     "title": "Girl with Hands",
     "type": "DIGITAL"
   },
   {
     "image": "static/images/art_projects/blue_red_flower.jpg",
+    "thumb": "static/images/art_projects/thumbs/blue_red_flower.webp",
     "title": "Red Flower",
     "type": "PASTEL"
   },
   {
     "image": "static/images/art_projects/Another_Abstract.jpg",
+    "thumb": "static/images/art_projects/thumbs/Another_Abstract.webp",
     "title": "Another Abstract",
     "type": "PASTEL"
   },
   {
     "image": "static/images/art_projects/guy_with_glasses.png",
+    "thumb": "static/images/art_projects/thumbs/guy_with_glasses.webp",
     "title": "Guy with Glasses",
     "type": "DIGITAL"
   }

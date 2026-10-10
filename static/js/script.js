@@ -13,6 +13,8 @@ $(window).scroll(function(){
 });
 
 
+/* Guard: Swiper is not loaded on this site, so skip instead of throwing a ReferenceError. */
+if (typeof Swiper !== 'undefined') {
 var swiper = new Swiper(".testimonialSwiper", {
   navigation: {
     nextEl: ".test-swiper-button-next",
@@ -47,6 +49,7 @@ var swiper = new Swiper(".certificatesSlider", {
     },
   },
 });
+}
 
 function toggleImage() {
   var image = document.getElementById('myImage');

@@ -4,6 +4,9 @@
 
 /* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
 
+/* Guard: particles.js is not loaded on this site, so skip instead of throwing a ReferenceError. */
+if (typeof particlesJS !== 'undefined') {
+
 particlesJS.load('particles-js', 'resources/js/particles.json', function() {
   console.log('particles.js loaded - callback');
 });
@@ -130,3 +133,5 @@ particlesJS('particles-js',
   }
 
 );
+
+}
