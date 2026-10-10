@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll) build settings.
+# The site is plain static HTML; this only keeps repo docs out of the published site.
+# Note: this list replaces Jekyll's default exclude list, which only covers files
+# this repo does not have (Gemfile, node_modules, vendor/...).
+exclude:
+  - README.md
+  - docs/
