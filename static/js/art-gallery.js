@@ -28,11 +28,11 @@
 
     const cards = pageItems
       .map(
-        (item) => `
+        (item, i) => `
         <div class="col-4 pColMain">
           <div class="pCol" style="position: relative; width: 100%; padding-top: 100%;">
             <a onclick="enlargeImage('${item.image}', '${item.title.replace(/'/g, "\\'")}')" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" data-type="${item.type}">
-              <img src="${item.image}" alt="${item.title}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="${item.thumb || item.image}" alt="${item.title}" class="pImg" style="width: 100%; height: 100%; object-fit: cover;"${i >= 3 ? ' loading="lazy"' : ''} decoding="async">
             </a>
           </div>
         </div>`
