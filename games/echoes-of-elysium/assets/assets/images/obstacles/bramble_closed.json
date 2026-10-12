@@ -1,0 +1,33 @@
+{
+ "name": "bramble_closed",
+ "file": "bramble_closed.png",
+ "size_px": [
+  64,
+  64
+ ],
+ "tiles": [
+  2,
+  2
+ ],
+ "ability": "SCENT",
+ "collision": [
+  [
+   4,
+   16,
+   56,
+   46
+  ]
+ ],
+ "interaction": {
+  "x": 32,
+  "y": 20,
+  "radius": 24
+ },
+ "state": "closed",
+ "closed_file": "bramble_closed.png",
+ "open_file": "bramble_open.png",
+ "passage": null,
+ "visual_gap_x": null,
+ "anim": null,
+ "note": "Closed: solid from mid-north through the south row so the north trail can still stand at the interact point, but cannot step through into the fragment pocket (the old y=39 feet strip was walkable from above). Open: side clumps only (see bramble_open.json)."
+}

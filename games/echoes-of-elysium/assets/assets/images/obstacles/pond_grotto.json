@@ -1,0 +1,133 @@
+{
+ "name": "pond_grotto",
+ "file": "pond_grotto_dark.png",
+ "size_px": [
+  96,
+  64
+ ],
+ "tiles": [
+  3,
+  2
+ ],
+ "ability": "LIGHT",
+ "collision": [
+  [
+   16,
+   3,
+   19,
+   30
+  ],
+  [
+   58,
+   3,
+   19,
+   30
+  ],
+  [
+   35,
+   3,
+   23,
+   10
+  ]
+ ],
+ "interaction": {
+  "x": 46,
+  "y": 66,
+  "radius": 24,
+  "note": "stand on the near (south) bank, in front of the water edge, facing north"
+ },
+ "mouth_rect": [
+  35,
+  13,
+  23,
+  20
+ ],
+ "mouth_blocks": "dark",
+ "pond_rect": [
+  14,
+  33,
+  65,
+  29
+ ],
+ "dark": {
+  "file": "pond_grotto_dark.png",
+  "collision": [
+   [
+    16,
+    3,
+    19,
+    30
+   ],
+   [
+    58,
+    3,
+    19,
+    30
+   ],
+   [
+    35,
+    3,
+    23,
+    10
+   ],
+   [
+    14,
+    33,
+    65,
+    29
+   ],
+   [
+    35,
+    13,
+    23,
+    20
+   ]
+  ]
+ },
+ "lit": {
+  "file": "pond_grotto_lit.png",
+  "collision": [
+   [
+    16,
+    3,
+    19,
+    30
+   ],
+   [
+    58,
+    3,
+    19,
+    30
+   ],
+   [
+    35,
+    3,
+    23,
+    10
+   ],
+   [
+    14,
+    33,
+    65,
+    29
+   ],
+   [
+    35,
+    13,
+    23,
+    20
+   ]
+  ]
+ },
+ "fragment_point": [
+  45,
+  27
+ ],
+ "dark_file": "pond_grotto_dark.png",
+ "lit_file": "pond_grotto_lit.png",
+ "state_files": {
+  "dark": "pond_grotto_dark.png",
+  "lit": "pond_grotto_lit.png"
+ },
+ "note": "both 96x64 on one canvas/scale/palette, bottom-aligned: swap the image in place. Dark and lit keep the same solid façade (rocks, arch, pond, mouth). Lit: E ENTER opens the pond_grotto cave room (#57); fragment is inside. LIGHT from the south-bank interaction point."
+}
