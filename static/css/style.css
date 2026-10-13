@@ -223,59 +223,59 @@ a,
 }
 
 .btn {
-  border-radius: 2px;
-  font-size: 20px;
+  border-radius: 8px;
+  font-size: 22px;
   font-weight: var(--medium);
   padding: 8px 20px;
 }
 
 .btn-sm {
-  font-size: 14px !important;
-  padding: 4px 12px !important;
+  font-size: 16px !important;
+  padding: 5px 14px !important;
 }
 
 /* Ensure buttons in code page are properly sized */
 .code-page .btn-sm {
-  font-size: 14px !important;
-  padding: 4px 12px !important;
+  font-size: 16px !important;
+  padding: 5px 14px !important;
   font-weight: 400 !important;
 }
 
 /* Override any media query button styles for small buttons */
 @media (max-width: 991px) {
   .btn-sm {
-    font-size: 14px !important;
-    padding: 4px 12px !important;
+    font-size: 16px !important;
+    padding: 5px 14px !important;
   }
 }
 
 @media (max-width: 767px) {
   .btn-sm {
-    font-size: 14px !important;
-    padding: 4px 12px !important;
+    font-size: 16px !important;
+    padding: 5px 14px !important;
   }
 }
 
 @media (max-width: 575px) {
   .btn-sm {
-    font-size: 14px !important;
-    padding: 4px 12px !important;
+    font-size: 16px !important;
+    padding: 5px 14px !important;
   }
 }
 
 /* Force standard button sizes for all small buttons */
 .btn.btn-sm {
-  font-size: 14px !important;
-  padding: 4px 12px !important;
+  font-size: 16px !important;
+  padding: 5px 14px !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
-  border-radius: 0.25rem !important;
+  border-radius: 8px !important;
 }
 
 /* Specific styling for project links in code page */
 .project-links .btn-sm {
-  font-size: 14px !important;
-  padding: 4px 12px !important;
+  font-size: 16px !important;
+  padding: 5px 14px !important;
   font-weight: 400 !important;
   margin-right: 8px !important;
   margin-bottom: 4px !important;
@@ -283,12 +283,17 @@ a,
 
 /* Override any remaining button size issues */
 .btn.btn-sm {
-  font-size: 14px !important;
-  padding: 4px 12px !important;
+  font-size: 16px !important;
+  padding: 5px 14px !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
-  border-radius: 0.25rem !important;
+  border-radius: 8px !important;
   min-height: auto !important;
+}
+
+.project-content code {
+  border-radius: 8px;
+  font-size: 1em;
 }
 
 /* GitHub button styling */
