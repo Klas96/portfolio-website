@@ -1,48 +1,37 @@
-# 🚀 Simple GitHub Pages Deployment
+# Simple GitHub Pages Deployment
 
 ## Quick Deploy
 ```bash
-./deploy-simple.sh
+./scripts/deploy-simple.sh
 ```
 
-That's it! This single command will:
-- ✅ Generate all static HTML files
-- ✅ Fix navigation links for GitHub Pages
-- ✅ Add favicons to all pages
-- ✅ Commit and push to GitHub Pages branch
-- ✅ Deploy your site automatically
+That single command will:
+- Generate all static HTML files
+- Fix navigation links for GitHub Pages
+- Add favicons to all pages
+- Commit and push to `main`
+- Deploy via GitHub Pages automatically
 
-## 📋 What Gets Deployed
-- **Home page** (`index.html`)
-- **Code projects** (`code.html`) 
-- **Art gallery** (`art.html`)
-- **Discussion** (`discussion.html`)
-- **Project details**:
-  - KeyMatch (`keymatch.html`)
-  - AI Agent (`ai-agent.html`)
-  - YeastTrack (`cell-tracker.html`)
-  - Fractal Explorer (`fractal-explorer.html`)
-  - Processing Games (`processing-games.html`)
+## Push to deploy
 
-## 🌐 Live Site
-Your site will be available at: **https://klas96.github.io/Portfolio-Website/**
+GitHub Pages is configured to publish from **`main`** (root `/`).
 
-## ⏱️ Update Time
-GitHub Pages typically updates within **2-5 minutes** after pushing.
+Any push to `main` updates the live site (usually within 2–5 minutes).
 
-## 🔧 Manual Steps (if needed)
-If you need to make manual changes:
+## Live Site
+**https://klasholmgren.se/**
 
-1. **Edit files** in your preferred editor
-2. **Run deployment**: `./deploy-simple.sh`
-3. **Wait 2-5 minutes** for updates
+## Manual Steps (if needed)
+1. Edit files in your preferred editor
+2. Commit and push to `main`, or run `./scripts/deploy-simple.sh`
+3. Wait 2–5 minutes for updates
 
-## 📁 File Structure
+## File Structure
 ```
 Portfolio-Website/
 ├── index.html              # Home page
 ├── code.html              # Code projects
-├── art.html               # Art gallery  
+├── art.html               # Art gallery
 ├── discussion.html        # Discussion
 ├── keymatch.html         # KeyMatch details
 ├── ai-agent.html         # AI Agent details
@@ -50,10 +39,10 @@ Portfolio-Website/
 ├── fractal-explorer.html # Fractal Explorer details
 ├── processing-games.html # Processing Games details
 ├── static/               # CSS, JS, images
-└── deploy-simple.sh     # One-click deploy script
+└── scripts/deploy-simple.sh
 ```
 
-## 🎯 GitHub Pages Branch
-- **Branch**: `v.2.0.2`
-- **Source**: GitHub Pages reads from this branch
-- **Auto-deploy**: Every push triggers a new deployment 
+## GitHub Pages Source
+- **Branch**: `main`
+- **Path**: `/` (repository root)
+- **Custom domain**: `klasholmgren.se`

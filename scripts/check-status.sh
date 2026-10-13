@@ -11,10 +11,10 @@ CURRENT_BRANCH=$(git branch --show-current)
 echo "📍 Current branch: $CURRENT_BRANCH"
 
 # Check if we're on the right branch
-if [ "$CURRENT_BRANCH" = "v.2.0.2" ]; then
-    echo "✅ On GitHub Pages branch"
+if [ "$CURRENT_BRANCH" = "main" ]; then
+    echo "✅ On GitHub Pages branch (main)"
 else
-    echo "⚠️  Not on GitHub Pages branch (should be v.2.0.2)"
+    echo "⚠️  Not on GitHub Pages branch (should be main)"
 fi
 
 # Check for required HTML files
@@ -45,5 +45,5 @@ echo "📝 Git status:"
 git status --porcelain
 
 echo ""
-echo "🌐 Live site: https://klas96.github.io/Portfolio-Website/"
-echo "⏱️  Updates take 2-5 minutes to appear" 
+echo "🌐 Live site: https://klasholmgren.se/"
+echo "⏱️  Updates take 2-5 minutes to appear"

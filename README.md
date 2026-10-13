@@ -3,7 +3,9 @@
 A clean, modern portfolio website showcasing my projects in code, art, and discussion.
 
 ## 🌐 Live Site
-**https://klas96.github.io/Portfolio-Website/**
+**https://klasholmgren.se/**
+
+GitHub Pages publishes from **`main`**. Pushing `main` deploys the site.
 
 ## 🚀 Quick Deploy
 ```bash
