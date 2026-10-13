@@ -91,6 +91,7 @@ html {
 
 body {
   font-family: var(--baseFont);
+  font-size: 1.2em;
   color: #ffffff;
   background-color: #000000;
   margin: 0;
@@ -224,19 +225,19 @@ a,
 
 .btn {
   border-radius: 8px;
-  font-size: 22px;
+  font-size: 1em;
   font-weight: var(--medium);
   padding: 8px 20px;
 }
 
 .btn-sm {
-  font-size: 16px !important;
+  font-size: 1em !important;
   padding: 5px 14px !important;
 }
 
 /* Ensure buttons in code page are properly sized */
 .code-page .btn-sm {
-  font-size: 16px !important;
+  font-size: 1em !important;
   padding: 5px 14px !important;
   font-weight: 400 !important;
 }
@@ -244,28 +245,28 @@ a,
 /* Override any media query button styles for small buttons */
 @media (max-width: 991px) {
   .btn-sm {
-    font-size: 16px !important;
+    font-size: 1em !important;
     padding: 5px 14px !important;
   }
 }
 
 @media (max-width: 767px) {
   .btn-sm {
-    font-size: 16px !important;
+    font-size: 1em !important;
     padding: 5px 14px !important;
   }
 }
 
 @media (max-width: 575px) {
   .btn-sm {
-    font-size: 16px !important;
+    font-size: 1em !important;
     padding: 5px 14px !important;
   }
 }
 
 /* Force standard button sizes for all small buttons */
 .btn.btn-sm {
-  font-size: 16px !important;
+  font-size: 1em !important;
   padding: 5px 14px !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
@@ -274,7 +275,7 @@ a,
 
 /* Specific styling for project links in code page */
 .project-links .btn-sm {
-  font-size: 16px !important;
+  font-size: 1em !important;
   padding: 5px 14px !important;
   font-weight: 400 !important;
   margin-right: 8px !important;
@@ -283,7 +284,7 @@ a,
 
 /* Override any remaining button size issues */
 .btn.btn-sm {
-  font-size: 16px !important;
+  font-size: 1em !important;
   padding: 5px 14px !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
@@ -908,7 +909,7 @@ h5 {
 		font-size: 24px;
 	}
 	.btn:not(.btn-sm) {
-		font-size: 18px;
+		font-size: 1em;
 	}
 	.cs1Title {
 		min-height: 60px;
@@ -941,7 +942,7 @@ h5 {
 		font-size: 32px;
 	}
 	body {
-		font-size: 14px;
+		font-size: 1.2em;
 	}
 	.bannerUserImg {
 		margin-left: 20px;
@@ -950,7 +951,7 @@ h5 {
     transition: 1s;
 	}
 	.btn:not(.btn-sm) {
-		font-size: 16px;
+		font-size: 1em;
 	}
 	.bannerBtnCol {
 		padding-top: 10px;
@@ -1232,7 +1233,7 @@ input[type=text], input[type=email], select, textarea {
     font-size: 32px;
   }
   body {
-    font-size: 14px;
+    font-size: 1.2em;
   }
   .bannerUserImg {
     margin-left: 20px;
@@ -1240,7 +1241,7 @@ input[type=text], input[type=email], select, textarea {
     height: 220px;
   }
   .btn:not(.btn-sm) {
-    font-size: 16px;
+    font-size: 1em;
   }
   .bannerBtnCol {
     padding-top: 10px;
@@ -1420,7 +1421,7 @@ input[type=text], input[type=email], select, textarea {
   }
 
   .btn:not(.btn-sm) {
-    font-size: 14px;
+    font-size: 1em;
   }
 
   .xlTitle {
