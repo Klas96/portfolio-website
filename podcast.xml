@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Veckologgen</title>
+    <link>https://klasholmgren.se/podcast.html</link>
+    <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
+    <description>En gång i veckan: vad Klas gjorde den veckan. Dans, konst, kod och resten. Namnet är tillfälligt.</description>
+    <language>sv</language>
+    <itunes:author>Klas Holmgren</itunes:author>
+    <itunes:summary>En gång i veckan: vad Klas gjorde den veckan. Dans, konst, kod och resten. Namnet är tillfälligt.</itunes:summary>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>Klas Holmgren</itunes:name>
+      <itunes:email>admin@klasholmgren.se</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://klasholmgren.se/static/images/user-img.jpg"/>
+    <itunes:category text="Society &amp; Culture"/>
+    <image>
+      <url>https://klasholmgren.se/static/images/user-img.jpg</url>
+      <title>Veckologgen</title>
+      <link>https://klasholmgren.se/podcast.html</link>
+    </image>
+  </channel>
+</rss>

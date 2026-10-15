@@ -5,3 +5,6 @@
 exclude:
   - README.md
   - docs/
+  - podcast/show.json
+  - podcast/episodes.json
+  - tests/

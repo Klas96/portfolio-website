@@ -75,6 +75,10 @@ def create_fallback_index_html():
                       "
                       href="discussion.html">Discussion</a></li>
                     
+                    <li><a class="nav-link
+                      "
+                      href="podcast.html">Podcast</a></li>
+                    
                   </ul>
                 </div>
               </div>
@@ -234,6 +238,10 @@ def create_code_html():
                     <li><a class="nav-link
                       "
                       href="discussion.html">Discussion</a></li>
+                    
+                    <li><a class="nav-link
+                      "
+                      href="podcast.html">Podcast</a></li>
                     
                   </ul>
                 </div>
