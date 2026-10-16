@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """Build the weekly podcast RSS feed from the catalog in podcast/.
 
-The weekly automation should not edit podcast.xml by hand. Log one episode
-with:
+The existing Cursor automation already produces the audio. Keep that job.
+Every run should end with these two commands, in this repo:
 
-    python3 scripts/podcast_feed.py add \\
-        --audio /path/to/week.mp3 \\
-        --title "Vecka 42" \\
-        --date 2026-10-15 \\
-        --description "Dans, kod och resten av veckan."
+    python3 scripts/podcast_feed.py draft
+    python3 scripts/podcast_feed.py publish --audio /path/to/the-file-just-written.mp3
 
-That copies the audio into static/podcast/ (stable public URL), appends
-podcast/episodes.json, and rewrites podcast.xml plus the episode list on
-podcast.html. Commit those files. Do not run scripts/deploy-simple.sh.
+`draft` prints what to say: projects from the last seven days, then open
+work for next week. Speak that text. `publish` logs that audio file as one
+episode and rewrites podcast.xml. Commit the files it prints. Do not run
+scripts/deploy-simple.sh.
 
 Rename the show by editing podcast/show.json, then run:
 
@@ -24,6 +22,7 @@ from __future__ import annotations
 import argparse
 import email.utils
 import filecmp
+import hashlib
 import json
 import re
 import shutil
@@ -31,6 +30,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape
+
+import weekly_brief
 
 MIME_TYPES = {
     ".mp3": "audio/mpeg",
@@ -469,6 +470,44 @@ def add_episode(
     }
 
 
+def episode_title(day: datetime) -> str:
+    week = day.isocalendar().week
+    return f"Vecka {week}, {weekly_brief.swedish_date(day.date())}"
+
+
+def audio_token(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()[:8]
+
+
+def cmd_draft(_args: argparse.Namespace) -> int:
+    sys.stdout.write(weekly_brief.draft())
+    return 0
+
+
+def cmd_publish(args: argparse.Namespace) -> int:
+    day = parse_date(args.date) if args.date else datetime.now(timezone.utc).replace(hour=12, minute=0, second=0, microsecond=0)
+    audio = Path(args.audio)
+    if not audio.is_file():
+        raise SystemExit(f"Audio file not found: {audio}")
+    description = weekly_brief.draft(day.date()).strip()
+    title = args.title or episode_title(day)
+    filename = args.filename or f"{day.date().isoformat()}-vecka-{day.isocalendar().week}-{audio_token(audio)}{audio.suffix.lower()}"
+    result = add_episode(
+        Path(args.root).resolve(),
+        audio,
+        title,
+        day.date().isoformat(),
+        description,
+        filename,
+        False,
+    )
+    print(f"Episode logged: {result['file']}")
+    print(f"Public URL: {result['url']}")
+    print(f"Feed: {result['feed']}")
+    print("Commit: " + " ".join(result["changed"]))
+    return 0
+
+
 def cmd_build(args: argparse.Namespace) -> int:
     changed = build(Path(args.root).resolve())
     if changed:
@@ -511,6 +550,16 @@ def parser() -> argparse.ArgumentParser:
     add_cmd.add_argument("--filename", help="Stable filename under static/podcast/. Default: date plus title.")
     add_cmd.add_argument("--replace", action="store_true", help="Overwrite the audio at an existing public URL")
     add_cmd.set_defaults(func=cmd_add)
+
+    draft_cmd = sub.add_parser("draft", help="Print what this run should say about projects")
+    draft_cmd.set_defaults(func=cmd_draft)
+
+    publish_cmd = sub.add_parser("publish", help="Log the audio from this run as one episode")
+    publish_cmd.add_argument("--audio", required=True, help="Audio file this run just produced")
+    publish_cmd.add_argument("--date", help="Episode date, YYYY-MM-DD. Default: today, UTC")
+    publish_cmd.add_argument("--title", help="Override the episode title")
+    publish_cmd.add_argument("--filename", help="Stable filename under static/podcast/")
+    publish_cmd.set_defaults(func=cmd_publish)
     return program
 
 

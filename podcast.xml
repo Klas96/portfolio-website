@@ -4,10 +4,10 @@
     <title>Veckologgen</title>
     <link>https://klasholmgren.se/podcast.html</link>
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
-    <description>En gång i veckan: vad Klas gjorde den veckan. Dans, konst, kod och resten. Namnet är tillfälligt.</description>
+    <description>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.</description>
     <language>sv</language>
     <itunes:author>Klas Holmgren</itunes:author>
-    <itunes:summary>En gång i veckan: vad Klas gjorde den veckan. Dans, konst, kod och resten. Namnet är tillfälligt.</itunes:summary>
+    <itunes:summary>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:owner>

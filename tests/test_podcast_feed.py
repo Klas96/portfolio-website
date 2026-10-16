@@ -3,7 +3,9 @@ import shutil
 import tempfile
 import unittest
 import wave
+from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 from xml.etree import ElementTree
 
 import sys
@@ -12,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import podcast_feed  # noqa: E402
+import weekly_brief  # noqa: E402
 
 
 def write_wav(path: Path, frames: int = 800) -> None:
@@ -142,6 +145,45 @@ class PodcastFeedTest(unittest.TestCase):
                 self.root, second, "Vecka", "2026-10-15", "Annan fil", filename="week.mp3"
             )
         self.assertTrue(filecmp.cmp(first, self.root / "static/podcast/week.mp3", shallow=False))
+
+    def test_brief_covers_this_week_and_next_week(self):
+        text = weekly_brief.render_brief(
+            [
+                {"repo": "Klas96/echoes-of-elysium", "subject": "Release 0.3.5: abilities HUD.\nMore detail"},
+                {"repo": "Klas96/echoes-of-elysium", "subject": "Merge pull request #68 from Klas96/design"},
+                {"repo": "Klas96/fdroid", "subject": "Fix F-Droid listing icons."},
+            ],
+            [
+                {"repo": "Klas96/fdroid", "title": "Publish KeyMatch 134.10.26"},
+                {"repo": "Klas96/portfolio-website", "title": "Add a weekly podcast RSS feed"},
+            ],
+            date(2026, 10, 16),
+        )
+        self.assertIn("vecka 42", text)
+        self.assertIn("16 oktober 2026", text)
+        self.assertIn("Den här veckan", text)
+        self.assertIn("echoes-of-elysium. Release 0.3.5: abilities HUD.", text)
+        self.assertNotIn("Merge pull request", text)
+        self.assertIn("Nästa vecka", text)
+        self.assertIn("fdroid. Publish KeyMatch 134.10.26.", text)
+        self.assertIn("portfolio-website. Add a weekly podcast RSS feed.", text)
+
+    def test_publish_makes_one_episode_per_run(self):
+        first = self.root / "first.mp3"
+        second = self.root / "second.mp3"
+        first.write_bytes(b"run-one")
+        second.write_bytes(b"run-two")
+        def fake_draft(_day=None):
+            return "Den här veckan: Echoes.\n\nNästa vecka: KeyMatch.\n"
+
+        with patch.object(podcast_feed.weekly_brief, "draft", fake_draft):
+            podcast_feed.main(["--root", str(self.root), "publish", "--audio", str(first), "--date", "2026-10-16"])
+            podcast_feed.main(["--root", str(self.root), "publish", "--audio", str(second), "--date", "2026-10-16"])
+            podcast_feed.main(["--root", str(self.root), "publish", "--audio", str(first), "--date", "2026-10-16"])
+        items = ElementTree.parse(self.root / "podcast.xml").getroot().findall("channel/item")
+        self.assertEqual(len(items), 2)
+        self.assertEqual(items[0].findtext("description"), "Den här veckan: Echoes.\n\nNästa vecka: KeyMatch.")
+        self.assertTrue(items[0].findtext("title").startswith("Vecka 42"))
 
     def test_home_block_and_autodiscovery_follow_the_show_title(self):
         show_file = self.root / "podcast" / "show.json"
