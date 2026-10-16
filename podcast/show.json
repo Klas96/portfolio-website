@@ -1,0 +1,15 @@
+{
+  "title": "Veckologgen",
+  "working_title": true,
+  "description": "Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.",
+  "language": "sv",
+  "author": "Klas Holmgren",
+  "email": "admin@klasholmgren.se",
+  "site_url": "https://klasholmgren.se",
+  "page_path": "podcast.html",
+  "feed_path": "podcast.xml",
+  "audio_dir": "static/podcast",
+  "image": "https://klasholmgren.se/static/images/user-img.jpg",
+  "explicit": false,
+  "category": "Society & Culture"
+}
