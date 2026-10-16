@@ -6,6 +6,7 @@
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.</description>
     <language>sv</language>
+    <lastBuildDate>Fri, 16 Oct 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
     <itunes:summary>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -21,5 +22,71 @@
       <title>Veckologgen</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
+    <item>
+      <title>Vecka 42, 16 oktober 2026</title>
+      <description>Det här är Veckologgen, vecka 42, den 16 oktober 2026.
+
+Den här veckan.
+
+Jag har jobbat i sex projekt.
+
+I fdroid tog jag bort en felaktig ikonlistning. Ämnet är Remove fake Icon listing, mis-indexed repo icon.png, nummer fem. Sen Fix F-Droid listing icons and add index rebuild workflow, nummer fyra. Och Retire ContentCreator, add mooves, rebrand Tectonic as NumBlocks, nummer två.
+
+På portfolio-website lade jag in veckans podd. Ämnet är Add a weekly podcast RSS feed. Jag tog bort fejkad fetstil på titlarna: Drop fake bold on title fonts, use size and color. Och jag rättade länken: Fix sökmorton.se link on the home page.
+
+I keymatch-website la jag till texten som App Store kräver, om nolltolerans och att man kan anmäla och blockera. Ämnet är Add zero-tolerance and report/block language required by App Store Guideline 1.2.
+
+I mooes-backend: Add Strava integration and Convex paths for training, coupons, and goals.
+
+I mooes-app: Add companies tab, Strava sync, and store/reward UX improvements.
+
+I echoes-of-elysium rättade jag stenarna på den stängda vägen. Revert closed road boulder art to pre-gen original. Fix boulder choke: full-width collision, no baked dirt. Och Fix transparent closed road boulder.
+
+Kalendern för veckan som varit. Fredag den nionde jobbade jag på Jeppesen, åtta till fem, på Odinsgatan. Samma kväll, från klockan sex, hade jag både Speaker&apos;s Corner på Debatthuset och Christoffer fyller trettionio på Debatthuset. Söndag den elfte städade jag, åtta till två. Måndag den tolfte var det Jeppesen åtta till fem, och socialdans på West Coast Jitterbugs från åtta till elva. Tisdag och onsdag var det Jeppesen igen. Onsdag kväll, från sex till kvart i sju, satt jag i möte med Neo Pettersson om KeyMatch-samarbetet. Torsdag den femtonde var det Jeppesen, och sen fri träning på West Coast Jitterbugs, sex till åtta.
+
+Nästa vecka.
+
+Det som ligger öppet är två saker i fdroid. Publish KeyMatch 134.10.26, 276, F-Droid APK. Och Read keystore password from env, FDROID_KEYSTORE_PASS, instead of plaintext.
+
+I echoes-of-elysium ligger Awakening: skiff crash opening, new stills, narration plus VO, nummer 46 och 48. Och Release: deploy web build to Klas96/games instead of portfolio-website.
+
+I kalendern framåt. I dag, fredag den sextonde, är det Jeppesen åtta till fem, och från klockan fem afterwork på Debatthuset, DH fyra år. Lördag är det städdag i Brf Skutan, tio till två, och kväll med Skutan, sex till tio. Söndag står städning åtta till två, och möte med PR-gruppen ett till fem. Stockholm är inlagt från måndag den nittonde till och med onsdag den tjugoförsta. Jeppesen ligger kvar på vardagarna, åtta till fem, måndag till fredag. Måndag kväll är det socialdans igen, åtta till elva, på West Coast Jitterbugs. Torsdag är det fri träning där, sex till åtta. Fredag den tjugotredje är det Speaker&apos;s Corner på Debatthuset, sex till tio.
+
+Vi hörs nästa vecka.</description>
+      <pubDate>Fri, 16 Oct 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://klasholmgren.se/static/podcast/2026-10-16-vecka-42-16-oktober-2026.mp3</guid>
+      <link>https://klasholmgren.se/static/podcast/2026-10-16-vecka-42-16-oktober-2026.mp3</link>
+      <enclosure url="https://klasholmgren.se/static/podcast/2026-10-16-vecka-42-16-oktober-2026.mp3" length="3022295" type="audio/mpeg"/>
+      <itunes:summary>Det här är Veckologgen, vecka 42, den 16 oktober 2026.
+
+Den här veckan.
+
+Jag har jobbat i sex projekt.
+
+I fdroid tog jag bort en felaktig ikonlistning. Ämnet är Remove fake Icon listing, mis-indexed repo icon.png, nummer fem. Sen Fix F-Droid listing icons and add index rebuild workflow, nummer fyra. Och Retire ContentCreator, add mooves, rebrand Tectonic as NumBlocks, nummer två.
+
+På portfolio-website lade jag in veckans podd. Ämnet är Add a weekly podcast RSS feed. Jag tog bort fejkad fetstil på titlarna: Drop fake bold on title fonts, use size and color. Och jag rättade länken: Fix sökmorton.se link on the home page.
+
+I keymatch-website la jag till texten som App Store kräver, om nolltolerans och att man kan anmäla och blockera. Ämnet är Add zero-tolerance and report/block language required by App Store Guideline 1.2.
+
+I mooes-backend: Add Strava integration and Convex paths for training, coupons, and goals.
+
+I mooes-app: Add companies tab, Strava sync, and store/reward UX improvements.
+
+I echoes-of-elysium rättade jag stenarna på den stängda vägen. Revert closed road boulder art to pre-gen original. Fix boulder choke: full-width collision, no baked dirt. Och Fix transparent closed road boulder.
+
+Kalendern för veckan som varit. Fredag den nionde jobbade jag på Jeppesen, åtta till fem, på Odinsgatan. Samma kväll, från klockan sex, hade jag både Speaker&apos;s Corner på Debatthuset och Christoffer fyller trettionio på Debatthuset. Söndag den elfte städade jag, åtta till två. Måndag den tolfte var det Jeppesen åtta till fem, och socialdans på West Coast Jitterbugs från åtta till elva. Tisdag och onsdag var det Jeppesen igen. Onsdag kväll, från sex till kvart i sju, satt jag i möte med Neo Pettersson om KeyMatch-samarbetet. Torsdag den femtonde var det Jeppesen, och sen fri träning på West Coast Jitterbugs, sex till åtta.
+
+Nästa vecka.
+
+Det som ligger öppet är två saker i fdroid. Publish KeyMatch 134.10.26, 276, F-Droid APK. Och Read keystore password from env, FDROID_KEYSTORE_PASS, instead of plaintext.
+
+I echoes-of-elysium ligger Awakening: skiff crash opening, new stills, narration plus VO, nummer 46 och 48. Och Release: deploy web build to Klas96/games instead of portfolio-website.
+
+I kalendern framåt. I dag, fredag den sextonde, är det Jeppesen åtta till fem, och från klockan fem afterwork på Debatthuset, DH fyra år. Lördag är det städdag i Brf Skutan, tio till två, och kväll med Skutan, sex till tio. Söndag står städning åtta till två, och möte med PR-gruppen ett till fem. Stockholm är inlagt från måndag den nittonde till och med onsdag den tjugoförsta. Jeppesen ligger kvar på vardagarna, åtta till fem, måndag till fredag. Måndag kväll är det socialdans igen, åtta till elva, på West Coast Jitterbugs. Torsdag är det fri träning där, sex till åtta. Fredag den tjugotredje är det Speaker&apos;s Corner på Debatthuset, sex till tio.
+
+Vi hörs nästa vecka.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
   </channel>
 </rss>
