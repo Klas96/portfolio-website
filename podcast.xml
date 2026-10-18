@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Veckologgen</title>
+    <title>Klas Veckologg</title>
     <link>https://klasholmgren.se/podcast.html</link>
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
-    <description>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.</description>
+    <description>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka.</description>
     <language>sv</language>
     <lastBuildDate>Fri, 16 Oct 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
-    <itunes:summary>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka. Namnet är tillfälligt.</itunes:summary>
+    <itunes:summary>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:owner>
@@ -19,7 +19,7 @@
     <itunes:category text="Society &amp; Culture"/>
     <image>
       <url>https://klasholmgren.se/static/images/user-img.jpg</url>
-      <title>Veckologgen</title>
+      <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
     <item>

@@ -61,9 +61,9 @@ class PodcastFeedTest(unittest.TestCase):
         self.assertIn("podcast.xml", changed)
         rss = ElementTree.parse(self.root / "podcast.xml")
         channel = rss.getroot().find("channel")
-        self.assertEqual(channel.findtext("title"), "Veckologgen")
+        self.assertEqual(channel.findtext("title"), "Klas Veckologg")
         self.assertEqual(channel.findtext("language"), "sv")
-        self.assertIn("Namnet är tillfälligt", channel.findtext("description"))
+        self.assertIn("vad som är på gång nästa vecka", channel.findtext("description"))
         self.assertEqual(channel.findall("item"), [])
         self.assertIn("Inga avsnitt ännu.", (self.root / "podcast.html").read_text(encoding="utf-8"))
 
@@ -187,7 +187,7 @@ class PodcastFeedTest(unittest.TestCase):
 
     def test_home_block_and_autodiscovery_follow_the_show_title(self):
         show_file = self.root / "podcast" / "show.json"
-        text = show_file.read_text(encoding="utf-8").replace("Veckologgen", "Arbetsnamn")
+        text = show_file.read_text(encoding="utf-8").replace("Klas Veckologg", "Arbetsnamn")
         show_file.write_text(text, encoding="utf-8")
         podcast_feed.build(self.root)
         index = (self.root / "index.html").read_text(encoding="utf-8")

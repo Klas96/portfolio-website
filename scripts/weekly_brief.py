@@ -70,7 +70,7 @@ def render_brief(
         [(repo_name(item["repo"]), first_line(item["title"])) for item in open_prs]
     )
     parts = [
-        f"Det här är Veckologgen, vecka {week}, den {swedish_date(day)}.",
+        f"Det här är Klas Veckologg, vecka {week}, den {swedish_date(day)}.",
         "Den här veckan har jag jobbat med de här projekten.",
     ]
     if not this_week:
