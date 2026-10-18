@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: 'toraja_2';
-  src: url('../fonts/toraja_2.ttf') format('truetype');
+  src: url('../fonts/toraja_2.ttf?v=sv1') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
