@@ -99,6 +99,8 @@ class PodcastFeedTest(unittest.TestCase):
         self.assertIn("Vecka 42", page)
         self.assertIn("static/podcast/2026-10-15-vecka-42.wav", page)
         self.assertNotIn("Inga avsnitt ännu.", page)
+        self.assertIn("<p>Dans på torsdagen. Kod på söndagen.</p>", page)
+        self.assertIn('<audio controls volume="1.0">', page)
 
         again = podcast_feed.add_episode(
             self.root,
@@ -131,6 +133,28 @@ class PodcastFeedTest(unittest.TestCase):
         self.assertIn("Vecka &lt;två&gt; &amp; &quot;tre&quot;", page)
         self.assertNotIn("<två>", page)
         self.assertLess(page.index("Vecka &lt;två&gt;"), page.index(">Först<"))
+
+    def test_page_shows_short_description_not_full_text(self):
+        audio = self.root / "long.mp3"
+        audio.write_bytes(b"ID3long")
+        body = "Intro om veckan.\n\nHemlig detalj som bara ska finnas i flödet."
+        podcast_feed.add_episode(self.root, audio, "Lång", "2026-10-16", body)
+        page = (self.root / "podcast.html").read_text(encoding="utf-8")
+        self.assertIn("<p>Intro om veckan.</p>", page)
+        self.assertNotIn("Hemlig detalj", page)
+        self.assertIn("<details open", page)
+        feed = (self.root / "podcast.xml").read_text(encoding="utf-8")
+        self.assertIn("Hemlig detalj", feed)
+
+    def test_summary_wins_and_long_text_is_cut(self):
+        long_text = " ".join(["ord"] * 100)
+        self.assertEqual(
+            podcast_feed.short_description({"description": long_text, "summary": "Kort."}),
+            "Kort.",
+        )
+        cut = podcast_feed.short_description({"description": long_text})
+        self.assertTrue(cut.endswith("…"))
+        self.assertLessEqual(len(cut), podcast_feed.SHORT_DESCRIPTION_LIMIT + 1)
 
     def test_different_audio_at_the_same_url_is_refused(self):
         first = self.root / "a.mp3"

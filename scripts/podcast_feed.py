@@ -239,9 +239,21 @@ def html_text(value: str) -> str:
     return escape(str(value), {'"': "&quot;"})
 
 
-def html_paragraph(value: str) -> str:
-    lines = [html_text(line) for line in str(value).strip().splitlines()]
-    return "<br>\n".join(lines) if lines else ""
+SHORT_DESCRIPTION_LIMIT = 200
+
+
+def short_description(episode: dict) -> str:
+    """One or two lines for the page: the summary if set, else the opening of the text."""
+    summary = str(episode.get("summary") or "").strip()
+    if summary:
+        return " ".join(summary.split())
+    text = str(episode.get("description") or "").strip()
+    paragraphs = [p for p in re.split(r"\n\s*\n", text) if p.strip()]
+    first = " ".join(paragraphs[0].split()) if paragraphs else ""
+    if len(first) <= SHORT_DESCRIPTION_LIMIT:
+        return first
+    cut = first[:SHORT_DESCRIPTION_LIMIT].rsplit(" ", 1)[0].rstrip(" ,.;:")
+    return cut + "…"
 
 
 def render_episode_html(show: dict, episode: dict) -> str:
@@ -250,13 +262,13 @@ def render_episode_html(show: dict, episode: dict) -> str:
     src = f"{show['audio_dir'].strip('/')}/{filename}"
     return (
         '            <li style="margin-bottom: 20px;">\n'
-        '              <details style="background-color: black; color: white; '
+        '              <details open style="background-color: black; color: white; '
         'border-radius: 8px; padding: 10px; max-width: 600px; margin: 0 auto;">\n'
         "                <summary>\n"
         f"                  <h2>{html_text(episode['title'])}</h2>\n"
         "                </summary>\n"
         f"                <p>{html_text(episode['date'])}</p>\n"
-        f"                <p>{html_paragraph(episode['description'])}</p>\n"
+        f"                <p>{html_text(short_description(episode))}</p>\n"
         '                <audio controls volume="1.0">\n'
         f'                  <source src="{html_text(src)}" type="{mime}">\n'
         "                  Your browser does not support the audio element.\n"
