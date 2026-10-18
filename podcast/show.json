@@ -9,7 +9,7 @@
   "page_path": "podcast.html",
   "feed_path": "podcast.xml",
   "audio_dir": "static/podcast",
-  "image": "https://klasholmgren.se/static/images/user-img.jpg",
+  "image": "https://klasholmgren.se/static/images/podcast-cover.jpg",
   "explicit": false,
   "category": "Society & Culture"
 }

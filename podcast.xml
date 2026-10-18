@@ -15,10 +15,10 @@
       <itunes:name>Klas Holmgren</itunes:name>
       <itunes:email>admin@klasholmgren.se</itunes:email>
     </itunes:owner>
-    <itunes:image href="https://klasholmgren.se/static/images/user-img.jpg"/>
+    <itunes:image href="https://klasholmgren.se/static/images/podcast-cover.jpg"/>
     <itunes:category text="Society &amp; Culture"/>
     <image>
-      <url>https://klasholmgren.se/static/images/user-img.jpg</url>
+      <url>https://klasholmgren.se/static/images/podcast-cover.jpg</url>
       <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
