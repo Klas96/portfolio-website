@@ -125,7 +125,7 @@ def create_fallback_index_html():
           <h4 class="lgTitle regular"><a href="code.html">About Code</a></h4>
         </div>
         <p class="pb-2">
-          Writing instructions that can be run on computers is a creative and productive way to solve problems. I mostly program in high level languages (Python and JavaScript) but are also intrested in C++. The project range from smale games to AI aplications and imagea-analysis. My favorite web extention is <a href='https://darkreader.org/' style="color: yellow;">Dark Reader</a> and the best site is ofcourse <a href="sökmotorn.se" style="color: yellow;">sökmotorn.se</a>. :) As editors I use <a href="https://cursor.com/" style="color: yellow;">Cursor</a> and Vim. As OS I use Ubuntu and here is my <a href="https://github.com/Klas96?tab=repositories" style="color: yellow;">Github</a>.
+          Writing instructions that can be run on computers is a creative and productive way to solve problems. I mostly program in high level languages (Python and JavaScript) but are also intrested in C++. The project range from smale games to AI aplications and imagea-analysis. My favorite web extention is <a href='https://darkreader.org/' style="color: yellow;">Dark Reader</a> and the best search engine is ofcourse <a href="sökmotorn.se" style="color: yellow;">sökmotorn.se</a>. :) As editors I use <a href="https://cursor.com/" style="color: yellow;">Cursor</a> and Vim. As distro I use Ubuntu and here is my <a href="https://github.com/Klas96?tab=repositories" style="color: yellow;">Github</a>.
         </p>
       </div>
     </div>
