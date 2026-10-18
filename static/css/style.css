@@ -1641,3 +1641,13 @@ form {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+/* Podcast subscribe */
+.podcastSubscribe { margin: 0 0 24px; max-width: 600px; }
+.podcastSubscribe__label { margin-bottom: 8px; }
+.podcastSubscribe__feed { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; align-items: center; }
+.podcastSubscribe__url { flex: 1 1 220px; min-width: 0; overflow-wrap: anywhere; word-break: break-all; color: yellow; background: #000; border-radius: 8px; padding: 8px 10px; font-size: 0.9em; }
+.podcastSubscribe__copy { flex: 0 0 auto; background: yellow; color: #000; border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; font: inherit; min-width: 7.5em; }
+.podcastSubscribe__copy:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.podcastSubscribe__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-top: 12px; }
+.podcastSubscribe__links a { color: yellow; }
