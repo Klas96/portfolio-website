@@ -12,6 +12,13 @@ That single command will:
 - Commit and push to `main`
 - Deploy via GitHub Pages automatically
 
+## Branches
+
+- **`dev`** — default branch for PRs and day-to-day work.
+- **`main`** — production. GitHub Pages publishes from here (root `/`).
+
+Merge PRs into `dev`, then promote to `main` when you want the live site updated.
+
 ## Push to deploy
 
 GitHub Pages is configured to publish from **`main`** (root `/`).
