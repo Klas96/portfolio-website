@@ -63,7 +63,7 @@ class PodcastFeedTest(unittest.TestCase):
         channel = rss.getroot().find("channel")
         self.assertEqual(channel.findtext("title"), "Klas Veckologg")
         self.assertEqual(channel.findtext("language"), "sv")
-        self.assertIn("vad som är på gång nästa vecka", channel.findtext("description"))
+        self.assertIn("vad som är på gång härnäst", channel.findtext("description"))
         self.assertEqual(channel.findall("item"), [])
         self.assertIn("Inga avsnitt ännu.", (self.root / "podcast.html").read_text(encoding="utf-8"))
 

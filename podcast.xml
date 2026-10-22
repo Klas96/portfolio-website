@@ -4,11 +4,11 @@
     <title>Klas Veckologg</title>
     <link>https://klasholmgren.se/podcast.html</link>
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
-    <description>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka.</description>
+    <description>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</description>
     <language>sv</language>
     <lastBuildDate>Fri, 16 Oct 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
-    <itunes:summary>Varje körning: vilka projekt Klas höll på med den här veckan, och vad som är på gång nästa vecka.</itunes:summary>
+    <itunes:summary>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:owner>
