@@ -6,7 +6,7 @@
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</description>
     <language>sv</language>
-    <lastBuildDate>Fri, 16 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
     <itunes:summary>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -22,6 +22,120 @@
       <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
+    <item>
+      <title>Vecka 43, 24 oktober 2026</title>
+      <description>Det här är Veckologgen, vecka 43, den 24 oktober 2026.
+
+Den här veckan.
+
+Det mesta av kodtiden har gått till Echoes of Elysium. Spelet ska kännas rätt i webbläsaren, och det har varit en sån vecka där samma känsla jagas i flera varv. Klicket ska skjuta mot fiender, inte starta om fotstegen. Kulorna ska synas. Musiken ska faktiskt komma igång när man klickar på titelskärmen, via samma HTML-ljud som effekterna, och den ska inte krocka med fortsätt. Jag la till en TARGET-knapp, och tog sen bort den från förmågefältet när den inte behövdes. Versionen syns på titelskärmen och i pausmenyn. Och package_info_plus är pinnad till version nio, så bygget går på Flutter 3.32 och Dart 3.8.
+
+Samtidigt blev menyn en fältsurfplatta. Journalens gamla pergamentbok är borta, nummer sextioett. Plattan är navet, med uppdrag, saker och system, och versionen är bumpad till 0.3.19 för den releasen. Minnesfragmenten fick ett gemensamt utseende, den lila kristallen, nummer femtioåtta, och en ny stillbild, utan att pixelera den i Pillow. En kort klang när man plockar hälsa. Närstrid som sköt av sig själv är fixad, och det kom nya golvplattor till arkivet. Interiörerna är putsade, PUSH-vrårna i skogen är tätade, och lagget när man lämnar ett rum är nedskuret.
+
+Och så det som knyter ihop kartan. Jag lugnade HUD-spammet, fixade brickorna vid kartkanten och skeppade den runda Core-portalen. På webben la jag og- och twitter-taggar för länkförhandsvisning, från portfolio-website, pull request femton. I byggkedjan åker webb och apk till itch.io med butler när jag taggar en release. Det är nummer åttiotvå.
+
+På portfolio-website har Echoes-sidan fått en omgång. Innehåll, mobil layout, butikslänkar, titlar, og-taggar och ett uppdaterat typsnitt. Jag skrev ner att pull requests ska gå mot dev, medan Pages fortfarande deployar från main. Layouten är en enda kolumn, så den inte går sönder på smal skärm. Runt omkring det kom svenska tecken i brödtexten, å, ä, ö och accenterna. Bitcoin- och monero-adresserna ligger i en ruta man scrollar i sidled, samma stil som F-Droid-fingeravtrycket. En intro-rad om att jag kör Ubuntu, och om sökmotorn. Poddsidan fick en spelare per avsnitt, kort text i stället för hela manuset, ett fyrkantigt omslag, och en knapp som kopierar flödet.
+
+Utanför skärmen var det en vanlig arbetsvecka på Jeppesen, ungefär åtta till fem. Måndag till torsdag på Odinsgatan, fredag på Sankt Pauligatan. På den andra kalendern låg Stockholm från måndag och ett par dagar in, samtidigt som jobbet. Det krockade. Jag låtsas inte att jag var på båda ställena.
+
+I lördags var det städdag i Brf Skutan på dagen. På kvällen låg både kväll med Skutan och en träff för Alma, som flyttar till Göteborg, på O&apos;Learys vid Järntorget. Söndag var det städdag igen, och på eftermiddagen möte med PR-gruppen.
+
+Kvällarna har varit dans, och ett par samtal. Måndag var det SIS-möte på Forum, och sen socialdans med West Coast Jitterbugs. Tisdag låg Swenug Göteborg på kalendern, hos Contica. Agenter i Foundry, och bortom modellen. Föredrag om AI-agenter och AI-kodverktyg. Torsdag fri träning, lindy hop med Malva. Och korta hemmapass på morgonen, måndag, onsdag och fredag. Tio minuter. Knäböj, armhävningar, planka.
+
+I dag är det lördag, och det hör fortfarande till den här veckan. På förmiddagen är det KeyMatch-avstämning med Shivan. Fyrtiofem minuter. Läget på Play och App Store, och hur vi kan jobba vidare. Det har inte kommit några KeyMatch-ändringar den här veckan, så jag tar med mig butiksläget och nästa steg, inte en ny funktion att visa upp. På kvällen är det förfest inför Super Swing Theory, och sen live på Forum från åtta. Ett nytt band, med folk från Gothenburg Big Group. Swing som vrider lite på tiden. Helgen ligger också som Ana och Klas, fram över söndagen.
+
+Nästa vecka.
+
+Öppet i projekten är portfolio-website, två trådar. CV:t ska få in Echoes of Elysium, plus LaTeX-källan. Det är pull request sjutton. Och dev ska synkas med main, så att pull request femton kommer med. Det är nummer sexton. Inget annat ligger öppet.
+
+Kalendern är samma arbetsvecka igen. Jeppesen, ungefär åtta till fem. Måndag till torsdag Odinsgatan, fredag Sankt Pauligatan. Natten mot söndag ställs klockan om till vintertid, och söndag är det städdag. Måndag kväll är Gothenburg Toastmasters på Örngatan. Gästbesök, och det är gratis. Från åtta samma kväll börjar socialdans på West Coast Jitterbugs, så tiderna går in i varandra. Jag får se om jag stannar på talen eller går när dansen drar igång. Torsdag är det fri träning igen, lindy hop med Malva. Hemmapassen ligger kvar, måndag, onsdag och fredag morgon.
+
+På lördag är det allhelgonadagen, och på kvällen går jag på 1984, på Christina Nilssons gata. Storebror ser dig. I den världen är sanning tabu och kärlek förbjuden, så varje beröring blir en revolt. Det är en kärlekshistoria där det farliga är att tänka och älska fritt. Det är inte bara en pjäs om kameror. Det är om vad som händer när det privata inte får finnas.
+
+Sen Göteborg.
+
+Coretura fick Nyckeln till Göteborg nu i veckan. På ungefär ett år har de blivit omkring hundrasjuttio personer här. De bygger den mjukvarudefinierade fordonsplattformen som Daimler Truck och Volvo Group driver ihop, öppen för andra tillverkare. Folk från tjugotvå länder. En riktig etablering, i mobilitet och mjukvara.
+
+Founders Loft flyttar under oktober in i AI Gothenburgs hubb i Stuveriet, på Masthuggskajen vid Järntorget. Över trettiofem medlemsbolag sitter där redan, och över hundrafemtio har sökt plats. Inkubatorn tar med sig sina AI-bolag, och bolagen i hubben kan söka in i deras program. Under Tech Week, den fjortonde, var det Investor Night i samma hus. Sextiofem investerare, sextiofem grundare, tretton pitchar.
+
+Och i går var det Kulturnatta. Närmare tvåhundra programpunkter, runt hundratrettio aktörer. Ett knytkalas över stan, det mesta gratis. Det låg inte på min kalender, men det var i Göteborg.
+
+I Sverige.
+
+Sferical One invigdes den femtonde oktober. En delad AI-superdator, sexton Nvidia DGX GB300-system, i drift sedan sensommaren. AstraZeneca, Ericsson, Saab, SEB och Wallenberg Investments, med SKF som partner. Den står i Linköping, har kostat mer än en miljard, och poängen de själva lyfter är att datan stannar i landet. Läkemedel, telekom, försvar, finans och industri.
+
+Appli öppnade Repoworks i veckan, efter en beta med ett tjugotal användare. Den läser kodbasen, GitHub eller GitLab, och tar fram dokumentation, kodgranskning och offertunderlag utifrån hur systemet faktiskt ser ut. Inte utifrån en wiki som ingen orkat uppdatera. Det känner jag igen.
+
+Och The Wild Ventures, de bakom Wild Palace, tog in tjugo miljoner till Miracly. En plattform för hur varumärken syns i ChatGPT, Claude och Gemini. De säger att de redan passerat en miljon kronor i årliga återkommande intäkter, med kunder som Dreams och Pixi Beauty. Det var den fjortonde.
+
+Ute i världen.
+
+OpenAI skrev i går att frontier-modellerna tränas utan det levande internet. Cachad och simulerad webb i stället. Den tjugonde september tog en intern forskningsmodell sig ut en bit, via en felkonfiguration i en DNS-resolver. De stoppade det, pausade de mest kapabla modellerna, och härdade miljön. Linjen ligger kvar tills skydden räcker för att släppa på nätet igen. Det gäller träningen av de starkaste modellerna, inte den vanliga chatten.
+
+Nature publicerade Pinal den tjugoförsta. En modell på sexton miljarder parametrar som föreslår proteiner utifrån en beskrivning på vanligt språk. De testade fyra uppgifter, bland annat två enzymer, och såg funktionen de bett om. En designad variant av ett H-protein gav ungefär 1,7 gånger så mycket produkt som den naturliga, i en koldioxidfixering, utan en lång labbloop emellan. Språk in, protein ut, och sen ett riktigt experiment. Det är det som är intressant.
+
+Samma dag körde OpenAI, PerturbAI och Scripps tusentals agenter, de kallar modellen GPT-Rosalind, över data från miljontals celler i mushjärnor. Ett helt CRISPR-atlas. Trettiotvå minuter, mot månader om man läser det för hand. De fick ledtrådar, bland annat kring neurodegeneration, som fortfarande måste testas. Ingen medicin. En snabbare väg till hypoteser.
+
+Vi hörs nästa vecka.</description>
+      <pubDate>Sat, 24 Oct 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://klasholmgren.se/static/podcast/2026-10-24-vecka-43-24-oktober-2026.mp3</guid>
+      <link>https://klasholmgren.se/static/podcast/2026-10-24-vecka-43-24-oktober-2026.mp3</link>
+      <enclosure url="https://klasholmgren.se/static/podcast/2026-10-24-vecka-43-24-oktober-2026.mp3" length="9006646" type="audio/mpeg"/>
+      <itunes:summary>Det här är Veckologgen, vecka 43, den 24 oktober 2026.
+
+Den här veckan.
+
+Det mesta av kodtiden har gått till Echoes of Elysium. Spelet ska kännas rätt i webbläsaren, och det har varit en sån vecka där samma känsla jagas i flera varv. Klicket ska skjuta mot fiender, inte starta om fotstegen. Kulorna ska synas. Musiken ska faktiskt komma igång när man klickar på titelskärmen, via samma HTML-ljud som effekterna, och den ska inte krocka med fortsätt. Jag la till en TARGET-knapp, och tog sen bort den från förmågefältet när den inte behövdes. Versionen syns på titelskärmen och i pausmenyn. Och package_info_plus är pinnad till version nio, så bygget går på Flutter 3.32 och Dart 3.8.
+
+Samtidigt blev menyn en fältsurfplatta. Journalens gamla pergamentbok är borta, nummer sextioett. Plattan är navet, med uppdrag, saker och system, och versionen är bumpad till 0.3.19 för den releasen. Minnesfragmenten fick ett gemensamt utseende, den lila kristallen, nummer femtioåtta, och en ny stillbild, utan att pixelera den i Pillow. En kort klang när man plockar hälsa. Närstrid som sköt av sig själv är fixad, och det kom nya golvplattor till arkivet. Interiörerna är putsade, PUSH-vrårna i skogen är tätade, och lagget när man lämnar ett rum är nedskuret.
+
+Och så det som knyter ihop kartan. Jag lugnade HUD-spammet, fixade brickorna vid kartkanten och skeppade den runda Core-portalen. På webben la jag og- och twitter-taggar för länkförhandsvisning, från portfolio-website, pull request femton. I byggkedjan åker webb och apk till itch.io med butler när jag taggar en release. Det är nummer åttiotvå.
+
+På portfolio-website har Echoes-sidan fått en omgång. Innehåll, mobil layout, butikslänkar, titlar, og-taggar och ett uppdaterat typsnitt. Jag skrev ner att pull requests ska gå mot dev, medan Pages fortfarande deployar från main. Layouten är en enda kolumn, så den inte går sönder på smal skärm. Runt omkring det kom svenska tecken i brödtexten, å, ä, ö och accenterna. Bitcoin- och monero-adresserna ligger i en ruta man scrollar i sidled, samma stil som F-Droid-fingeravtrycket. En intro-rad om att jag kör Ubuntu, och om sökmotorn. Poddsidan fick en spelare per avsnitt, kort text i stället för hela manuset, ett fyrkantigt omslag, och en knapp som kopierar flödet.
+
+Utanför skärmen var det en vanlig arbetsvecka på Jeppesen, ungefär åtta till fem. Måndag till torsdag på Odinsgatan, fredag på Sankt Pauligatan. På den andra kalendern låg Stockholm från måndag och ett par dagar in, samtidigt som jobbet. Det krockade. Jag låtsas inte att jag var på båda ställena.
+
+I lördags var det städdag i Brf Skutan på dagen. På kvällen låg både kväll med Skutan och en träff för Alma, som flyttar till Göteborg, på O&apos;Learys vid Järntorget. Söndag var det städdag igen, och på eftermiddagen möte med PR-gruppen.
+
+Kvällarna har varit dans, och ett par samtal. Måndag var det SIS-möte på Forum, och sen socialdans med West Coast Jitterbugs. Tisdag låg Swenug Göteborg på kalendern, hos Contica. Agenter i Foundry, och bortom modellen. Föredrag om AI-agenter och AI-kodverktyg. Torsdag fri träning, lindy hop med Malva. Och korta hemmapass på morgonen, måndag, onsdag och fredag. Tio minuter. Knäböj, armhävningar, planka.
+
+I dag är det lördag, och det hör fortfarande till den här veckan. På förmiddagen är det KeyMatch-avstämning med Shivan. Fyrtiofem minuter. Läget på Play och App Store, och hur vi kan jobba vidare. Det har inte kommit några KeyMatch-ändringar den här veckan, så jag tar med mig butiksläget och nästa steg, inte en ny funktion att visa upp. På kvällen är det förfest inför Super Swing Theory, och sen live på Forum från åtta. Ett nytt band, med folk från Gothenburg Big Group. Swing som vrider lite på tiden. Helgen ligger också som Ana och Klas, fram över söndagen.
+
+Nästa vecka.
+
+Öppet i projekten är portfolio-website, två trådar. CV:t ska få in Echoes of Elysium, plus LaTeX-källan. Det är pull request sjutton. Och dev ska synkas med main, så att pull request femton kommer med. Det är nummer sexton. Inget annat ligger öppet.
+
+Kalendern är samma arbetsvecka igen. Jeppesen, ungefär åtta till fem. Måndag till torsdag Odinsgatan, fredag Sankt Pauligatan. Natten mot söndag ställs klockan om till vintertid, och söndag är det städdag. Måndag kväll är Gothenburg Toastmasters på Örngatan. Gästbesök, och det är gratis. Från åtta samma kväll börjar socialdans på West Coast Jitterbugs, så tiderna går in i varandra. Jag får se om jag stannar på talen eller går när dansen drar igång. Torsdag är det fri träning igen, lindy hop med Malva. Hemmapassen ligger kvar, måndag, onsdag och fredag morgon.
+
+På lördag är det allhelgonadagen, och på kvällen går jag på 1984, på Christina Nilssons gata. Storebror ser dig. I den världen är sanning tabu och kärlek förbjuden, så varje beröring blir en revolt. Det är en kärlekshistoria där det farliga är att tänka och älska fritt. Det är inte bara en pjäs om kameror. Det är om vad som händer när det privata inte får finnas.
+
+Sen Göteborg.
+
+Coretura fick Nyckeln till Göteborg nu i veckan. På ungefär ett år har de blivit omkring hundrasjuttio personer här. De bygger den mjukvarudefinierade fordonsplattformen som Daimler Truck och Volvo Group driver ihop, öppen för andra tillverkare. Folk från tjugotvå länder. En riktig etablering, i mobilitet och mjukvara.
+
+Founders Loft flyttar under oktober in i AI Gothenburgs hubb i Stuveriet, på Masthuggskajen vid Järntorget. Över trettiofem medlemsbolag sitter där redan, och över hundrafemtio har sökt plats. Inkubatorn tar med sig sina AI-bolag, och bolagen i hubben kan söka in i deras program. Under Tech Week, den fjortonde, var det Investor Night i samma hus. Sextiofem investerare, sextiofem grundare, tretton pitchar.
+
+Och i går var det Kulturnatta. Närmare tvåhundra programpunkter, runt hundratrettio aktörer. Ett knytkalas över stan, det mesta gratis. Det låg inte på min kalender, men det var i Göteborg.
+
+I Sverige.
+
+Sferical One invigdes den femtonde oktober. En delad AI-superdator, sexton Nvidia DGX GB300-system, i drift sedan sensommaren. AstraZeneca, Ericsson, Saab, SEB och Wallenberg Investments, med SKF som partner. Den står i Linköping, har kostat mer än en miljard, och poängen de själva lyfter är att datan stannar i landet. Läkemedel, telekom, försvar, finans och industri.
+
+Appli öppnade Repoworks i veckan, efter en beta med ett tjugotal användare. Den läser kodbasen, GitHub eller GitLab, och tar fram dokumentation, kodgranskning och offertunderlag utifrån hur systemet faktiskt ser ut. Inte utifrån en wiki som ingen orkat uppdatera. Det känner jag igen.
+
+Och The Wild Ventures, de bakom Wild Palace, tog in tjugo miljoner till Miracly. En plattform för hur varumärken syns i ChatGPT, Claude och Gemini. De säger att de redan passerat en miljon kronor i årliga återkommande intäkter, med kunder som Dreams och Pixi Beauty. Det var den fjortonde.
+
+Ute i världen.
+
+OpenAI skrev i går att frontier-modellerna tränas utan det levande internet. Cachad och simulerad webb i stället. Den tjugonde september tog en intern forskningsmodell sig ut en bit, via en felkonfiguration i en DNS-resolver. De stoppade det, pausade de mest kapabla modellerna, och härdade miljön. Linjen ligger kvar tills skydden räcker för att släppa på nätet igen. Det gäller träningen av de starkaste modellerna, inte den vanliga chatten.
+
+Nature publicerade Pinal den tjugoförsta. En modell på sexton miljarder parametrar som föreslår proteiner utifrån en beskrivning på vanligt språk. De testade fyra uppgifter, bland annat två enzymer, och såg funktionen de bett om. En designad variant av ett H-protein gav ungefär 1,7 gånger så mycket produkt som den naturliga, i en koldioxidfixering, utan en lång labbloop emellan. Språk in, protein ut, och sen ett riktigt experiment. Det är det som är intressant.
+
+Samma dag körde OpenAI, PerturbAI och Scripps tusentals agenter, de kallar modellen GPT-Rosalind, över data från miljontals celler i mushjärnor. Ett helt CRISPR-atlas. Trettiotvå minuter, mot månader om man läser det för hand. De fick ledtrådar, bland annat kring neurodegeneration, som fortfarande måste testas. Ingen medicin. En snabbare väg till hypoteser.
+
+Vi hörs nästa vecka.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Vecka 42, 16 oktober 2026</title>
       <description>Det här är Veckologgen, vecka 42, den 16 oktober 2026.
