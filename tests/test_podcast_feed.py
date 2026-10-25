@@ -219,6 +219,9 @@ class PodcastFeedTest(unittest.TestCase):
         self.assertIn('href="podcast.xml"', index)
         discussion = (self.root / "discussion.html").read_text(encoding="utf-8")
         self.assertIn('title="Arbetsnamn"', discussion)
+        page = (self.root / "podcast.html").read_text(encoding="utf-8")
+        self.assertIn("<title>Klas Holmgren</title>", page)
+        self.assertIn("<!-- PODCAST_TITLE -->Arbetsnamn<!-- /PODCAST_TITLE -->", page)
 
 
 if __name__ == "__main__":
