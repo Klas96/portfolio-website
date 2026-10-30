@@ -6,7 +6,7 @@
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</description>
     <language>sv</language>
-    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
     <itunes:summary>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -22,6 +22,16 @@
       <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
+    <item>
+      <title>Vecka 44, 30 oktober 2026</title>
+      <description>Jag går igenom veckans releaser, bland annat NPC-uppdrag i echoes-of-elysium och domänstrul för mooves-sajten, en vanlig Jeppesenvecka och swing på Forum. Nästa vecka väntar socialdans, lindyträning och Poliscope. Sen Volvo Cars sparpaket, skärgårdsavtalet och lite AI-nyheter.</description>
+      <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://klasholmgren.se/static/podcast/2026-10-30-vecka-44-30-oktober-2026.mp3</guid>
+      <link>https://klasholmgren.se/static/podcast/2026-10-30-vecka-44-30-oktober-2026.mp3</link>
+      <enclosure url="https://klasholmgren.se/static/podcast/2026-10-30-vecka-44-30-oktober-2026.mp3" length="10494449" type="audio/mpeg"/>
+      <itunes:summary>Jag går igenom veckans releaser, bland annat NPC-uppdrag i echoes-of-elysium och domänstrul för mooves-sajten, en vanlig Jeppesenvecka och swing på Forum. Nästa vecka väntar socialdans, lindyträning och Poliscope. Sen Volvo Cars sparpaket, skärgårdsavtalet och lite AI-nyheter.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Vecka 43, 24 oktober 2026</title>
       <description>Det här är Veckologgen, vecka 43, den 24 oktober 2026.
