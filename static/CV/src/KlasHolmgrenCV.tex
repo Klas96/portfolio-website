@@ -1,0 +1,224 @@
+% Klas Holmgren - CV
+% Recreated LaTeX source of static/CV/KlasHolmgrenCV.pdf (compile with XeLaTeX).
+%   xelatex KlasHolmgrenCV.tex && cp KlasHolmgrenCV.pdf ../KlasHolmgrenCV.pdf
+\documentclass[letterpaper,11pt]{article}
+\usepackage{fontspec}
+\usepackage[margin=0.4in,top=0.4in,bottom=0.4in,includehead=false]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedright
+\raggedbottom
+
+% Section headings: bold, upper case, rule underneath
+\titleformat{\section}{\large\bfseries}{}{0em}{\MakeUppercase}[\vspace{-9.3pt}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{4pt}{-1.45pt}
+
+% Entry with bold title + right date, italic subtitle + right location
+\newcommand{\entry}[5][]{%
+  \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    {\large\bfseries #2} & {\small\bfseries #3}\\
+    {\large\itshape #1#4} & {\small\itshape #5}\\
+  \end{tabular*}\par\vspace{1.6pt}}
+\newenvironment{bullets}{\begin{itemize}[leftmargin=24.1pt,labelsep=5.47pt,label=$\vcenter{\hbox{\tiny$\bullet$}}$,topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt]}{\end{itemize}\vspace{3.5pt}}
+
+\newcommand{\project}[2]{{\large\bfseries #1}\\{\large\itshape #2}\par\vspace{1.2pt}}
+\newenvironment{skillcol}{\begin{itemize}[leftmargin=27.27pt,labelsep=5.47pt,label=$\vcenter{\hbox{\tiny$\bullet$}}$,topsep=0pt,itemsep=3pt,parsep=0pt,partopsep=0pt]}{\end{itemize}}
+\begin{document}
+\vspace*{-20.8pt}
+=1\par\vspace{-0.95pt}
+\begin{center}
+  {\Huge\scshape Klas Holmgren}\\[2pt]
+  Gothenburg, Sweden\\
+  \small\faPhone\ \underline{\href{tel:+46723149001}{+46723149001}}~~
+  \faEnvelope\ \underline{\href{mailto:admin@klasholmgren@gmail.se}{admin@klasholmgren@gmail.se}}~~
+  \faCircle\ \underline{\href{https://www.klasholmgres.se}{www.klasholmgres.se}}
+\end{center}
+\vspace{-11.6pt}
+
+\section{Education}
+\entry{Chalmers University of Thechnology}{07 2018 -- 10 2020}{MSc. Engineering mathematics and computational science}{Gothenburg, Sweden}\vspace{11.2pt}
+\entry{Chalmers University of Thechnology}{07 2015 -- 07 2018}{B.AS Engineering Physics}{Gothenburg, Sweden}\vspace{11.2pt}
+\entry{Sigrid Rudebecks Gymnasium}{07 2012 -- 07 2015}{Natural Science}{Gothenburg, Sweden}
+
+\section{Professional Experience}
+\entry{Boeing Jeppesen}{08 2025 -- NOW}{\underline{Technical Support Specialist}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item Working as a Technical Support Specialist at Boeing Jeppesen.
+  \item This role include providing technical support to customers and partners.
+\end{bullets}
+\entry{Data Värde Teknik}{08 2023 -- 07 2024}{\underline{DataScientist}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item Working as a developer at Data Värde Teknik
+  \item This role include developing a control algorithm for boat steering. It also involved developing a frontend for a fastAPI backbend.
+\end{bullets}
+\entry{PromoSoft}{11 2021 -- 07 2023}{\underline{DataScientist}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item Working as a Data Scientist with timeseries forecasting at Promo Soft.
+  \item This role include developing a demand forecasting model for inventory planning using Pandas and Sklearn.
+\end{bullets}
+\entry{Ericsson}{07 2020 -- 11 2021}{\underline{Developer}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item Working as developer at Ericsson 5G core.
+  \item This role included working in an agile environment using Scrum.
+  \item The mission was to develop and test the new 5G core. This mainly involved programming in C++.
+\end{bullets}
+\entry{Chalmers - Cvijovic Lab}{07 2020 -- 11 2021}{\underline{Image Analysist}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item Master thesis project at Chalmers analysing microscopy time-laps data of growing yeast cells.
+  \item In this project I learned a lot about image analysis and available tools like OpenCV and Scikit-Learn. But also how to mange larger projects and report regularly ta an employer.
+\end{bullets}
+\entry{Chalmers University of Technology}{07 2019 -- 11 2021}{\underline{Teaching Assistant}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item The role of the teaching assistant is to help with a course by holding certain lectures as well as correcting assignments etc.
+  \item I have been an assistant for courses in probability, statistics, Matlab and mathematical analysis.
+\end{bullets}
+\entry{Intize}{07 2019 -- 11 2021}{\underline{Private Teacher}}{Gothenburg, Sweden}
+\begin{bullets}
+  \item I have worked as a private teacher for younger students needing help with mathematics and natural science.
+  \item This has been through different organization such as Intize and Study Buddy.
+\end{bullets}
+
+\section{Technical Skills}
+\vspace{1.25pt}\hspace*{10.8pt}\textbf{Languages:} Python, C++, C, JavaScript, Bash, HTML, SQL, Java\\[-1.6pt]
+\hspace*{10.8pt}\textbf{Developer Tools:} Linux, Cursor, vim, Git, Postgres
+
+\newpage
+\vspace*{-22.92pt}
+\section{Personal Projects}
+\project{Echoes of Elysium}{2026 -- Present}
+\begin{bullets}
+  \item Cyberpunk space RPG in Flutter/Dart on Bonfire: tile-based Tiled maps, NPC dialogue, voiced cutscenes.
+  \item CI/CD releases to F-Droid, \href{https://klas96.itch.io/echoes-of-elysium}{itch.io} and a web build. Play: \href{https://klasholmgren.se/echoes-of-elysium.html}{klasholmgren.se/echoes-of-elysium.html}.
+\end{bullets}\vspace{1.5pt}
+\project{Email Agent}{2025}
+\begin{bullets}
+  \item Developed a email agent based on AI.
+  \item Built with python for the backend and HTML, CSS and JavaScript for the frontend.
+  \item Deployed on Home Server.
+  \item Used OpenAI, ElevenLabs, Stability, Libriscribe and Podcastfy APIs.
+  \item Used FastAPI for the backend and Flask for the frontend.
+\end{bullets}\vspace{1.5pt}
+\project{Key-Match}{2025}
+\begin{bullets}
+  \item Developed a dating app based on AI match making.
+  \item Built with Flutter for the frontend and Node.js for the backend.
+  \item Deployed on Google Cloud.
+\end{bullets}\vspace{1.5pt}
+\project{SubSynced}{2024}
+\begin{bullets}
+  \item SuperTokes for authentication and authorization.
+  \item React project for a client.
+\end{bullets}\vspace{1.5pt}
+\project{Personal Website}{2022}
+\begin{bullets}
+  \item Personal website for my projects and services.
+  \item Built with django for the backend and html and JS for the frontend.
+  \item Deployed on Heroku.
+\end{bullets}\vspace{1.5pt}
+
+\newpage
+\vspace*{-22.92pt}
+\section{Skills}
+\vspace{1.55pt}\noindent\hspace*{0.11pt}%
+\begin{minipage}[t]{110.95pt}
+\begin{skillcol}
+\item ElevenLabs
+\item Libriscribe
+\item OpenAI
+\item Podcastfy
+\item Stability
+\item keras
+\item matplotlib
+\item numpy
+\item pandas
+\item pocketflow
+\item plotly
+\item scikit-learn
+\item seaborn
+\item tensorflow
+\item SQLite
+\item PostgreSQL
+\end{skillcol}\end{minipage}%
+\begin{minipage}[t]{110.95pt}
+\begin{skillcol}
+\item Azure
+\item CI/CD
+\item Docker
+\item GCP
+\item Google Cloud
+\item Jenkins
+\item Kubernetes
+\item Django
+\item FastAPI
+\item Flask
+\item Flutter
+\item Jinja
+\item Node.js
+\item React
+\item Tailwind
+\item Android
+\end{skillcol}\end{minipage}%
+\begin{minipage}[t]{110.95pt}
+\begin{skillcol}
+\item HTMLX
+\item Optimization
+\item npm
+\item Bash
+\item C
+\item C++
+\item CSS
+\item HTML
+\item Java
+\item JavaScript
+\item SQL
+\item python
+\item css
+\item html
+\item GNOME
+\item Git
+\end{skillcol}\end{minipage}%
+\begin{minipage}[t]{110.95pt}
+\begin{skillcol}
+\item Linux
+\item Play Console
+\item Play Store
+\item Ubuntu
+\item Ubuntu Server
+\item WebDevelopment
+\item Zsh
+\item apt
+\item pip
+\item uv venv
+\item Linux
+\item OpenCV
+\item vim
+\item cursor
+\item vscode
+\item heroku
+\end{skillcol}\end{minipage}%
+\begin{minipage}[t]{110.95pt}
+\begin{skillcol}
+\item github
+\item smtp
+\item ssh
+\item loopia
+\item playwirght
+\item browseruse
+\item postman
+\item redis
+\item rabbitmq
+\item fastAPI
+\item latex
+\item flask
+\item pytest
+\item torrent
+\item vnc
+\end{skillcol}\end{minipage}%
+
+\end{document}
