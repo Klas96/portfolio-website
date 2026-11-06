@@ -14,10 +14,10 @@ That single command will:
 
 ## Branches
 
-- **`dev`** — default branch for PRs and day-to-day work.
-- **`main`** — production. GitHub Pages publishes from here (root `/`).
+- **`main`** — GitHub default branch. GitHub Pages publishes this branch (root `/`).
+- **`dev`** — working branch. Feature branches open pull requests into `dev`.
 
-Merge PRs into `dev`, then promote to `main` when you want the live site updated.
+`dev` reaches `main` only through a reviewed pull request whose head is `dev`. `scripts/deploy-simple.sh` still commits and pushes straight to `main`, so it skips that review.
 
 ## Push to deploy
 
