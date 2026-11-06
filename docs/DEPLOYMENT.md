@@ -14,7 +14,7 @@ That single command will:
 
 ## Branches
 
-- **`main`** — GitHub default branch. GitHub Pages publishes this branch (root `/`).
+- **`main`** — production. GitHub Pages publishes this branch (root `/`).
 - **`dev`** — working branch. Feature branches open pull requests into `dev`.
 
 `dev` reaches `main` only through a reviewed pull request whose head is `dev`. `scripts/deploy-simple.sh` still commits and pushes straight to `main`, so it skips that review.
