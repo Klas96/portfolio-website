@@ -6,7 +6,7 @@
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</description>
     <language>sv</language>
-    <lastBuildDate>Fri, 06 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
     <itunes:summary>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -22,6 +22,16 @@
       <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
+    <item>
+      <title>Vecka 46, 14 november 2026</title>
+      <description>En lugn kodvecka, med Echoes från helgen innan och dagarna på Jeppesen. Nästa vecka är fonddatabasen, tedans och trettioårskalas, och sen Volvo, AI-varsel och Gemini 4 Carbon.</description>
+      <pubDate>Sat, 14 Nov 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://klasholmgren.se/static/podcast/2026-11-14-vecka-46-14-november-2026.mp3</guid>
+      <link>https://klasholmgren.se/static/podcast/2026-11-14-vecka-46-14-november-2026.mp3</link>
+      <enclosure url="https://klasholmgren.se/static/podcast/2026-11-14-vecka-46-14-november-2026.mp3" length="10480370" type="audio/mpeg"/>
+      <itunes:summary>En lugn kodvecka, med Echoes från helgen innan och dagarna på Jeppesen. Nästa vecka är fonddatabasen, tedans och trettioårskalas, och sen Volvo, AI-varsel och Gemini 4 Carbon.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Vecka 45, 6 november 2026</title>
       <description>Echoes of Elysium fick Pokémon-gator, sentinel-telegraf och Android-fixar. Jeppesen, dans och Poliscope, nästa vecka tehus, Toastmasters och gokart. Kort om Volvo, Perstorp och två AI-nyheter.</description>
