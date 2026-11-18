@@ -118,10 +118,36 @@
     .choice:last-child { background: var(--pine); }
     .choice:active { transform: scale(0.98); }
     .choice:focus-visible,
-    .again:focus-visible {
+    .again:focus-visible,
+    .showcard:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 3px;
     }
+    .showcard {
+      display: block;
+      margin-top: 0.75rem;
+      padding: 0.95rem 1rem;
+      border-radius: 1.1rem;
+      background: #fff;
+      border: 2px solid var(--wine);
+      color: inherit;
+      text-decoration: none;
+    }
+    .showcard strong {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+    .showcard span {
+      display: block;
+      margin-top: 0.3rem;
+      font-family: system-ui, sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.35;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .showcard:active { transform: scale(0.98); }
     .ornament {
       margin: 0 0 0.35rem;
       color: var(--gold);
@@ -158,7 +184,7 @@
       z-index: 3;
     }
     @media (prefers-reduced-motion: reduce) {
-      .choice:active, .again:active { transform: none; }
+      .choice:active, .again:active, .showcard:active { transform: none; }
     }
   </style>
 </head>
@@ -266,13 +292,23 @@
         href: "https://www.andlight.com/se/p/pc-no-2-portable-lamp-fall-green_400638/",
         link: "HAY PC Portable No 2 i Fall Green"
       },
-      // PLACEHOLDER — swap title and body when the opera is chosen.
       F: {
         kind: "present",
         id: "F",
-        placeholder: true,
-        title: "Opera",
-        body: "PLACEHOLDER. En opera på GöteborgsOperan, som du och Klas ser tillsammans."
+        title: "En kväll på operan",
+        body: "Du och Klas på GöteborgsOperan. Välj en föreställning.",
+        cards: [
+          {
+            title: "Trollflöjten",
+            text: "Mozarts lekfulla klassiker på svenska, 18 dec 2026–21 jan 2027.",
+            href: "https://www.opera.se/forestallningar/sasong-2026-2027/trollflojten/"
+          },
+          {
+            title: "Big in Japan",
+            text: "Kör och orkester spelar musik från Studio Ghibli, Zelda och Final Fantasy, 1–11 april 2027.",
+            href: "https://www.opera.se/forestallningar/sasong-2026-2027/big-in-japan/"
+          }
+        ]
       }
     };
 
@@ -375,6 +411,21 @@
           card.appendChild(img);
         }
         card.appendChild(el("p", "present", step.body));
+        if (step.cards) {
+          var picks = el("div", "picks");
+          var showcard;
+          var n;
+          for (n = 0; n < step.cards.length; n++) {
+            showcard = el("a", "showcard");
+            showcard.href = step.cards[n].href;
+            showcard.target = "_blank";
+            showcard.rel = "noopener noreferrer";
+            showcard.appendChild(el("strong", null, step.cards[n].title));
+            showcard.appendChild(el("span", null, step.cards[n].text));
+            picks.appendChild(showcard);
+          }
+          card.appendChild(picks);
+        }
         if (step.href) {
           var link = el("a", "giftlink", step.link);
           link.href = step.href;
