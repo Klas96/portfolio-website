@@ -75,6 +75,23 @@
       color: var(--muted);
     }
     .present { color: var(--ink); }
+    .gift {
+      display: block;
+      width: 100%;
+      max-height: 14rem;
+      object-fit: contain;
+      margin-top: 0.9rem;
+      border-radius: 1rem;
+      background: #fff;
+    }
+    .giftlink {
+      display: inline-block;
+      margin-top: 0.85rem;
+      color: var(--wine);
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+    }
     .choices {
       display: flex;
       flex-direction: column;
@@ -182,7 +199,7 @@
         text: "Får du spritt i benen när musiken drar igång?",
         choices: [
           { label: "Ja", next: "C" },
-          { label: "Nej", next: "D" }
+          { label: "Nej", next: "q7" }
         ]
       },
       q5: {
@@ -190,7 +207,7 @@
         text: "En kväll i soffan eller en kväll ute i stan?",
         choices: [
           { label: "I soffan", next: "q6" },
-          { label: "Ute i stan", next: "D" }
+          { label: "Ute i stan", next: "q7" }
         ]
       },
       q6: {
@@ -200,10 +217,18 @@
           { label: "Något att titta på", next: "E1" },
           { label: "Något att hålla i", next: "E2" }
         ]
+      },
+      q7: {
+        kind: "q",
+        text: "Sammet, kristallkronor och arior – något för dig, eller ger det dig gåshud på fel sätt?",
+        choices: [
+          { label: "Ja, mer sånt!", next: "F" },
+          { label: "Gåshud på fel sätt", next: "B" }
+        ]
       }
     };
 
-    // One object for every gift. E1 and E2 are placeholders: replace title and body, leave the ids.
+    // One object for every gift.
     var presents = {
       A: {
         kind: "present",
@@ -223,25 +248,31 @@
         title: "Trettondagsbal och garn",
         body: "Trettondagsbal 5 januari med Klas, plus ett presentkort på Stickwick, garnbutiken."
       },
-      D: {
-        kind: "present",
-        id: "D",
-        title: "Presentkort till operan",
-        body: "Presentkort på GöteborgsOperan, 1 200 kr."
-      },
       E1: {
         kind: "present",
         id: "E1",
-        placeholder: true,
-        title: "Tavla",
-        body: "PLACEHOLDER Tavla"
+        title: "Segel",
+        body: "Trycket Segel av Daniel Nyström, inramat Fine Art, 70×100 cm. En segelbåt i solnedgång över Öresund. Du älskar att segla, så den här är din.",
+        href: "https://printler.com/sv/print/35052/",
+        link: "Segel av Daniel Nyström"
       },
       E2: {
         kind: "present",
         id: "E2",
-        placeholder: true,
         title: "Design",
-        body: "PLACEHOLDER Design"
+        body: "Ett presentkort på ca 1 200 kr – välj själv en designpryl till nya hemmet i någon butik i Göteborg. Inspiration: HAY PC Portable No 2 i Fall Green.",
+        image: "hay-pc-portable-fall-green.jpg",
+        imageAlt: "HAY PC Portable No 2 i Fall Green",
+        href: "https://www.andlight.com/se/p/pc-no-2-portable-lamp-fall-green_400638/",
+        link: "HAY PC Portable No 2 i Fall Green"
+      },
+      // PLACEHOLDER — swap title and body when the opera is chosen.
+      F: {
+        kind: "present",
+        id: "F",
+        placeholder: true,
+        title: "Opera",
+        body: "PLACEHOLDER. En opera på GöteborgsOperan, som du och Klas ser tillsammans."
       }
     };
 
@@ -337,7 +368,20 @@
         card.appendChild(el("p", "kicker", "Din present"));
         heading = el("h1", null, step.title);
         card.appendChild(heading);
+        if (step.image) {
+          var img = el("img", "gift");
+          img.src = step.image;
+          img.alt = step.imageAlt || "";
+          card.appendChild(img);
+        }
         card.appendChild(el("p", "present", step.body));
+        if (step.href) {
+          var link = el("a", "giftlink", step.link);
+          link.href = step.href;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          card.appendChild(link);
+        }
         sign = el("p", "sign");
         sign.appendChild(document.createTextNode("Grattis Irma!"));
         sign.appendChild(el("span", null, "/Klas"));
