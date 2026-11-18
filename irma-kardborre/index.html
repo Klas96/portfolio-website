@@ -232,16 +232,8 @@
         kind: "q",
         text: "En kväll i soffan eller en kväll ute i stan?",
         choices: [
-          { label: "I soffan", next: "q6" },
+          { label: "I soffan", next: "G" },
           { label: "Ute i stan", next: "q7" }
-        ]
-      },
-      q6: {
-        kind: "q",
-        text: "Vad behöver nya hemmet mest – något att titta på eller något att hålla i?",
-        choices: [
-          { label: "Något att titta på", next: "E1" },
-          { label: "Något att hålla i", next: "E2" }
         ]
       },
       q7: {
@@ -274,23 +266,13 @@
         title: "Trettondagsbal och garn",
         body: "Trettondagsbal 5 januari med Klas, plus ett presentkort på Stickwick, garnbutiken."
       },
-      E1: {
+      G: {
         kind: "present",
-        id: "E1",
-        title: "Segel",
-        body: "Trycket Segel av Daniel Nyström, inramat Fine Art, 70×100 cm. En segelbåt i solnedgång över Öresund. Du älskar att segla, så den här är din.",
-        href: "https://printler.com/sv/print/35052/",
-        link: "Segel av Daniel Nyström"
-      },
-      E2: {
-        kind: "present",
-        id: "E2",
-        title: "Design",
-        body: "Ett presentkort. Välj själv en designpryl till nya hemmet i någon butik i Göteborg. Inspiration: HAY PC Portable No 2 i Fall Green.",
-        image: "hay-pc-portable-fall-green.jpg",
-        imageAlt: "HAY PC Portable No 2 i Fall Green",
-        href: "https://www.andlight.com/se/p/pc-no-2-portable-lamp-fall-green_400638/",
-        link: "HAY PC Portable No 2 i Fall Green"
+        id: "G",
+        title: "Småskalig designmarknad",
+        body: "Du och Klas går tillsammans till Småskalig designmarknad i Kronhuset, Kronhusgatan 1D, Göteborg, 5–6 december 2026 (lördag 11–18, söndag 11–17). 45 utställare med konst, design och hantverk, café och workshops. Du får en slant att handla för, via Swish, till exempel en tavla eller en designpryl.",
+        href: "https://www.smaskaligt.com/designmarknad",
+        link: "Småskalig designmarknad"
       },
       F: {
         kind: "present",
