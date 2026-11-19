@@ -209,7 +209,7 @@
         text: "Kan Malte också hänga med på äventyr den kvällen?",
         choices: [
           { label: "Ja", next: "q3" },
-          { label: "Nej", next: "q4" }
+          { label: "Nej", next: "q7" }
         ]
       },
       q3: {
@@ -217,14 +217,6 @@
         text: "Får du och Malte spritt i benen när musiken drar igång?",
         choices: [
           { label: "Ja", next: "A" },
-          { label: "Nej", next: "B" }
-        ]
-      },
-      q4: {
-        kind: "q",
-        text: "Får du spritt i benen när musiken drar igång?",
-        choices: [
-          { label: "Ja", next: "C" },
           { label: "Nej", next: "q7" }
         ]
       },
@@ -241,7 +233,7 @@
         text: "Sammet, kristallkronor och arior – något för dig, eller ger det dig gåshud på fel sätt?",
         choices: [
           { label: "Ja, mer sånt!", next: "F" },
-          { label: "Gåshud på fel sätt", next: "B" }
+          { label: "Gåshud på fel sätt", next: "G" }
         ]
       }
     };
@@ -253,18 +245,6 @@
         id: "A",
         title: "Trettondagskonsert med bal",
         body: "Trettondagskonsert med bal på GöteborgsOperan, 5 januari 2027 kl 19, för dig och Malte, tillsammans med Klas. Plus en danskurs i vals och foxtrot, lördag 2 januari kl 15."
-      },
-      B: {
-        kind: "present",
-        id: "B",
-        title: "Så som i himmelen",
-        body: "Tre biljetter till musikalen Så som i himmelen på Lorensbergsteatern för dig, Malte och Klas (spelas till 28 feb 2027)."
-      },
-      C: {
-        kind: "present",
-        id: "C",
-        title: "Trettondagsbal och garn",
-        body: "Trettondagsbal 5 januari med Klas, plus ett presentkort på Stickwick, garnbutiken."
       },
       G: {
         kind: "present",
