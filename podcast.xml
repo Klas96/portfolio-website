@@ -6,7 +6,7 @@
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</description>
     <language>sv</language>
-    <lastBuildDate>Sat, 14 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
     <itunes:summary>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -22,6 +22,16 @@
       <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
+    <item>
+      <title>Vecka 47, 20 november 2026</title>
+      <description>Dammen i Echoes of Elysium, trettioårsdagen och en vecka utan Jeppesen. Nästa vecka är kalas, gokart och tedans, sedan jobbet igen. Sen Adient, Brewhouse, Fortnox och två forskningsnyheter.</description>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://klasholmgren.se/static/podcast/2026-11-20-vecka-47-20-november-2026.mp3</guid>
+      <link>https://klasholmgren.se/static/podcast/2026-11-20-vecka-47-20-november-2026.mp3</link>
+      <enclosure url="https://klasholmgren.se/static/podcast/2026-11-20-vecka-47-20-november-2026.mp3" length="9236942" type="audio/mpeg"/>
+      <itunes:summary>Dammen i Echoes of Elysium, trettioårsdagen och en vecka utan Jeppesen. Nästa vecka är kalas, gokart och tedans, sedan jobbet igen. Sen Adient, Brewhouse, Fortnox och två forskningsnyheter.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Vecka 46, 14 november 2026</title>
       <description>En lugn kodvecka, med Echoes från helgen innan och dagarna på Jeppesen. Nästa vecka är fonddatabasen, tedans och trettioårskalas, och sen Volvo, AI-varsel och Gemini 4 Carbon.</description>
