@@ -6,7 +6,7 @@
     <atom:link href="https://klasholmgren.se/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</description>
     <language>sv</language>
-    <lastBuildDate>Fri, 20 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 12:00:00 +0000</lastBuildDate>
     <itunes:author>Klas Holmgren</itunes:author>
     <itunes:summary>Varje vecka: vilka projekt Klas har jobbat med och vad som är på gång härnäst.</itunes:summary>
     <itunes:explicit>false</itunes:explicit>
@@ -22,6 +22,16 @@
       <title>Klas Veckologg</title>
       <link>https://klasholmgren.se/podcast.html</link>
     </image>
+    <item>
+      <title>Vecka 48, 27 november 2026</title>
+      <description>En tyst vecka i repona efter förra helgens Echoes-jobb, och en vanlig Jeppesenvecka med Toastmasters, dansföreningen och första advent. Nästa vecka ligger tehuset kvar öppet, Irma fyller 25 och golvet på Forum ska oljas. Volvo bromsar i Göteborg medan lastbilarna drar, och i världen bevisar agenter kvantkretsar.</description>
+      <pubDate>Fri, 27 Nov 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://klasholmgren.se/static/podcast/2026-11-27-vecka-48-27-november-2026.mp3</guid>
+      <link>https://klasholmgren.se/static/podcast/2026-11-27-vecka-48-27-november-2026.mp3</link>
+      <enclosure url="https://klasholmgren.se/static/podcast/2026-11-27-vecka-48-27-november-2026.mp3" length="6347821" type="audio/mpeg"/>
+      <itunes:summary>En tyst vecka i repona efter förra helgens Echoes-jobb, och en vanlig Jeppesenvecka med Toastmasters, dansföreningen och första advent. Nästa vecka ligger tehuset kvar öppet, Irma fyller 25 och golvet på Forum ska oljas. Volvo bromsar i Göteborg medan lastbilarna drar, och i världen bevisar agenter kvantkretsar.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Vecka 47, 20 november 2026</title>
       <description>Dammen i Echoes of Elysium, trettioårsdagen och en vecka utan Jeppesen. Nästa vecka är kalas, gokart och tedans, sedan jobbet igen. Sen Adient, Brewhouse, Fortnox och två forskningsnyheter.</description>
