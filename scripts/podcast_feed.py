@@ -256,10 +256,7 @@ def short_description(episode: dict) -> str:
     return cut + "…"
 
 
-def render_episode_html(show: dict, episode: dict) -> str:
-    filename = episode["file"]
-    mime = MIME_TYPES[Path(filename).suffix.lower()]
-    src = f"{show['audio_dir'].strip('/')}/{filename}"
+def render_episode_html(_show: dict, episode: dict) -> str:
     return (
         '            <li style="margin-bottom: 20px;">\n'
         '              <details open style="background-color: black; color: white; '
@@ -269,10 +266,6 @@ def render_episode_html(show: dict, episode: dict) -> str:
         "                </summary>\n"
         f"                <p>{html_text(episode['date'])}</p>\n"
         f"                <p>{html_text(short_description(episode))}</p>\n"
-        '                <audio controls volume="1.0">\n'
-        f'                  <source src="{html_text(src)}" type="{mime}">\n'
-        "                  Your browser does not support the audio element.\n"
-        "                </audio>\n"
         "              </details>\n"
         "            </li>\n"
     )
