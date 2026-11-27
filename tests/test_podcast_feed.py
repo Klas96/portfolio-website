@@ -98,15 +98,22 @@ class PodcastFeedTest(unittest.TestCase):
         page = (self.root / "podcast.html").read_text(encoding="utf-8")
         self.assertIn("Vecka 42", page)
         self.assertIn("<p>2026-10-15</p>", page)
-        self.assertNotIn("static/podcast/2026-10-15-vecka-42.wav", page)
+        self.assertIn("static/podcast/2026-10-15-vecka-42.wav", page)
         self.assertNotIn("Inga avsnitt ännu.", page)
         self.assertIn("<p>Dans på torsdagen. Kod på söndagen.</p>", page)
-        self.assertNotIn("<audio", page)
+        self.assertIn('<audio controls volume="1.0">', page)
+        self.assertEqual(page.count("<audio"), 1)
         self.assertIn('href="podcast.xml"', page)
-        self.assertNotIn("Apple Podcasts", page)
-        self.assertNotIn("Overcast", page)
-        self.assertNotIn("Pocket Casts", page)
-        self.assertNotIn("Spotify", page)
+        for app_link in (
+            "Apple Podcasts",
+            "Overcast",
+            "Pocket Casts",
+            "Spotify",
+            "podcast://",
+            "overcast://",
+            "pktc://",
+        ):
+            self.assertNotIn(app_link, page)
 
         again = podcast_feed.add_episode(
             self.root,
