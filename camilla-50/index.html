@@ -417,15 +417,15 @@
           link.rel = "noopener noreferrer";
           card.appendChild(link);
         }
-        var tell = el("a", "tell", "Skicka ditt val till Klas");
+        var tell = el("a", "tell", "Skicka ditt val till oss");
         tell.href = "mailto:" + mailTo +
           "?subject=" + encodeURIComponent("Camilla 50 – mitt val: " + step.title) +
-          "&body=" + encodeURIComponent("Hej Klas!\n\nJag landade på: " + step.title + ".\n\nKram, Camilla");
+          "&body=" + encodeURIComponent("Hej Klas, Irma och Julia!\n\nJag landade på: " + step.title + ".\n\nKram, Camilla");
         tell.dataset.mail = step.id;
         card.appendChild(tell);
         sign = el("p", "sign");
         sign.appendChild(document.createTextNode(signName));
-        sign.appendChild(el("span", null, "/Klas"));
+        sign.appendChild(el("span", null, "/Klas, Irma & Julia"));
         card.appendChild(sign);
         button = el("button", "again", "Spela igen");
         button.type = "button";
