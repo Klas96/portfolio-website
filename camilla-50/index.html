@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="description" content="Till Camilla">
+  <meta name="theme-color" content="#1a0b2e">
+  <meta name="referrer" content="no-referrer">
+  <title>Till Camilla – 50 år!</title>
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGUlEQVR4nGOsUTFiIAUwkaR6VMOohiGlAQC19ADy4krJdQAAAABJRU5ErkJggg==">
+  <style>
+    :root {
+      --ink: #26122e;
+      --cream: #fff7fb;
+      --wine: #c2185b;
+      --pine: #5b2bbf;
+      --gold: #f4b400;
+      --muted: #6a5470;
+      --night: #1a0b2e;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:
+        max(1rem, env(safe-area-inset-top))
+        max(1rem, env(safe-area-inset-right))
+        max(1rem, env(safe-area-inset-bottom))
+        max(1rem, env(safe-area-inset-left));
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(244, 180, 0, 0.3), transparent 52%),
+        radial-gradient(ellipse at 100% 100%, rgba(194, 24, 91, 0.55), transparent 50%),
+        radial-gradient(ellipse at 0% 100%, rgba(0, 188, 212, 0.35), transparent 45%),
+        var(--night);
+      color: var(--ink);
+      font-family: Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+      text-rendering: optimizeLegibility;
+    }
+    .card {
+      width: min(100%, 26.5rem);
+      background: var(--cream);
+      border-radius: 1.75rem;
+      padding: 1.6rem 1.25rem 1.3rem;
+      box-shadow:
+        0 0 0 2px rgba(244, 180, 0, 0.7),
+        0 24px 50px rgba(0, 0, 0, 0.35);
+      position: relative;
+      z-index: 1;
+    }
+    .kicker {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--wine);
+    }
+    h1 {
+      margin: 0.45rem 0 0;
+      font-size: clamp(1.6rem, 6.6vw, 2.05rem);
+      line-height: 1.22;
+      font-weight: 700;
+      overflow-wrap: break-word;
+    }
+    h1:focus { outline: none; }
+    .lead, .present {
+      margin: 0.85rem 0 0;
+      font-size: 1.12rem;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+    .present { color: var(--ink); }
+    .gift {
+      display: block;
+      width: 100%;
+      max-height: 14rem;
+      object-fit: contain;
+      margin-top: 0.9rem;
+      border-radius: 1rem;
+      background: #fff;
+    }
+    .giftlink {
+      display: inline-block;
+      margin-top: 0.85rem;
+      color: var(--wine);
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+    }
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.35rem;
+    }
+    button {
+      appearance: none;
+      width: 100%;
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .choice {
+      min-height: 4.6rem;
+      padding: 0.85rem 1.15rem;
+      font-size: 1.28rem;
+      line-height: 1.2;
+      border: 0;
+      color: var(--cream);
+    }
+    .choice:first-child { background: var(--wine); }
+    .choice:last-child { background: var(--pine); }
+    .choice:active { transform: scale(0.98); }
+    .choice:focus-visible,
+    .again:focus-visible,
+    .showcard:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .showcard {
+      display: block;
+      margin-top: 0.75rem;
+      padding: 0.95rem 1rem;
+      border-radius: 1.1rem;
+      background: #fff;
+      border: 2px solid var(--wine);
+      color: inherit;
+      text-decoration: none;
+    }
+    .showcard strong {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+    .showcard span {
+      display: block;
+      margin-top: 0.3rem;
+      font-family: system-ui, sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.35;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .showcard:active { transform: scale(0.98); }
+    .ornament {
+      margin: 0 0 0.35rem;
+      color: var(--gold);
+      letter-spacing: 0.4em;
+      font-size: 1rem;
+    }
+    .tell {
+      display: block;
+      margin-top: 1.15rem;
+      padding: 1rem 1.1rem;
+      border-radius: 999px;
+      background: var(--wine);
+      color: var(--cream);
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.12rem;
+      text-align: center;
+      text-decoration: none;
+    }
+    .tell:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .sign {
+      margin: 1.4rem 0 0;
+      font-size: 1.45rem;
+      line-height: 1.15;
+    }
+    .sign span {
+      display: block;
+      margin-top: 0.2rem;
+      color: var(--muted);
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+    .again {
+      margin-top: 1.15rem;
+      min-height: 3.6rem;
+      font-size: 1.15rem;
+      color: var(--wine);
+      background: transparent;
+      border: 2px solid var(--wine);
+    }
+    .again:active { transform: scale(0.98); }
+    #confetti {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .choice:active, .again:active, .showcard:active { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="app" aria-live="polite"></main>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <noscript><p>Den här sidan behöver JavaScript.</p></noscript>
+  <script>
+    var questions = {
+      q1: {
+        kind: "q",
+        kicker: "Hej Camilla – 50 år!",
+        text: "Vill du själv ut och svänga på dansgolvet i vinter?",
+        lead: "En fråga i taget. Dina svar väljer presenten.",
+        choices: [
+          { label: "Ja, självklart!", next: "q2" },
+          { label: "Nej, jag tittar hellre", next: "q3" }
+        ]
+      },
+      q2: {
+        kind: "q",
+        text: "Full fart i buggen hela kvällen – eller ska dansfötterna få bli ompysslade i stället?",
+        choices: [
+          { label: "Full fart!", next: "A" },
+          { label: "Pyssla om mig", next: "E" }
+        ]
+      },
+      q3: {
+        kind: "q",
+        text: "En kväll i salongen framför en scen, eller en kväll runt ett bord med gott i glaset?",
+        choices: [
+          { label: "Framför en scen", next: "q4" },
+          { label: "Gott i glaset", next: "F" }
+        ]
+      },
+      q4: {
+        kind: "q",
+        text: "Ska det handla om musik och rörelse, eller om ord och skratt?",
+        choices: [
+          { label: "Musik och rörelse", next: "q5" },
+          { label: "Ord och skratt", next: "D" }
+        ]
+      },
+      q5: {
+        kind: "q",
+        text: "Tåspetsar och tyll, eller stråkar och festlig nyårsmusik?",
+        choices: [
+          { label: "Tåspetsar och tyll", next: "B" },
+          { label: "Stråkar och fest", next: "C" }
+        ]
+      }
+    };
+
+    // One object for every gift.
+    var presents = {
+      A: {
+        kind: "present",
+        id: "A",
+        title: "Festdanzen på Conventum",
+        body: "Två biljetter till Festdanzen på Conventum i Örebro, fredag 19 februari 2027. En hel kväll med dansfest, och en bugg-workshop så att stegen sitter. Ta med någon som gillar att dansa!"
+      },
+      B: {
+        kind: "present",
+        id: "B",
+        title: "Baletten Svansjön",
+        body: "Två biljetter till baletten Svansjön på Örebro Konserthus, 24 februari 2027. Tjajkovskijs musik, tåspetsar och tyll – dans när den är som allra vackrast."
+      },
+      C: {
+        kind: "present",
+        id: "C",
+        title: "Trettondagskonserten",
+        body: "Två biljetter till Trettondagskonserten på Örebro Konserthus, 6 januari 2027, när Peter Flack firar 80 år. En festlig start på det nya året, och en fortsättning på ditt jubileum."
+      },
+      D: {
+        kind: "present",
+        id: "D",
+        title: "Orkestern på Örebro Teater",
+        body: "Två biljetter till pjäsen Orkestern på Örebro Teater. Du väljer själv vilken kväll i januari det ska bli."
+      },
+      E: {
+        kind: "present",
+        id: "E",
+        title: "Sportmassage på Spahuset",
+        body: "En sportmassage på Spahuset i Örebro. Dansfötterna och resten av dig förtjänar lite omsorg efter 50 fina år. Du bokar den tid som passar dig efter nyår."
+      },
+      F: {
+        kind: "present",
+        id: "F",
+        title: "Vinprovning för två",
+        body: "En vinprovning för två på STÅ Pintxos & Vänner i Örebro. Du väljer valfri torsdag från januari och tar med dig vem du vill."
+      }
+    };
+
+    var signName = "Grattis Camilla!";
+    var mailTo = "admin@klasholmgren.se";
+
+    var app = document.getElementById("app");
+    var canvas = document.getElementById("confetti");
+    var ctx = canvas.getContext("2d");
+    var raf = 0;
+
+    function el(tag, className, text) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text != null) node.textContent = text;
+      return node;
+    }
+
+    function stopConfetti() {
+      cancelAnimationFrame(raf);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function burst() {
+      stopConfetti();
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      var colors = ["#f4b400", "#ff4fa3", "#00bcd4", "#7c4dff", "#ffffff", "#ff7043"];
+      var pieces = [];
+      var i;
+      for (i = 0; i < 90; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: -Math.random() * canvas.height * 0.45,
+          vx: (-1.2 + Math.random() * 2.4) * dpr,
+          vy: (1.6 + Math.random() * 2.8) * dpr,
+          w: (5 + Math.random() * 7) * dpr,
+          h: (7 + Math.random() * 8) * dpr,
+          rot: Math.random() * 6,
+          vr: -0.12 + Math.random() * 0.24,
+          color: colors[(Math.random() * colors.length) | 0]
+        });
+      }
+      var start = performance.now();
+      function frame(now) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var p;
+        for (i = 0; i < pieces.length; i++) {
+          p = pieces[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.04 * dpr;
+          p.rot += p.vr;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        }
+        if (now - start < 3800) raf = requestAnimationFrame(frame);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      raf = requestAnimationFrame(frame);
+    }
+
+    function show(id) {
+      var step = questions[id] || presents[id];
+      var card = el("article", "card");
+      var heading;
+      var choices;
+      var button;
+      var c;
+      var sign;
+      stopConfetti();
+      app.textContent = "";
+      if (step.kind === "q") {
+        if (step.kicker) card.appendChild(el("p", "kicker", step.kicker));
+        heading = el("h1", null, step.text);
+        heading.id = "fraga";
+        card.appendChild(heading);
+        if (step.lead) card.appendChild(el("p", "lead", step.lead));
+        choices = el("div", "choices");
+        for (c = 0; c < step.choices.length; c++) {
+          button = el("button", "choice", step.choices[c].label);
+          button.type = "button";
+          button.addEventListener("click", show.bind(null, step.choices[c].next));
+          choices.appendChild(button);
+        }
+        card.appendChild(choices);
+      } else {
+        card.dataset.present = step.id;
+        card.appendChild(el("p", "ornament", "✦ 50 ✦"));
+        card.appendChild(el("p", "kicker", "Din present"));
+        heading = el("h1", null, step.title);
+        card.appendChild(heading);
+        if (step.image) {
+          var img = el("img", "gift");
+          img.src = step.image;
+          img.alt = step.imageAlt || "";
+          card.appendChild(img);
+        }
+        card.appendChild(el("p", "present", step.body));
+        if (step.cards) {
+          var picks = el("div", "picks");
+          var showcard;
+          var n;
+          for (n = 0; n < step.cards.length; n++) {
+            showcard = el("a", "showcard");
+            showcard.href = step.cards[n].href;
+            showcard.target = "_blank";
+            showcard.rel = "noopener noreferrer";
+            showcard.appendChild(el("strong", null, step.cards[n].title));
+            showcard.appendChild(el("span", null, step.cards[n].text));
+            picks.appendChild(showcard);
+          }
+          card.appendChild(picks);
+        }
+        if (step.href) {
+          var link = el("a", "giftlink", step.link);
+          link.href = step.href;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          card.appendChild(link);
+        }
+        var tell = el("a", "tell", "Skicka ditt val till Klas");
+        tell.href = "mailto:" + mailTo +
+          "?subject=" + encodeURIComponent("Camilla 50 – mitt val: " + step.title) +
+          "&body=" + encodeURIComponent("Hej Klas!\n\nJag landade på: " + step.title + ".\n\nKram, Camilla");
+        tell.dataset.mail = step.id;
+        card.appendChild(tell);
+        sign = el("p", "sign");
+        sign.appendChild(document.createTextNode(signName));
+        sign.appendChild(el("span", null, "/Klas"));
+        card.appendChild(sign);
+        button = el("button", "again", "Spela igen");
+        button.type = "button";
+        button.addEventListener("click", show.bind(null, "q1"));
+        card.appendChild(button);
+        burst();
+      }
+      heading.tabIndex = -1;
+      app.appendChild(card);
+      heading.focus({ preventScroll: true });
+    }
+
+    show("q1");
+  </script>
+</body>
+</html>
